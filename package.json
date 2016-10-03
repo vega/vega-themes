@@ -1,0 +1,50 @@
+{
+  "name": "vega-themes",
+  "version": "1.0.0-beta",
+  "description": "Themes for stylized Vega visualizations.",
+  "keywords": [
+    "vega",
+    "themes",
+    "style"
+  ],
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "UW Interactive Data Lab",
+    "url": "http://idl.cs.washington.edu"
+  },
+  "contributors": [
+    {
+      "name": "Emily Gu",
+      "url": "https://github.com/emilygu"
+    },
+    {
+      "name": "Arvind Satyanarayan",
+      "url": "http://arvindsatya.com"
+    },
+    {
+      "name": "Jeffrey Heer",
+      "url": "http://idl.cs.washington.edu"
+    }
+  ],
+  "main": "build/vega-themes.js",
+  "module": "index",
+  "jsnext:main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vega/vega-themes.git"
+  },
+  "scripts": {
+    "build": "npm run test && uglifyjs build/vega-themes.js -c -m -o build/vega-themes.min.js",
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n vega.themes -o build/vega-themes.js -- index.js",
+    "test": "eslint index.js src",
+    "prepublish": "npm run build",
+    "postpublish": "git push && git push --tags && zip -j build/vega-themes.zip -- LICENSE README.md build/vega-themes.js build/vega-themes.min.js"
+  },
+  "devDependencies": {
+    "vega": ">=3.0.0-beta",
+    "eslint": "2",
+    "rollup": "0.36",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}

@@ -3,15 +3,13 @@ var markColor = '#4572a7';
 export default {
   background: '#fff',
 
-  mark: {
-    arc: { fill: markColor },
-    area: { fill: markColor },
-    line: { stroke: markColor, strokeWidth: 2 },
-    path: { stroke: markColor },
-    rect: { fill: markColor },
-    shape: { stroke: markColor },
-    symbol: { fill: markColor, strokeWidth: 1.5, size: 50 }
-  },
+  arc: { fill: markColor },
+  area: { fill: markColor },
+  line: { stroke: markColor, strokeWidth: 2 },
+  path: { stroke: markColor },
+  rect: { fill: markColor },
+  shape: { stroke: markColor },
+  symbol: { fill: markColor, strokeWidth: 1.5, size: 50 },
 
   axis: {
     bandPosition: 0.5,

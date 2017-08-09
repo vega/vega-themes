@@ -4,15 +4,13 @@ var markColor = '#ab5787',
 export default {
   background: '#f9f9f9',
 
-  mark: {
-    arc: { fill: markColor },
-    area: { fill: markColor },
-    line: { stroke: markColor },
-    path: { stroke: markColor },
-    rect: { fill: markColor },
-    shape: { stroke: markColor },
-    symbol: { fill: markColor, size: 30 }
-  },
+  arc: { fill: markColor },
+  area: { fill: markColor },
+  line: { stroke: markColor },
+  path: { stroke: markColor },
+  rect: { fill: markColor },
+  shape: { stroke: markColor },
+  symbol: { fill: markColor, size: 30 },
 
   axis: {
     domainColor: axisColor,

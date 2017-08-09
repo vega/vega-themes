@@ -5,15 +5,13 @@ export default {
     fill: '#e5e5e5'
   },
 
-  mark: {
-    arc: { fill: markColor },
-    area: { fill: markColor },
-    line: { stroke: markColor },
-    path: { stroke: markColor },
-    rect: { fill: markColor },
-    shape: { stroke: markColor },
-    symbol: { fill: markColor, size: 40 }
-  },
+  arc: { fill: markColor },
+  area: { fill: markColor },
+  line: { stroke: markColor },
+  path: { stroke: markColor },
+  rect: { fill: markColor },
+  shape: { stroke: markColor },
+  symbol: { fill: markColor, size: 40 },
 
   axis: {
     domainDefault: false,

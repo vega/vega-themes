@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Vega Theme Test</title>
-    <script src="../node_modules/vega/build/vega.js"></script>
+    <script src="../node_modules/vega-lib/build/vega.js"></script>
+    <script src="../node_modules/vega-lite/build/vega-lite.js"></script>
+    <script src="../node_modules/vega-embed/build/vega-embed.js"></script>
     <script src="../build/vega-themes.js"></script>
     <style>
       body { margin: 10px; font: 14px Helvetica Neue; position: relative; }
@@ -15,14 +17,15 @@
         height: 20px;
         background: white;
       }
-      #views { margin-top: 40px; }
-      .view { display: inline-block; margin-right: 5px; }
+      #views { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: left; }
+      .view { flex: 0; margin-right: 5px; margin-bottom: 10px; }
       canvas, svg { border: 1px dashed #ccc; }
       .vega-bind { line-height: 18px; margin-bottom: 2px; }
       .vega-bind-name { display: inline-block; width: 100px; }
       .vega-bind input[type="range"] { width: 400px; }
       .vega-bind label { margin: 0 0.5em 0 2px; }
     </style>
+    <link rel="stylesheet" href="../node_modules/vega-embed/vega-embed.css"/>
   </head>
   <body>
     <div id="header">
@@ -33,6 +36,7 @@
         <option value="ggplot2">ggplot2</option>
         <option value="quartz">quartz</option>
         <option value="vox">vox</option>
+        <option value="dark">dark</option>
       </select> &nbsp;
       Renderer:
       <select id="render">
@@ -45,14 +49,15 @@
 var files = [
   'bars.vg.json',
   'lines.vg.json',
-  'scatter.vg.json'
+  'scatter.vg.json',
+  'stacked.vl.json'
 ];
 var specs = [];
 
 var container = document.querySelector('#views'),
     loader = vega.loader(),
     renderType = 'svg',
-    theme = 'default';
+    theme = {};
 
 Promise.all(
   files.map(function(file) {
@@ -80,20 +85,11 @@ render.addEventListener('change', function() {
 function refresh() {
   container.innerHTML = '';
   specs.forEach(function(spec) {
-    var view = document.createElement('div');
-    view.setAttribute('class', 'view');
-    container.appendChild(view);
-    visualize(view, spec, theme);
+    var el = document.createElement('div');
+    el.setAttribute('class', 'view');
+    container.appendChild(el);
+    vegaEmbed(el, spec, {render: renderType, config: theme});
   });
-}
-
-function visualize(el, spec, theme) {
-  new vega.View(vega.parse(spec, theme))
-    .logLevel(vega.Warn)
-    .initialize(el)
-    .renderer(renderType)
-    .hover()
-    .run();
 }
     </script>
   </body>

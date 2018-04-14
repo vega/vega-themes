@@ -1,20 +1,19 @@
 # vega-themes
 
-Themes for stylized Vega visualizations. For Vega version 3.0+.
+Themes for stylized [Vega](https://vega.github.io/vega/) and [Vega-Lite](https://vega.github.io/vega-lite/) visualizations. For Vega version 3 and Vega-Lite 2.
 
-A Vega *theme* is a configuration object with default settings for a variety
-of visual properties such as colors, typefaces, line widths and spacing. This
-module exports a set of named themes, which can be passed as input to the Vega
-parser:
+A Vega *theme* is a [configuration object](https://vega.github.io/vega/docs/config/)
+with default settings for a variety of visual properties such as colors, typefaces,
+line widths and spacing. This module exports a set of named themes, which can be
+passed as input to the Vega or Vega-Lite with [Vega-Embed](https://github.com/vega/vega-embed)
+or directly as a configuration object to the [Vega parser](https://vega.github.io/vega/docs/api/parser/).
 
 ```js
-var runtime = vega.parse(vega_spec, vega.themes.quartz);
-var view = new vega.View(runtime);
+var runtime = vegaEmbed(el, spec, {config: vega.themes.quartz});
 ```
 
 Once instantiated, a visualization theme can not be changed. Instead, the
-input specification must be re-parsed with a new theme and a new `View`
-instance must be created.
+input specification must be re-parsed with a new theme.
 
 ## Included Themes
 
@@ -42,10 +41,16 @@ vega.themes.<b>vox</b>
 
 Chart theme modeled after Vox.
 
+<a name="dark" href="#dark">#</a>
+vega.themes.<b>dark</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-dark.js "Source")
+
+A dark theme.
+
 ## Instructions
 
 To view and test different themes, follow these steps:
 
-1. Install dependencies via `npm install`.
-2. Launch a local web server in the top-level directory (e.g., `python -m SimpleHTTPServer 8000`).
-3. Load the examples in your browser (e.g., at `http://localhost:8000/test/`).
+1. Install dependencies via `yarn`.
+2. Launch a local web server in the top-level directory with `yarn start`.
+3. Load the examples in your browser (at `http://localhost:8000/test/`).

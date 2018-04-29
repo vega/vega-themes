@@ -8,6 +8,8 @@ line widths and spacing. This module exports a set of named themes, which can be
 passed as input to the Vega or Vega-Lite with [Vega-Embed](https://github.com/vega/vega-embed)
 or directly as a configuration object to the [Vega parser](https://vega.github.io/vega/docs/api/parser/).
 
+Try Vega-Themes in our [Observable Demo](https://beta.observablehq.com/@domoritz/vega-themes-demo).
+
 Vega Themes comes with Vega-Embed:
 
 ```js
@@ -61,4 +63,3 @@ To view and test different themes, follow these steps:
 
 1. Install dependencies via `yarn`.
 2. Launch a local web server in the top-level directory with `yarn start`.
-3. Load the examples in your browser (at `http://localhost:8000/test/`).

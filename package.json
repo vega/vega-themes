@@ -65,6 +65,6 @@
     "vega-embed": "^3.8.0"
   },
   "dependencies": {
-    "vega-typings": "^0.2.15"
+    "vega-typings": "^0.2.16"
   }
 }

@@ -1,4 +1,4 @@
-# vega-themes
+# Vega Themes
 
 Themes for stylized [Vega](https://vega.github.io/vega/) and [Vega-Lite](https://vega.github.io/vega-lite/) visualizations. For Vega version 3 and Vega-Lite 2.
 
@@ -8,8 +8,16 @@ line widths and spacing. This module exports a set of named themes, which can be
 passed as input to the Vega or Vega-Lite with [Vega-Embed](https://github.com/vega/vega-embed)
 or directly as a configuration object to the [Vega parser](https://vega.github.io/vega/docs/api/parser/).
 
+Vega Themes comes with Vega-Embed:
+
 ```js
-var runtime = vegaEmbed(el, spec, {config: vega.themes.quartz});
+vegaEmbed(el, spec, {theme: 'quartz'});
+```
+
+If you want to use a different version, pass the theme as a configuration:
+
+```js
+vegaEmbed(el, spec, {config: vegaThemes.quartz});
 ```
 
 Once instantiated, a visualization theme can not be changed. Instead, the

@@ -1,7 +1,9 @@
-var markColor = '#ab5787',
-    axisColor = '#979797';
+import { Config } from 'vega';
 
-export default {
+const markColor = '#ab5787';
+const axisColor = '#979797';
+
+const quartzTheme: Config = {
   background: '#f9f9f9',
 
   arc: { fill: markColor },
@@ -16,32 +18,32 @@ export default {
     domainColor: axisColor,
     domainWidth: 0.5,
     gridWidth: 0.2,
+    labelColor: axisColor,
     tickColor: axisColor,
     tickWidth: 0.2,
-    tickLabelColor: axisColor,
-    titleColor: axisColor
+    titleColor: axisColor,
   },
 
   axisBand: {
-    gridDefault: false
+    grid: false,
   },
 
   axisX: {
-    gridDefault: true,
-    tickSize: 10
+    grid: true,
+    tickSize: 10,
   },
 
   axisY: {
-    domainDefault: false,
-    gridDefault: true,
-    tickSize: 0
+    domain: false,
+    grid: true,
+    tickSize: 0,
   },
 
   legend: {
-    padding: 1,
     labelFontSize: 11,
+    padding: 1,
+    symbolSize: 30,
     symbolType: 'square',
-    symbolSize: 30
   },
 
   range: {
@@ -55,7 +57,9 @@ export default {
       '#d365ba',
       '#154866',
       '#666666',
-      '#c4c4c4'
-    ]
-  }
+      '#c4c4c4',
+    ],
+  },
 };
+
+export default quartzTheme;

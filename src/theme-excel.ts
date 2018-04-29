@@ -1,6 +1,8 @@
-var markColor = '#4572a7';
+import { Config } from 'vega';
 
-export default {
+const markColor = '#4572a7';
+
+const excelTheme: Config = {
   background: '#fff',
 
   arc: { fill: markColor },
@@ -13,25 +15,25 @@ export default {
 
   axis: {
     bandPosition: 0.5,
-    gridDefault: true,
+    grid: true,
+    gridColor: '#000000',
     gridOpacity: 1,
     gridWidth: 0.5,
-    gridColor: '#000000',
-    tickPadding: 10,
+    labelPadding: 10,
     tickSize: 5,
-    tickWidth: 0.5
+    tickWidth: 0.5,
   },
 
   axisBand: {
+    grid: false,
     tickExtra: true,
-    gridDefault: false
   },
 
   legend: {
     labelBaseline: 'middle',
     labelFontSize: 11,
+    symbolSize: 50,
     symbolType: 'square',
-    symbolSize: 50
   },
 
   range: {
@@ -45,7 +47,9 @@ export default {
       '#94aace',
       '#d09393',
       '#b9cc98',
-      '#a99cbc'
-    ]
-  }
+      '#a99cbc',
+    ],
+  },
 };
+
+export default excelTheme;

@@ -1,8 +1,10 @@
-var markColor = '#000';
+import { Config } from 'vega';
 
-export default {
+const markColor = '#000';
+
+const ggplot2Theme: Config = {
   group: {
-    fill: '#e5e5e5'
+    fill: '#e5e5e5',
   },
 
   arc: { fill: markColor },
@@ -14,22 +16,22 @@ export default {
   symbol: { fill: markColor, size: 40 },
 
   axis: {
-    domainDefault: false,
-    gridDefault: true,
+    domain: false,
+    grid: true,
     gridColor: '#FFFFFF',
     gridOpacity: 1,
+    labelColor: '#7F7F7F',
+    labelPadding: 4,
     tickColor: '#7F7F7F',
-    tickPadding: 4,
     tickSize: 5.67,
-    tickLabelColor: '#7F7F7F',
     titleFontSize: 16,
-    titleFontWeight: 'normal'
+    titleFontWeight: 'normal',
   },
 
   legend: {
     labelBaseline: 'middle',
     labelFontSize: 11,
-    symbolSize: 40
+    symbolSize: 40,
   },
 
   range: {
@@ -43,7 +45,9 @@ export default {
       '#4D4D4D',
       '#C9C9C9',
       '#666666',
-      '#DCDCDC'
-    ]
-  }
+      '#DCDCDC',
+    ],
+  },
 };
+
+export default ggplot2Theme;

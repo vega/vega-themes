@@ -1,9 +1,10 @@
 {
   "name": "vega-themes",
   "version": "1.1.0",
-  "description": "Themes for stylized Vega visualizations.",
+  "description": "Themes for stylized Vega and Vega-Lite visualizations.",
   "keywords": [
     "vega",
+    "vega-lite",
     "themes",
     "style"
   ],
@@ -31,25 +32,39 @@
     }
   ],
   "main": "build/vega-themes.js",
-  "module": "index",
-  "jsnext:main": "index",
+  "module": "build/index.js",
+  "unpkg": "build/vega-themes.min.js",
+  "jsdelivr": "build/vega-themes.min.js",
+  "typings": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vega/vega-themes.git"
   },
   "scripts": {
-    "build": "npm run test && uglifyjs build/vega-themes.js -c -m -o build/vega-themes.min.js",
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -n vega.themes -o build/vega-themes.js -- index.js",
-    "test": "eslint index.js src",
-    "prepublish": "npm run build",
-    "postpublish": "git push && git push --tags && zip -j build/vega-themes.zip -- LICENSE README.md build/vega-themes.js build/vega-themes.min.js",
-    "start": "python -m http.server"
+    "build": "rollup -c",
+    "clean": "rm -rf build && mkdir build",
+    "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
+    "lint": "tslint -p . && prettier --list-different '{src,test}/**/*.ts'",
+    "postbuild": "uglifyjs build/vega-themes.js -cm > build/vega-themes.min.js",
+    "prebuild": "npm run clean && tsc",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run lint",
+    "serve": "browser-sync start -s -f build test --startPath test",
+    "start": "concurrently --kill-others -n Server,Typescript,Rollup 'npm run serve' 'tsc -w' 'rollup -c -w'"
   },
   "devDependencies": {
-    "eslint": "4",
-    "rollup": "0.57",
-    "tape": "4",
-    "uglify-js": "3",
-    "vega-embed": "3"
+    "@types/node": "^8.0.0",
+    "browser-sync": "^2.23.7",
+    "concurrently": "^3.5.1",
+    "prettier": "^1.12.1",
+    "rollup": "^0.58.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.12.0",
+    "typescript": "^2.8.3",
+    "uglify-js": "^3.3.23",
+    "vega-embed": "^3.8.0"
+  },
+  "dependencies": {
+    "vega-typings": "^0.2.15"
   }
 }

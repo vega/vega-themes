@@ -1,3 +1,6 @@
-*.sublime-*
-build/*.zip
-test/
+.DS_Store
+.gitignore
+.editorconfig
+tslint.json
+node_modules
+test

@@ -1,6 +1,8 @@
-var markColor = '#3e5c69';
+import { Config } from 'vega';
 
-export default {
+const markColor = '#3e5c69';
+
+const voxTheme: Config = {
   background: '#fff',
 
   arc: { fill: markColor },
@@ -13,30 +15,30 @@ export default {
 
   axis: {
     domainWidth: 0.5,
-    gridDefault: true,
-    tickPadding: 2,
+    grid: true,
+    labelPadding: 2,
+    tickSize: 5,
     tickWidth: 0.5,
     titleFontWeight: 'normal',
-    tickSize: 5
   },
 
   axisBand: {
-    gridDefault: false
+    grid: false,
   },
 
   axisX: {
-    gridWidth: 0.2
+    gridWidth: 0.2,
   },
 
   axisY: {
+    gridDash: [3],
     gridWidth: 0.4,
-    gridDash: [3]
   },
 
   legend: {
-    padding: 1,
     labelFontSize: 11,
-    symbolType: 'square'
+    padding: 1,
+    symbolType: 'square',
   },
 
   range: {
@@ -48,7 +50,9 @@ export default {
       '#3690c0',
       '#74a9cf',
       '#a6bddb',
-      '#e2ddf2'
-    ]
-  }
+      '#e2ddf2',
+    ],
+  },
 };
+
+export default voxTheme;

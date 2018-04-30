@@ -60,9 +60,10 @@ vega.themes.<b>dark</b>
 
 A dark theme.
 
-## Instructions
+## Instructions for Developers
 
 To view and test different themes, follow these steps:
 
 1. Install dependencies via `yarn`.
 2. Launch a local web server in the top-level directory with `yarn start`.
+3. Make changes. The website with automatically reload. 

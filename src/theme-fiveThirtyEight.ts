@@ -94,7 +94,6 @@ const fiveThirtyEightTheme: Config = {
   },
 
   symbol: {
-    filled: true,
     opacity: 0.5,
     shape: 'circle',
     size: 40,

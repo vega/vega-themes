@@ -4,6 +4,8 @@
   "height": 150,
   "padding": 5,
 
+  "title": "Simple Bar Chart",
+
   "data": [
     {
       "name": "table",

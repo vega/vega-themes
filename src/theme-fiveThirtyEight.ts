@@ -1,7 +1,7 @@
 import { Config } from 'vega';
 
-const markColor = "#30a2da";
-const axisColor = "#f0f0f0";
+const markColor = '#30a2da';
+const axisColor = '#f0f0f0';
 
 const fiveThirtyEightTheme: Config = {
   arc: { fill: markColor },
@@ -13,69 +13,60 @@ const fiveThirtyEightTheme: Config = {
 
   axisBottom: {
     domain: false,
-    grid: true,
-    gridColor: "#cbcbcb",
-    gridWidth: 1,
-    tickColor: "#cbcbcb",
-    domainColor: "black",
+    domainColor: 'black',
     domainWidth: 3,
+    grid: true,
+    gridColor: '#cbcbcb',
+    gridWidth: 1,
+    labelFontSize: 12,
+    labelPadding: 4,
+    tickColor: '#cbcbcb',
     tickSize: 10,
-    labelPadding: 4,
-    labelFontSize: 12,
     titleFontSize: 14,
-    labelPadding: 4,
-    labelFontSize: 12,
-    titleFontSize: 14,
-    titlePadding: 10
+    titlePadding: 10,
   },
 
   axisLeft: {
-    domainColor: "#cbcbcb",
+    domainColor: '#cbcbcb',
     domainWidth: 1,
-    gridColor: "#cbcbcb",
+    gridColor: '#cbcbcb',
     gridWidth: 1,
-    labelPadding: 4,
     labelFontSize: 12,
-    ticks: true,
-    tickColor: "#cbcbcb",
+    labelPadding: 4,
+    tickColor: '#cbcbcb',
     tickSize: 10,
+    ticks: true,
     titleFontSize: 14,
-    titleFontSize: 14,
-    titlePadding: 10
-
+    titlePadding: 10,
   },
 
-
-
   axisRight: {
-
-    gridColor: "#cbcbcb",
-    gridWidth: 1,
+    domainColor: '#cbcbcb',
     domainWidth: 1,
-    domainColor: "#cbcbcb",
-    ticks: true,
-    tickColor: "#cbcbcb",
-    tickSize: 10,
-    labelPadding: 4,
+    gridColor: '#cbcbcb',
+    gridWidth: 1,
     labelFontSize: 12,
+    labelPadding: 4,
+    tickColor: '#cbcbcb',
+    tickSize: 10,
+    ticks: true,
     titleFontSize: 14,
-    titlePadding: 10
+    titlePadding: 10,
   },
 
   axisTop: {
     domain: false,
-    domainColor: "black",
+    domainColor: 'black',
     domainWidth: 3,
-    labelPadding: 4,
-    labelFontSize: 12,
     grid: true,
-    gridColor: "#cbcbcb",
+    gridColor: '#cbcbcb',
     gridWidth: 1,
-    tickColor: "#cbcbcb",
+    labelFontSize: 12,
+    labelPadding: 4,
+    tickColor: '#cbcbcb',
     tickSize: 10,
     titleFontSize: 14,
-    titlePadding: 10
-
+    titlePadding: 10,
   },
 
   background: '#f0f0f0',
@@ -86,45 +77,38 @@ const fiveThirtyEightTheme: Config = {
     symbolSize: 30,
     symbolType: 'square',
     titleFontSize: 14,
-    titlePadding: 10
+    titlePadding: 10,
   },
 
   line: {
     stroke: markColor,
+    strokeCap: 'butt',
     strokeWidth: 2,
-    strokeCap: 'butt'
   },
 
   path: { stroke: markColor, strokeWidth: 0.5 },
   rect: { fill: markColor },
 
   range: {
-    category: [
-      "#30a2da",
-      "#fc4f30",
-      "#e5ae38",
-      "#6d904f",
-      "#8b8b8b"
-    ],
+    category: ['#30a2da', '#fc4f30', '#e5ae38', '#6d904f', '#8b8b8b'],
   },
 
   symbol: {
     filled: true,
     opacity: 0.5,
     shape: 'circle',
-    size: 40
+    size: 40,
   },
 
   shape: { stroke: markColor },
 
   style: {
     bar: {
-      fill: markColor,
       binSpacing: 2,
-      stroke: null
-    }
+      fill: markColor,
+      stroke: null,
+    },
   },
-
 };
 
 export default fiveThirtyEightTheme;

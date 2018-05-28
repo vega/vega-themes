@@ -82,7 +82,6 @@ const fiveThirtyEightTheme: Config = {
 
   line: {
     stroke: markColor,
-    strokeCap: 'butt',
     strokeWidth: 2,
   },
 

@@ -54,6 +54,12 @@ vega.themes.<b>vox</b>
 
 Chart theme modeled after Vox.
 
+<a name="fivethirtyeight" href="#fivethirtyeight">#</a>
+vega.themes.<b>fivethirtyeight</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-fiveThirtyEight.js "Source")
+
+Chart theme modeled after FiveThirtyEight.
+
 <a name="dark" href="#dark">#</a>
 vega.themes.<b>dark</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-dark.js "Source")

@@ -90,6 +90,7 @@ const fivethirtyeighttheme: Config = {
   },
 
   path: { stroke: markColor, strokeWidth: 0.5 },
+  point: { filled: true }, 
   rect: { fill: markColor },
 
   range: {

@@ -1,7 +1,8 @@
 import { Config } from 'vega';
 
 const markColor = '#30a2da';
-const axisColor = '#f0f0f0';
+const axisColor = '#cbcbcb';
+const backgroundColor = '#f0f0f0';
 
 const fiveThirtyEightTheme: Config = {
   arc: { fill: markColor },
@@ -16,24 +17,24 @@ const fiveThirtyEightTheme: Config = {
     domainColor: 'black',
     domainWidth: 3,
     grid: true,
-    gridColor: '#cbcbcb',
+    gridColor: axisColor,
     gridWidth: 1,
     labelFontSize: 12,
     labelPadding: 4,
-    tickColor: '#cbcbcb',
+    tickColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
   },
 
   axisLeft: {
-    domainColor: '#cbcbcb',
+    domainColor: axisColor,
     domainWidth: 1,
-    gridColor: '#cbcbcb',
+    gridColor: axisColor,
     gridWidth: 1,
     labelFontSize: 12,
     labelPadding: 4,
-    tickColor: '#cbcbcb',
+    tickColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -41,13 +42,13 @@ const fiveThirtyEightTheme: Config = {
   },
 
   axisRight: {
-    domainColor: '#cbcbcb',
+    domainColor: axisColor,
     domainWidth: 1,
-    gridColor: '#cbcbcb',
+    gridColor: axisColor,
     gridWidth: 1,
     labelFontSize: 12,
     labelPadding: 4,
-    tickColor: '#cbcbcb',
+    tickColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -59,17 +60,20 @@ const fiveThirtyEightTheme: Config = {
     domainColor: 'black',
     domainWidth: 3,
     grid: true,
-    gridColor: '#cbcbcb',
+    gridColor: axisColor,
     gridWidth: 1,
     labelFontSize: 12,
     labelPadding: 4,
-    tickColor: '#cbcbcb',
+    tickColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
   },
 
-  background: '#f0f0f0',
+  background: backgroundColor,
+  group: {
+    fill: backgroundColor,
+  },
 
   legend: {
     labelFontSize: 11,
@@ -89,7 +93,30 @@ const fiveThirtyEightTheme: Config = {
   rect: { fill: markColor },
 
   range: {
-    category: ['#30a2da', '#fc4f30', '#e5ae38', '#6d904f', '#8b8b8b'],
+    category: [
+      '#30a2da',
+      '#fc4f30',
+      '#e5ae38',
+      '#6d904f',
+      '#8b8b8b',
+      '#b96db8',
+      '#ff9e27',
+      '#56cc60',
+      '#52d2ca',
+      '#52689e',
+      '#545454',
+      '#9fe4f8',
+    ],
+
+    diverging: [
+      '#cc0020',
+      '#e77866',
+      '#f6e7e1',
+      '#d6e8ed',
+      '#91bfd9',
+      '#1d78b5',
+    ],
+    heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5'],
   },
 
   symbol: {
@@ -106,6 +133,13 @@ const fiveThirtyEightTheme: Config = {
       fill: markColor,
       stroke: null,
     },
+  },
+
+  title: {
+    anchor: 'start',
+    fontSize: 24,
+    fontWeight: 600,
+    offset: 20,
   },
 };
 

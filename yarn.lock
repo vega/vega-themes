@@ -15,8 +15,8 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.1.3.tgz#5c16980936c4e3c83ce64e8ed71fb37bd7aea135"
 
 "@types/node@^9.0.0":
-  version "9.6.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.18.tgz#092e13ef64c47e986802c9c45a61c1454813b31d"
+  version "9.6.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.19.tgz#696b4f12e60295c55ec8d202a534aef7765434fb"
 
 abbrev@1:
   version "1.1.1"
@@ -1470,9 +1470,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.0.tgz#054de8d5fb1a4405c845d16183f58a2c301f6f16"
+prettier@^1.13.3:
+  version "1.13.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.3.tgz#e74c09a7df6519d472ca6febaa37cf7addb48a20"
 
 process-nextick-args@~2.0.0:
   version "2.0.0"
@@ -1940,17 +1940,17 @@ tsutils@^2.12.1:
   dependencies:
     tslib "^1.8.1"
 
-typescript@^2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
+typescript@^2.8.4:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.4.tgz#0b1db68e6bdfb0b767fa2ab642136a35b059b199"
 
 ua-parser-js@0.7.17:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
-uglify-js@^3.3.27:
-  version "3.3.27"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.27.tgz#eb8c3c9429969f86ff5b0a2422ffc78c3cea8cc0"
+uglify-js@^3.3.28:
+  version "3.3.28"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.28.tgz#0efb9a13850e11303361c1051f64d2ec68d9be06"
   dependencies:
     commander "~2.15.0"
     source-map "~0.6.1"
@@ -2005,18 +2005,18 @@ vega-dataflow@^4.0.0, vega-dataflow@^4.0.1:
     vega-loader "^3.0.0"
     vega-util "^1.7.0"
 
-vega-embed@^3.13.2:
-  version "3.13.2"
-  resolved "https://registry.yarnpkg.com/vega-embed/-/vega-embed-3.13.2.tgz#c82460d8c39953c4c69f340de007266d447abebf"
+vega-embed@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/vega-embed/-/vega-embed-3.14.0.tgz#92403ffbd4f05913f53096a3f01bf087e6f0f900"
   dependencies:
     d3-selection "^1.3.0"
     json-stringify-pretty-compact "^1.2.0"
     semver "^5.5.0"
-    vega-lib "^4.0.0-rc.1 || ^3.3.0"
+    vega-lib "^4.0.0-rc.2 || ^3.3.0"
     vega-lite "^2.4.3"
     vega-schema-url-parser "^1.0.0"
-    vega-themes "^2.0.0"
-    vega-tooltip "^0.10.1"
+    vega-themes "^2.1.0"
+    vega-tooltip "^0.11.0"
 
 vega-encode@^3.0.0:
   version "3.0.0"
@@ -2067,7 +2067,7 @@ vega-hierarchy@^3.0.0:
     vega-dataflow "^4.0.0"
     vega-util "^1.7.0"
 
-"vega-lib@^4.0.0-rc.1 || ^3.3.0":
+"vega-lib@^4.0.0-rc.2 || ^3.3.0":
   version "4.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/vega-lib/-/vega-lib-4.0.0-rc.2.tgz#c77fba0adb55d85b44d2bd3421dc5d0ef22fdd9b"
   dependencies:
@@ -2177,15 +2177,15 @@ vega-statistics@^1.2.1:
   dependencies:
     d3-array "1"
 
-vega-themes@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/vega-themes/-/vega-themes-2.0.0.tgz#3f314ac9f9ffeeb1f61866897408416fa36ec607"
+vega-themes@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vega-themes/-/vega-themes-2.1.0.tgz#83879e95cdc14bd960620d60bdc4547ee690666a"
   dependencies:
-    vega-typings "^0.2.15"
+    vega-typings "^0.3.3"
 
-vega-tooltip@^0.10.1:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/vega-tooltip/-/vega-tooltip-0.10.4.tgz#a465b7f714917e63d61d78f1fdd724f4b70c1b67"
+vega-tooltip@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/vega-tooltip/-/vega-tooltip-0.11.0.tgz#b7212911615b73c2359d41d53db25f45862a8623"
   dependencies:
     vega-util "^1.7.0"
 
@@ -2202,9 +2202,13 @@ vega-typings@*, vega-typings@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/vega-typings/-/vega-typings-0.3.3.tgz#122f4224aa6f98aa6516e60278d40f43aa2d0787"
 
-vega-typings@^0.2.15, vega-typings@^0.2.16:
+vega-typings@^0.2.16:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/vega-typings/-/vega-typings-0.2.17.tgz#9f26775173b3d234d68dfe4c482037743786b8d2"
+
+vega-typings@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/vega-typings/-/vega-typings-0.3.4.tgz#ea17c3c9c0114eadf658bcf04788fd603e0e83eb"
 
 vega-util@1, vega-util@^1.7.0:
   version "1.7.0"

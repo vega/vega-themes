@@ -1,4 +1,4 @@
-import { AxisConfig, Config } from 'vega';
+import { Config } from './config';
 
 const lightColor = '#fff';
 const medColor = '#aaa';

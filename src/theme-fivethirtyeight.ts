@@ -1,4 +1,4 @@
-import { Config } from 'vega';
+import { Config } from './config';
 
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';

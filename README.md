@@ -72,4 +72,8 @@ To view and test different themes, follow these steps:
 
 1. Install dependencies via `yarn`.
 2. Launch a local web server in the top-level directory with `yarn start`.
-3. Make changes. The website will automatically reload. 
+3. Make changes. The website will automatically reload.
+
+## Release Process
+
+To release a new version, make sure that everything works. Then run `yarn version` and bump the version number. Lastly, push to GitHub (with the release tag). [Travis](https://travis-ci.org/vega/vega-themes/builds) will build a bundle and make the [npm release](https://www.npmjs.com/package/vega-themes) automatically.

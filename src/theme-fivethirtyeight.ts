@@ -20,10 +20,10 @@ const fivethirtyeighttheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -32,9 +32,9 @@ const fivethirtyeighttheme: Config = {
   axisLeft: {
     domainColor: axisColor,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    grid: true,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -48,9 +48,9 @@ const fivethirtyeighttheme: Config = {
   axisRight: {
     domainColor: blackTitle,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    grid: true,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -68,10 +68,10 @@ const fivethirtyeighttheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -83,8 +83,8 @@ const fivethirtyeighttheme: Config = {
   },
 
   legend: {
-    labelFontSize: 11,
     labelColor: blackTitle,
+    labelFontSize: 11,
     padding: 1,
     symbolSize: 30,
     symbolType: 'square',
@@ -129,10 +129,10 @@ const fivethirtyeighttheme: Config = {
   },
 
   symbol: {
+    filled: true
     opacity: 0.5,
     shape: 'circle',
-    size: 40,
-    filled: True
+    size: 40
   },
 
   shape: { stroke: markColor },

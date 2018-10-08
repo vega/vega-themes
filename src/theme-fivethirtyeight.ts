@@ -137,6 +137,7 @@ const fivethirtyeighttheme: Config = {
     opacity: 0.5,
     shape: 'circle',
     size: 40,
+    strokeWidth: 1,
   },
 
   shape: { stroke: markColor },

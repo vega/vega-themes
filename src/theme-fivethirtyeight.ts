@@ -25,6 +25,7 @@ const fivethirtyeighttheme: Config = {
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
   },
@@ -41,6 +42,7 @@ const fivethirtyeighttheme: Config = {
     labelColor: axisColor,
     tickSize: 10,
     ticks: true,
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
   },
@@ -57,6 +59,7 @@ const fivethirtyeighttheme: Config = {
     labelColor: axisColor,
     tickSize: 10,
     ticks: true,
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
   },
@@ -73,6 +76,7 @@ const fivethirtyeighttheme: Config = {
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
   },
@@ -88,9 +92,9 @@ const fivethirtyeighttheme: Config = {
     padding: 1,
     symbolSize: 30,
     symbolType: 'square',
+    titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
-    titleColor: blackTitle
+    titlePadding: 10
   },
 
   line: {

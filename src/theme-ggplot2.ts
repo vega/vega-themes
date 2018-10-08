@@ -1,4 +1,4 @@
-import { Config } from 'vega';
+import { Config } from './config';
 
 const markColor = '#000';
 

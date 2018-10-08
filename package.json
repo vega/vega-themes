@@ -1,6 +1,6 @@
 {
   "name": "vega-themes",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "Themes for stylized Vega and Vega-Lite visualizations.",
   "keywords": [
     "vega",
@@ -53,18 +53,18 @@
     "start": "concurrently --kill-others -n Server,Typescript,Rollup 'npm run serve' 'tsc -w' 'rollup -c -w'"
   },
   "devDependencies": {
-    "@types/node": "^8.0.0",
-    "browser-sync": "^2.23.7",
-    "concurrently": "^3.5.1",
-    "prettier": "^1.12.1",
-    "rollup": "^0.58.2",
-    "tslint": "^5.9.1",
-    "tslint-config-prettier": "^1.12.0",
-    "typescript": "^2.8.3",
-    "uglify-js": "^3.3.23",
-    "vega-embed": "^3.8.0"
+    "@types/node": "^10.5.2",
+    "browser-sync": "^2.24.5",
+    "concurrently": "^3.6.0",
+    "prettier": "^1.13.7",
+    "rollup": "^0.62.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.9.2",
+    "uglify-js": "^3.4.4",
+    "vega-embed": "^3.18.1"
   },
   "dependencies": {
-    "vega-typings": "^0.2.16"
+    "vega-typings": "^0.3.30"
   }
 }

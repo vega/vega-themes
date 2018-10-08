@@ -19,13 +19,12 @@
       }
       #views { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: left; }
       .view { flex: 0; margin-right: 5px; margin-bottom: 10px; }
-      canvas, svg { border: 1px dashed #ccc; }
+      .view > canvas, .view > svg { border: 1px dashed #ccc; }
       .vega-bind { line-height: 18px; margin-bottom: 2px; }
       .vega-bind-name { display: inline-block; width: 100px; }
       .vega-bind input[type="range"] { width: 400px; }
       .vega-bind label { margin: 0 0.5em 0 2px; }
     </style>
-    <link rel="stylesheet" href="../node_modules/vega-embed/vega-embed.css"/>
   </head>
   <body>
     <div id="header">
@@ -89,7 +88,7 @@ function refresh() {
     var el = document.createElement('div');
     el.setAttribute('class', 'view');
     container.appendChild(el);
-    vegaEmbed(el, spec, {render: renderType, config: theme});
+    vegaEmbed(el, spec, {render: renderType, config: theme, defaultStyle: true});
   });
 }
     </script>

@@ -133,7 +133,7 @@ const fivethirtyeighttheme: Config = {
   },
 
   symbol: {
-    filled: true
+    filled: true,
     opacity: 0.5,
     shape: 'circle',
     size: 40

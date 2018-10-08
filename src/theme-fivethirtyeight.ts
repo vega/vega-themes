@@ -10,7 +10,7 @@ const fivethirtyeighttheme: Config = {
   area: { fill: markColor },
 
   axisBand: {
-    grid: false,
+    grid: false
   },
 
   axisBottom: {
@@ -27,7 +27,7 @@ const fivethirtyeighttheme: Config = {
     tickSize: 10,
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
+    titlePadding: 10
   },
 
   axisLeft: {
@@ -44,7 +44,7 @@ const fivethirtyeighttheme: Config = {
     ticks: true,
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
+    titlePadding: 1
   },
 
   axisRight: {
@@ -61,7 +61,7 @@ const fivethirtyeighttheme: Config = {
     ticks: true,
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
+    titlePadding: 10
   },
 
   axisTop: {
@@ -78,7 +78,7 @@ const fivethirtyeighttheme: Config = {
     tickSize: 10,
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
+    titlePadding: 10
   },
 
   background: backgroundColor,
@@ -99,7 +99,7 @@ const fivethirtyeighttheme: Config = {
 
   line: {
     stroke: markColor,
-    strokeWidth: 2,
+    strokeWidth: 2
   },
 
   path: { stroke: markColor, strokeWidth: 0.5 },
@@ -118,7 +118,7 @@ const fivethirtyeighttheme: Config = {
       '#52d2ca',
       '#52689e',
       '#545454',
-      '#9fe4f8',
+      '#9fe4f8'
     ],
 
     diverging: [
@@ -127,7 +127,7 @@ const fivethirtyeighttheme: Config = {
       '#f6e7e1',
       '#d6e8ed',
       '#91bfd9',
-      '#1d78b5',
+      '#1d78b5'
     ],
     heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5'],
   },
@@ -145,16 +145,16 @@ const fivethirtyeighttheme: Config = {
     bar: {
       binSpacing: 2,
       fill: markColor,
-      stroke: null,
-    },
+      stroke: null
+    }
   },
 
   title: {
     anchor: 'start',
     fontSize: 24,
     fontWeight: 600,
-    offset: 20,
-  },
+    offset: 20
+  }
 };
 
 export default fivethirtyeighttheme;

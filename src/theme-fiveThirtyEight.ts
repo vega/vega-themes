@@ -3,6 +3,7 @@ import { Config } from 'vega';
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';
 const backgroundColor = '#f0f0f0';
+const blackTitle = '#1c1c1c';
 
 const fiveThirtyEightTheme: Config = {
   arc: { fill: markColor },
@@ -14,14 +15,15 @@ const fiveThirtyEightTheme: Config = {
 
   axisBottom: {
     domain: false,
-    domainColor: 'black',
+    domainColor: blackTitle,
     domainWidth: 3,
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
+    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -32,9 +34,11 @@ const fiveThirtyEightTheme: Config = {
     domainWidth: 1,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    grid: true,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
+    labelColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -42,13 +46,15 @@ const fiveThirtyEightTheme: Config = {
   },
 
   axisRight: {
-    domainColor: axisColor,
+    domainColor: blackTitle,
     domainWidth: 1,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    grid: true,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
+    labelColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -57,14 +63,15 @@ const fiveThirtyEightTheme: Config = {
 
   axisTop: {
     domain: false,
-    domainColor: 'black',
+    domainColor: blackTitle,
     domainWidth: 3,
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
+    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -77,11 +84,13 @@ const fiveThirtyEightTheme: Config = {
 
   legend: {
     labelFontSize: 11,
+    labelColor: blackTitle,
     padding: 1,
     symbolSize: 30,
     symbolType: 'square',
     titleFontSize: 14,
     titlePadding: 10,
+    titleColor: blackTitle
   },
 
   line: {
@@ -123,6 +132,7 @@ const fiveThirtyEightTheme: Config = {
     opacity: 0.5,
     shape: 'circle',
     size: 40,
+    filled: True
   },
 
   shape: { stroke: markColor },

@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.12.10",
+    "@types/json-stable-stringify": "^1.0.32",
     "browser-sync": "^2.26.3",
     "concurrently": "^4.1.0",
     "prettier": "^1.15.2",

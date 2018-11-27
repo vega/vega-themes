@@ -3,8 +3,9 @@ import { Config } from './config';
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';
 const backgroundColor = '#f0f0f0';
+const blackTitle = '#1c1c1c';
 
-const fivethirtyeighttheme: Config = {
+const fiveThirtyEightTheme: Config = {
   arc: { fill: markColor },
   area: { fill: markColor },
 
@@ -14,12 +15,13 @@ const fivethirtyeighttheme: Config = {
 
   axisBottom: {
     domain: false,
-    domainColor: 'black',
+    domainColor: blackTitle,
     domainWidth: 3,
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelColor: axisColor,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
@@ -30,9 +32,11 @@ const fivethirtyeighttheme: Config = {
   axisLeft: {
     domainColor: axisColor,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelColor: axisColor,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
@@ -42,11 +46,13 @@ const fivethirtyeighttheme: Config = {
   },
 
   axisRight: {
-    domainColor: axisColor,
+    domainColor: blackTitle,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelColor: axisColor,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
@@ -57,12 +63,13 @@ const fivethirtyeighttheme: Config = {
 
   axisTop: {
     domain: false,
-    domainColor: 'black',
+    domainColor: blackTitle,
     domainWidth: 3,
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelFontSize: 12,
+    labelColor: axisColor,
+    labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
     tickSize: 10,
@@ -76,10 +83,12 @@ const fivethirtyeighttheme: Config = {
   },
 
   legend: {
+    labelColor: blackTitle,
     labelFontSize: 11,
     padding: 1,
     symbolSize: 30,
     symbolType: 'square',
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
   },
@@ -90,7 +99,6 @@ const fivethirtyeighttheme: Config = {
   },
 
   path: { stroke: markColor, strokeWidth: 0.5 },
-  point: { filled: true },
   rect: { fill: markColor },
 
   range: {
@@ -121,10 +129,10 @@ const fivethirtyeighttheme: Config = {
   },
 
   symbol: {
-    opacity: 1,
+    filled: true,
+    opacity: 0.5,
     shape: 'circle',
     size: 40,
-    strokeWidth: 1,
   },
 
   shape: { stroke: markColor },
@@ -145,4 +153,4 @@ const fivethirtyeighttheme: Config = {
   },
 };
 
-export default fivethirtyeighttheme;
+export default fiveThirtyEightTheme;

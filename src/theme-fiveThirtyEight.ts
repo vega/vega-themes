@@ -1,4 +1,4 @@
-import { Config } from 'vega';
+import { Config } from './config';
 
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';
@@ -20,10 +20,10 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -32,13 +32,13 @@ const fiveThirtyEightTheme: Config = {
   axisLeft: {
     domainColor: axisColor,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    grid: true,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -48,13 +48,13 @@ const fiveThirtyEightTheme: Config = {
   axisRight: {
     domainColor: blackTitle,
     domainWidth: 1,
+    grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    grid: true,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     ticks: true,
     titleFontSize: 14,
@@ -68,10 +68,10 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
+    labelColor: axisColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
-    labelColor: axisColor,
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
@@ -83,14 +83,14 @@ const fiveThirtyEightTheme: Config = {
   },
 
   legend: {
-    labelFontSize: 11,
     labelColor: blackTitle,
+    labelFontSize: 11,
     padding: 1,
     symbolSize: 30,
     symbolType: 'square',
+    titleColor: blackTitle,
     titleFontSize: 14,
     titlePadding: 10,
-    titleColor: blackTitle
   },
 
   line: {
@@ -129,10 +129,10 @@ const fiveThirtyEightTheme: Config = {
   },
 
   symbol: {
+    filled: true,
     opacity: 0.5,
     shape: 'circle',
     size: 40,
-    filled: True
   },
 
   shape: { stroke: markColor },

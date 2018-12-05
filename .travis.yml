@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '10'
+- '11'
 script:
 - yarn lint
 - yarn build
@@ -12,6 +12,6 @@ deploy:
   on:
     tags: true
     repo: vega/vega-themes
-    node: '10'
+    node: '11'
   api_key:
     secure: D4SFfhy9H4M26FLyKTjGPXGgq0Gv8qz7V3tMMXxUQhMR46rckODDglVRukV0m49nm+DHdbVowznhTICM8CrIzR1nBEkrNwkD+mVwekgjRWJwhyH5umuQiCsYFrfvZp037fMKY0zLeeH6iXFW+a1AnbjDl8buchBYz7R5vJ4dpDZhXjNT+UCFP1sWncjvfIsFsthUaue7Lkwnce9pQics3KTXcM0yiKPc10mXbE5TOhaIK5G5pE5I9/3I5EP9tMoIOQZLCoE6c9Np38WtcL6twpuQgPU0yo3VOatqF+y1jO4G6nx9cO6uWXmOYQYxJTsdWhP6W7CVaQuP1pO8a78DaRW0wkx/Z1sA51QZQ6wNPdkW6Wm9o4K8ku9X9BzT5HsVL0YVg+sq6h3rCYJmxpftmY4gnRu4quoiurxUgbkQtj7vS3xNnsZ/H8U2UeAVAEVd/Jfk3t9Sx/gedhUL6cpE0Tk5ZpTf2PqIxa365dIaRkzr7gAgSWlLeuHGB3l+5YOqdi3a/ZXjJID+6B/9KKRatvwwHBsUCx2IvZfKluxLHmzZzpEBILkZkKYCYubo9rtiDfR6qTFHChTElp3yPNw2pVlyGFsVV2zRaqG/xIjzwOkk+zA0o0smJUOgGv1uMY7a8Eql27BkQUjHVvUHtqoLPD3/sF/nlEDALLGBzgevEa4=

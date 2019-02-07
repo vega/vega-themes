@@ -4,3 +4,4 @@ export { default as quartz } from './theme-quartz';
 export { default as vox } from './theme-vox';
 export { default as dark } from './theme-dark';
 export { default as fivethirtyeight } from './theme-fivethirtyeight';
+export { default as latimes } from './theme-latimes';

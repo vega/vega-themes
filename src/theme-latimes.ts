@@ -47,8 +47,8 @@ const latimesTheme: Config = {
       tickSize: 2,
       titleAlign: "left",
       titleAngle: 0,
-      titleY: -11,
-      titleX: -45
+      titleX: -45,
+      titleY: -11
   },
 
   legend: {

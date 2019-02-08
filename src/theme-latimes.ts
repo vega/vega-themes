@@ -1,20 +1,20 @@
 import { Config } from './config';
 
-const markColor = '#82c6df';
-const titleFont = "Benton Gothic Bold, sans"
-const titleFontWeight = "normal";
-const labelFont = "Benton Gothic, sans"
+const labelFont = "Benton Gothic, sans";
 const labelFontSize = 11.5;
+const markColor = '#82c6df';
+const titleFont = "Benton Gothic Bold, sans";
+const titleFontWeight = "normal";
 
 const latimesTheme: Config = {
   background: '#ffffff',
 
   title: {
-      fontSize: 24,
-      font: titleFont,
       anchor: "start",
+      font: titleFont,
+      fontSize: 24,
       fontColor: "#000000",
-      fontWeight: "normal",
+      fontWeight: "normal"
   },
 
   arc: { fill: markColor },
@@ -26,39 +26,39 @@ const latimesTheme: Config = {
   symbol: { fill: markColor, size: 30 },
 
   axis: {
-      titleFont: titleFont,
-      titleFontSize: 13,
-      titleFontWeight: titleFontWeight,
       labelFont: labelFont,
       labelFontSize: labelFontSize,
       labelFontWeight: "normal",
+      titleFont: titleFont,
+      titleFontSize: 13,
+      titleFontWeight: titleFontWeight
   },
 
   axisX: {
       labelAngle: 0,
       labelPadding: 4,
-      tickSize: 3,
+      tickSize: 3
   },
 
   axisY: {
-      titleAngle: 0,
-      titleY: -11,
-      titleX: -45,
-      titleAlign: "left",
       labelBaseline: "middle",
-      tickSize: 2,
       minExtent: 45,
       maxExtent: 45,
+      tickSize: 2,
+      titleAlign: "left",
+      titleAngle: 0,
+      titleY: -11,
+      titleX: -45
   },
 
   legend: {
-    titleFont: titleFont,
-    titleFontSize: 13,
-    titleFontWeight: titleFontWeight,
     labelFont: labelFont,
     labelFontSize: labelFontSize,
     symbolType: 'square',
-  },
+    titleFont: titleFont,
+    titleFontSize: 13,
+    titleFontWeight: titleFontWeight
+  }
 
 };
 

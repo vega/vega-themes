@@ -1,9 +1,9 @@
 import { Config } from './config';
 
 const markColor = '#82c6df';
-const titleFont = "Benton Gothic Bold"
+const titleFont = "Benton Gothic Bold, sans"
 const titleFontWeight = "normal";
-const labelFont = "Benton Gothic"
+const labelFont = "Benton Gothic, sans"
 const labelFontSize = 11.5;
 
 const latimesTheme: Config = {

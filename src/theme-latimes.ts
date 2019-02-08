@@ -42,8 +42,8 @@ const latimesTheme: Config = {
 
   axisY: {
       labelBaseline: "middle",
-      minExtent: 45,
       maxExtent: 45,
+      minExtent: 45,
       tickSize: 2,
       titleAlign: "left",
       titleAngle: 0,

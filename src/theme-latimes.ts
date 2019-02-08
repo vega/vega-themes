@@ -12,8 +12,8 @@ const latimesTheme: Config = {
   title: {
       anchor: "start",
       font: titleFont,
-      fontSize: 24,
       fontColor: "#000000",
+      fontSize: 24,
       fontWeight: "normal"
   },
 
@@ -26,12 +26,12 @@ const latimesTheme: Config = {
   symbol: { fill: markColor, size: 30 },
 
   axis: {
-      labelFont: labelFont,
-      labelFontSize: labelFontSize,
+      labelFont,
+      labelFontSize,
       labelFontWeight: "normal",
-      titleFont: titleFont,
+      titleFont,
       titleFontSize: 13,
-      titleFontWeight: titleFontWeight
+      titleFontWeight
   },
 
   axisX: {
@@ -52,12 +52,12 @@ const latimesTheme: Config = {
   },
 
   legend: {
-    labelFont: labelFont,
-    labelFontSize: labelFontSize,
+    labelFont,
+    labelFontSize,
     symbolType: 'square',
-    titleFont: titleFont,
+    titleFont,
     titleFontSize: 13,
-    titleFontWeight: titleFontWeight
+    titleFontWeight
   }
 
 };

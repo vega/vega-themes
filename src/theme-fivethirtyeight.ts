@@ -132,7 +132,7 @@ const fiveThirtyEightTheme: Config = {
 
   symbol: {
     filled: true,
-    shape: 'circle'
+    shape: 'circle',
   },
 
   shape: { stroke: markColor },
@@ -142,7 +142,7 @@ const fiveThirtyEightTheme: Config = {
       binSpacing: 2,
       fill: markColor,
       stroke: null,
-    }
+    },
   },
 
   title: {

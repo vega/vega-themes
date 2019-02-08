@@ -1,20 +1,20 @@
 import { Config } from './config';
 
-const labelFont = "Benton Gothic, sans";
+const labelFont = 'Benton Gothic, sans';
 const labelFontSize = 11.5;
 const markColor = '#82c6df';
-const titleFont = "Benton Gothic Bold, sans";
-const titleFontWeight = "normal";
+const titleFont = 'Benton Gothic Bold, sans';
+const titleFontWeight = 'normal';
 
 const latimesTheme: Config = {
   background: '#ffffff',
 
   title: {
-      anchor: "start",
+      anchor: 'start',
       font: titleFont,
-      fontColor: "#000000",
+      fontColor: '#000000',
       fontSize: 24,
-      fontWeight: "normal"
+      fontWeight: 'normal'
   },
 
   arc: { fill: markColor },
@@ -28,7 +28,7 @@ const latimesTheme: Config = {
   axis: {
       labelFont,
       labelFontSize,
-      labelFontWeight: "normal",
+      labelFontWeight: 'normal',
       titleFont,
       titleFontSize: 13,
       titleFontWeight
@@ -41,11 +41,11 @@ const latimesTheme: Config = {
   },
 
   axisY: {
-      labelBaseline: "middle",
+      labelBaseline: 'middle',
       maxExtent: 45,
       minExtent: 45,
       tickSize: 2,
-      titleAlign: "left",
+      titleAlign: 'left',
       titleAngle: 0,
       titleX: -45,
       titleY: -11

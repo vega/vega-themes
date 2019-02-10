@@ -1,10 +1,53 @@
 import { Config } from './config';
 
+const headlineFontSize = 22;
+const headlineFontWeight = 'normal';
 const labelFont = 'Benton Gothic, sans';
 const labelFontSize = 11.5;
+const labelFontWeight = 'normal';
 const markColor = '#82c6df';
+const markHighlight = '#006d8f';
+const markDemocrat = '#5789b8';
+const markRepublican = '#d94f54';
 const titleFont = 'Benton Gothic Bold, sans';
 const titleFontWeight = 'normal';
+const titleFontSize = 13;
+const colorSchemes = {
+    'category-6': [
+        '#ec8431',
+        '#829eb1',
+        '#c89d29',
+        '#3580b1',
+        '#adc839',
+        '#ab7fb4'
+    ],
+    'fire-7': [
+        '#fbf2c7',
+        '#f9e39c',
+        '#f8d36e',
+        '#f4bb6a',
+        '#e68a4f',
+        '#d15a40',
+        '#ab4232',
+    ],
+    'ice-7': [
+        '#edefee',
+        '#dadfe2',
+        '#c4ccd2',
+        '#a6b7c6',
+        '#849eae',
+        '#607785',
+        '#47525d'
+    ],
+    'fireandice-6': [
+        '#e68a4f',
+        '#f4bb6a',
+        '#f9e39c',
+        '#dadfe2',
+        '#a6b7c6',
+        '#849eae'
+    ]
+}
 
 const latimesTheme: Config = {
   background: '#ffffff',
@@ -13,13 +56,13 @@ const latimesTheme: Config = {
       anchor: 'start',
       font: titleFont,
       fontColor: '#000000',
-      fontSize: 24,
-      fontWeight: 'normal'
+      fontSize: headlineFontSize,
+      fontWeight: headlineFontWeight
   },
 
   arc: { fill: markColor },
   area: { fill: markColor },
-  line: { stroke: markColor },
+  line: { stroke: markColor, strokeWidth: 2 },
   path: { stroke: markColor },
   rect: { fill: markColor },
   shape: { stroke: markColor },
@@ -28,9 +71,9 @@ const latimesTheme: Config = {
   axis: {
       labelFont,
       labelFontSize,
-      labelFontWeight: 'normal',
+      labelFontWeight,
       titleFont,
-      titleFontSize: 13,
+      titleFontSize,
       titleFontWeight
   },
 
@@ -56,8 +99,16 @@ const latimesTheme: Config = {
     labelFontSize,
     symbolType: 'square',
     titleFont,
-    titleFontSize: 13,
+    titleFontSize,
     titleFontWeight
+  },
+
+  range: {
+    category: colorSchemes['category-6'],
+    diverging: colorSchemes['fireandice-6'],
+    heatmap: colorSchemes['fire-7'],
+    ordinal: colorSchemes['fire-7'],
+    ramp: colorSchemes['fire-7']
   }
 
 };

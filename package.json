@@ -44,7 +44,7 @@
     "build": "rollup -c",
     "clean": "rm -rf build && mkdir build",
     "format": "tslint -p . --fix && prettier --write '{src,test}/**/*.ts'",
-    "lint": "tslint -p . && prettier --list-different '{src,test}/**/*.ts'",
+    "lint": "tslint -p . && prettier --check '{src,test}/**/*.ts'",
     "postbuild": "terser build/vega-themes.js -cm > build/vega-themes.min.js",
     "prebuild": "npm run clean && tsc",
     "prepublishOnly": "npm run build",

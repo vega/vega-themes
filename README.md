@@ -66,6 +66,12 @@ vega.themes.<b>dark</b>
 
 A dark theme.
 
+<a name="latimes" href="#latimes">#</a>
+vega.themes.<b>latimes</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-latimes.js "Source")
+
+Chart theme modeled after the Los Angeles Times.
+
 ## Instructions for Developers
 
 To view and test different themes, follow these steps:

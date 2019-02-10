@@ -30,6 +30,14 @@ const colorSchemes = {
         '#d15a40',
         '#ab4232',
     ],
+    'fireandice-6': [
+        '#e68a4f',
+        '#f4bb6a',
+        '#f9e39c',
+        '#dadfe2',
+        '#a6b7c6',
+        '#849eae'
+    ],
     'ice-7': [
         '#edefee',
         '#dadfe2',
@@ -38,14 +46,6 @@ const colorSchemes = {
         '#849eae',
         '#607785',
         '#47525d'
-    ],
-    'fireandice-6': [
-        '#e68a4f',
-        '#f4bb6a',
-        '#f9e39c',
-        '#dadfe2',
-        '#a6b7c6',
-        '#849eae'
     ]
 }
 

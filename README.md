@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/vega-themes.svg)](https://www.npmjs.com/package/vega-themes)
 [![Build Status](https://travis-ci.org/vega/vega-themes.svg?branch=master)](https://travis-ci.org/vega/vega-themes) [![Greenkeeper badge](https://badges.greenkeeper.io/vega/vega-themes.svg)](https://greenkeeper.io/)
 
-Themes for stylized [Vega](https://vega.github.io/vega/) and [Vega-Lite](https://vega.github.io/vega-lite/) visualizations. For Vega version 3 and Vega-Lite 2.
+Themes for stylized [Vega](https://vega.github.io/vega/) and [Vega-Lite](https://vega.github.io/vega-lite/) visualizations. For Vega version 3+ and Vega-Lite 2+.
 
 A Vega *theme* is a [configuration object](https://vega.github.io/vega/docs/config/)
 with default settings for a variety of visual properties such as colors, typefaces,

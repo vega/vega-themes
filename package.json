@@ -53,19 +53,18 @@
     "start": "concurrently --kill-others -n Server,Typescript,Rollup 'npm run serve' 'tsc -w' 'rollup -c -w'"
   },
   "devDependencies": {
-    "@types/json-stable-stringify": "^1.0.32",
-    "@types/node": "^10.12.12",
+    "@types/node": "^10.12.24",
     "browser-sync": "^2.26.3",
     "concurrently": "^4.1.0",
-    "prettier": "^1.15.3",
-    "rollup": "^0.67.4",
-    "terser": "^3.11.0",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.2.1",
-    "vega-embed": "^3.25.0"
+    "prettier": "^1.16.4",
+    "rollup": "^1.1.2",
+    "terser": "^3.16.1",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3",
+    "vega-embed": "^3.29.0"
   },
   "dependencies": {
-    "vega-typings": "^0.3.51"
+    "vega-typings": "^0.3.53"
   }
 }

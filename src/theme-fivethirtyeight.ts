@@ -2,8 +2,10 @@ import { Config } from './config';
 
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';
+const guideLabelColor = '#999';
+const guideTitleColor = '#333';
 const backgroundColor = '#f0f0f0';
-const blackTitle = '#1c1c1c';
+const blackTitle = '#333';
 
 const fiveThirtyEightTheme: Config = {
   arc: { fill: markColor },
@@ -20,7 +22,7 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelColor: axisColor,
+    labelColor: guideLabelColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -35,7 +37,7 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelColor: axisColor,
+    labelColor: guideLabelColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -51,7 +53,7 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelColor: axisColor,
+    labelColor: guideLabelColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -68,7 +70,7 @@ const fiveThirtyEightTheme: Config = {
     grid: true,
     gridColor: axisColor,
     gridWidth: 1,
-    labelColor: axisColor,
+    labelColor: guideLabelColor,
     labelFontSize: 10,
     labelPadding: 4,
     tickColor: axisColor,
@@ -130,9 +132,7 @@ const fiveThirtyEightTheme: Config = {
 
   symbol: {
     filled: true,
-    opacity: 0.5,
     shape: 'circle',
-    size: 40,
   },
 
   shape: { stroke: markColor },

@@ -1,7 +1,7 @@
 import { Config } from './config';
 
 const lightColor = '#fff';
-const medColor = '#aaa';
+const medColor = '#888';
 
 const darkTheme: Config = {
   background: '#333',

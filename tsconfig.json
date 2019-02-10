@@ -12,6 +12,7 @@
   },
   "files": ["src/index.ts"],
   "include": [
-    "typings/*.d.ts"
+    "typings/*.d.ts",
+    "node_modules/vega-lite/typings"
   ]
 }

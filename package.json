@@ -47,6 +47,7 @@
     "lint": "tslint -p . && prettier --check '{src,test}/**/*.ts'",
     "postbuild": "terser build/vega-themes.js -cm > build/vega-themes.min.js",
     "prebuild": "npm run clean && tsc",
+    "copy:build": "rsync -r build/* test/build",
     "deploy:gh": "npm run build && npm run copy:build && gh-pages -d test && npm run clean",
     "prepublishOnly": "npm run build",
     "preversion": "npm run lint",

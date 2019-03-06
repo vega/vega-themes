@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "width": 200,
+  "height": 150,
+  "padding": 5,
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"index": 1,  "value": 28, "position": 1, "category": "A"},
+        {"index": 2,  "value": 55, "position": 2, "category": "A"},
+        {"index": 3,  "value": 43, "position": 3, "category": "A"},
+        {"index": 4,  "value": 91, "position": 4, "category": "A"},
+        {"index": 5,  "value": 81, "position": 5, "category": "A"},
+        {"index": 6,  "value": 53, "position": 6, "category": "A"},
+        {"index": 7,  "value": 19, "position": 1, "category": "B"},
+        {"index": 8,  "value": 87, "position": 2, "category": "B"},
+        {"index": 9,  "value": 52, "position": 3, "category": "B"},
+        {"index": 10, "value": 48, "position": 4, "category": "B"},
+        {"index": 11, "value": 24, "position": 5, "category": "B"},
+        {"index": 12, "value": 49, "position": 6, "category": "B"},
+        {"index": 13, "value": 87, "position": 1, "category": "C"},
+        {"index": 14, "value": 66, "position": 2, "category": "C"},
+        {"index": 15, "value": 17, "position": 3, "category": "C"},
+        {"index": 16, "value": 27, "position": 4, "category": "C"},
+        {"index": 17, "value": 68, "position": 5, "category": "C"},
+        {"index": 18, "value": 16, "position": 6, "category": "C"}
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "scalePosition",
+      "type": "linear",
+      "range": "width",
+      "domain": {"data": "table", "field": "position"},
+      "zero": false
+    },
+    {
+      "name": "scaleValue",
+      "type": "linear",
+      "range": "height",
+      "domain": {"data": "table", "field": "value"},
+      "zero": true,
+      "nice": true
+    },
+    {
+      "name": "colorCategory",
+      "type": "ordinal",
+      "range": "category",
+      "domain": {"data": "table", "field": "category"}
+    },
+    {
+      "name": "symbolCategory",
+      "type": "ordinal",
+      "range": "symbol",
+      "domain": {"data": "table", "field": "category"}
+    }
+  ],
+
+  "axes": [
+    {"orient": "left", "scale": "scaleValue", "title": "Value"},
+    {"orient": "bottom", "scale": "scalePosition", "title": "Position"}
+  ],
+
+  "legends": [
+    {"stroke": "colorCategory", "shape": "symbolCategory", "title": "Category"}
+  ],
+
+  "marks": [
+    {
+      "type": "symbol",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "scalePosition", "field": "position"},
+          "y": {"scale": "scaleValue", "field": "value"},
+          "shape": {"scale": "symbolCategory", "field": "category"},
+          "stroke": {"scale": "colorCategory", "field": "category"}
+        }
+      }
+    }
+  ]
+}

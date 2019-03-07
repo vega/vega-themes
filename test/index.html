@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Vega Theme Test</title>
@@ -7,7 +7,11 @@
     <script src="../node_modules/vega-embed/build/vega-embed.js"></script>
     <script src="../build/vega-themes.js"></script>
     <style>
-      body { margin: 10px; font: 14px Helvetica Neue; position: relative; }
+      body {
+        margin: 10px;
+        font: 14px Helvetica Neue;
+        position: relative;
+      }
       #header {
         position: fixed;
         top: 0;
@@ -17,13 +21,35 @@
         height: 20px;
         background: white;
       }
-      #views { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: left; }
-      .view { flex: 0; margin-right: 5px; margin-bottom: 10px; }
-      .view > canvas, .view > svg { border: 1px dashed #ccc; }
-      .vega-bind { line-height: 18px; margin-bottom: 2px; }
-      .vega-bind-name { display: inline-block; width: 100px; }
-      .vega-bind input[type="range"] { width: 400px; }
-      .vega-bind label { margin: 0 0.5em 0 2px; }
+      #views {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+      }
+      .view {
+        flex: 0;
+        margin-right: 5px;
+        margin-bottom: 10px;
+      }
+      .view > canvas,
+      .view > svg {
+        border: 1px dashed #ccc;
+      }
+      .vega-bind {
+        line-height: 18px;
+        margin-bottom: 2px;
+      }
+      .vega-bind-name {
+        display: inline-block;
+        width: 100px;
+      }
+      .vega-bind input[type="range"] {
+        width: 400px;
+      }
+      .vega-bind label {
+        margin: 0 0.5em 0 2px;
+      }
     </style>
   </head>
   <body>
@@ -38,70 +64,81 @@
         <option value="dark">dark</option>
         <option value="fivethirtyeight">fivethirtyeight</option>
         <option value="latimes">latimes</option>
-      </select> &nbsp;
-      Renderer:
+      </select>
+      &nbsp; Renderer:
       <select id="render">
         <option value="svg" selected>svg</option>
         <option value="canvas">canvas</option>
-      </select> <br/>
+      </select>
+      <br />
     </div>
     <div id="views"></div>
     <script>
-var files = [
-  'bars.vg.json',
-  'lines.vg.json',
-  'scatter.vg.json',
-  'stacked.vl.json',
-  'area.vl.json',
-  'heatmap.vl.json',
-  'ramp.vl.json'
-];
-var specs = [];
+      var files = [
+        "bars.vg.json",
+        "lines.vg.json",
+        "scatter.vg.json",
+        "stacked.vl.json",
+        "area.vl.json",
+        "heatmap.vl.json",
+        "ramp.vl.json"
+      ];
+      var specs = [];
 
-var container = document.querySelector('#views'),
-    loader = vega.loader(),
-    renderType = 'svg',
-    theme = {};
+      var container = document.querySelector("#views"),
+        loader = vega.loader(),
+        renderType = "svg",
+        theme = {};
 
-Promise.all(
-  files.map(function(file) {
-    var index = specs.length;
-    specs.push(file);
-    return loader.load(file).then(function(json) {
-      specs[index] = JSON.parse(json);
-    });
-  }))
- .then(function() { refresh(); })
- .catch(function(err) { console.error(err, err.stack); });
+      Promise.all(
+        files.map(function(file) {
+          var index = specs.length;
+          specs.push(file);
+          return loader.load(file).then(function(json) {
+            specs[index] = JSON.parse(json);
+          });
+        })
+      )
+        .then(function() {
+          refresh();
+        })
+        .catch(function(err) {
+          console.error(err, err.stack);
+        });
 
-var themes = document.querySelector('#themes');
-themes.addEventListener('change', function() {
-  theme = vegaThemes[themes.options[themes.selectedIndex].value];
-  localStorage.setItem('theme',JSON.stringify(theme));
-  localStorage.setItem('themes',themes.selectedIndex)
-  refresh();
-});
+      var themes = document.querySelector("#themes");
+      var currentLocation = window.location;
+      var url = new URL(currentLocation);
+      themes.addEventListener("change", function() {
+        theme = vegaThemes[themes.options[themes.selectedIndex].value];
+        url.searchParams.set("id", `${themes.selectedIndex}`);
+        window.location.href = url;
+      });
 
-var render = document.querySelector('#render');
-render.addEventListener('change', function() {
-  renderType = render.options[render.selectedIndex].value;
-  refresh();
-});
+      var render = document.querySelector("#render");
+      render.addEventListener("change", function() {
+        renderType = render.options[render.selectedIndex].value;
+        refresh();
+      });
 
-function refresh() {
-  var earlierChoosenTheme = JSON.parse(localStorage.getItem('theme'))
-  if(earlierChoosenTheme){
-    theme=earlierChoosenTheme
-    themes.selectedIndex=localStorage.getItem('themes')
-  }
-  container.innerHTML = '';
-  specs.forEach(function(spec) {
-    var el = document.createElement('div');
-    el.setAttribute('class', 'view');
-    container.appendChild(el);
-    vegaEmbed(el, spec, {render: renderType, config: theme, defaultStyle: true});
-  });
-}
+      function refresh() {
+        var earlierChoosenTheme = url.searchParams.get("id");
+        if (earlierChoosenTheme) {
+          theme = vegaThemes[themes.options[earlierChoosenTheme].value];
+          themes.selectedIndex = url.searchParams.get("id");
+        }
+        container.innerHTML = "";
+        specs.forEach(function(spec) {
+          var el = document.createElement("div");
+          el.setAttribute("class", "view");
+          container.appendChild(el);
+          vegaEmbed(el, spec, {
+            render: renderType,
+            config: theme,
+            defaultStyle: true
+          });
+        });
+      }
     </script>
   </body>
 </html>

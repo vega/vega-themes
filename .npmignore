@@ -1,7 +1,6 @@
 .DS_Store
 .editorconfig
 .gitignore
-dist
 examples
 node_modules
 tslint.json

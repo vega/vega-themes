@@ -108,9 +108,12 @@
         });
 
       var themes = document.querySelector("#themes");
+      var currentLocation = window.location;
+      var url = new URL(currentLocation);
       themes.addEventListener("change", function() {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
-        refresh();
+        url.searchParams.set("id", `${themes.selectedIndex}`);
+        window.location.href = url;        
       });
 
       var render = document.querySelector("#render");
@@ -120,6 +123,11 @@
       });
 
       function refresh() {
+        var earlierChoosenTheme = url.searchParams.get("id");
+        if (earlierChoosenTheme) {
+          theme = vegaThemes[themes.options[earlierChoosenTheme].value];
+          themes.selectedIndex = url.searchParams.get("id");
+        }
         container.innerHTML = "";
         specs.forEach(function(spec) {
           var el = document.createElement("div");

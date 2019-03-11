@@ -112,21 +112,27 @@
       var url = new URL(currentLocation);
       themes.addEventListener("change", function() {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
-        url.searchParams.set("id", `${themes.selectedIndex}`);
+        url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
         window.location.href = url;        
       });
 
       var render = document.querySelector("#render");
       render.addEventListener("change", function() {
         renderType = render.options[render.selectedIndex].value;
+        url.searchParams.set("renderer",`${render.options[render.selectedIndex].value}`)
         refresh();
       });
 
       function refresh() {
-        var earlierChoosenTheme = url.searchParams.get("id");
+        var earlierChoosenTheme = url.searchParams.get("theme");
+        var selectedGraph = url.searchParams.get("renderer"); 
         if (earlierChoosenTheme) {
-          theme = vegaThemes[themes.options[earlierChoosenTheme].value];
-          themes.selectedIndex = url.searchParams.get("id");
+          theme = vegaThemes[earlierChoosenTheme];
+          themes.value = earlierChoosenTheme;
+        }
+        if(selectedGraph){
+          render.value = selectedGraph;
+          renderType = selectedGraph;
         }
         container.innerHTML = "";
         specs.forEach(function(spec) {

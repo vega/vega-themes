@@ -3,8 +3,8 @@
   <head>
     <title>Vega Theme Test</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc14"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
     <script src="build/vega-themes.js"></script>
     <style>
       body {
@@ -101,6 +101,17 @@
         })
       )
         .then(function() {
+          var earlierChoosenTheme = url.searchParams.get("theme");
+          var selectedGraph = url.searchParams.get("renderer");
+          if (earlierChoosenTheme) {
+            theme = vegaThemes[earlierChoosenTheme];
+            themes.value = earlierChoosenTheme;
+          }
+          if (selectedGraph) {
+            render.value = selectedGraph;
+            renderType = selectedGraph;
+          }
+
           refresh();
         })
         .catch(function(err) {
@@ -108,14 +119,26 @@
         });
 
       var themes = document.querySelector("#themes");
+      var currentLocation = window.location;
+      var url = new URL(currentLocation);
       themes.addEventListener("change", function() {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
+        url.searchParams.set(
+          "theme",
+          `${themes.options[themes.selectedIndex].value}`
+        );
+        window.history.replaceState(null, null, url);
         refresh();
       });
 
       var render = document.querySelector("#render");
       render.addEventListener("change", function() {
         renderType = render.options[render.selectedIndex].value;
+        url.searchParams.set(
+          "renderer",
+          `${render.options[render.selectedIndex].value}`
+        );
+        window.history.replaceState(null, null, url);
         refresh();
       });
 

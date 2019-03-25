@@ -3,8 +3,8 @@
   <head>
     <title>Vega Theme Test</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc14"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
     <script src="build/vega-themes.js"></script>
     <style>
       body {
@@ -101,6 +101,17 @@
         })
       )
         .then(function() {
+          var earlierChoosenTheme = url.searchParams.get("theme");
+          var selectedGraph = url.searchParams.get("renderer");
+          if (earlierChoosenTheme) {
+            theme = vegaThemes[earlierChoosenTheme];
+            themes.value = earlierChoosenTheme;
+          }
+          if (selectedGraph) {
+            render.value = selectedGraph;
+            renderType = selectedGraph;
+          }
+
           refresh();
         })
         .catch(function(err) {
@@ -132,16 +143,6 @@
       });
 
       function refresh() {
-        var earlierChoosenTheme = url.searchParams.get("theme");
-        var selectedGraph = url.searchParams.get("renderer");
-        if (earlierChoosenTheme) {
-          theme = vegaThemes[earlierChoosenTheme];
-          themes.value = earlierChoosenTheme;
-        }
-        if (selectedGraph) {
-          render.value = selectedGraph;
-          renderType = selectedGraph;
-        }
         container.innerHTML = "";
         specs.forEach(function(spec) {
           var el = document.createElement("div");

@@ -34,31 +34,31 @@ input specification must be re-parsed with a new theme.
 vega.themes.<b>excel</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-excel.js "Source")
 
-Chart theme modeled after Microsoft Excel.
+Chart theme modeled after Microsoft Excel. [Try it here](https://vega.github.io/vega-themes/?theme=excel).
 
 <a name="ggplot2" href="#ggplot2">#</a>
 vega.themes.<b>ggplot2</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-ggplot2.js "Source")
 
-Chart theme modeled after ggplot2.
+Chart theme modeled after ggplot2. [Try it here](https://vega.github.io/vega-themes/?theme=ggplot2).
 
 <a name="quartz" href="#quartz">#</a>
 vega.themes.<b>quartz</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-quartz.js "Source")
 
-Chart theme modeled after Quartz.
+Chart theme modeled after Quartz. [Try it here](https://vega.github.io/vega-themes/?theme=quartz).
 
 <a name="vox" href="#vox">#</a>
 vega.themes.<b>vox</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-vox.js "Source")
 
-Chart theme modeled after Vox.
+Chart theme modeled after Vox. [Try it here](https://vega.github.io/vega-themes/?theme=vox).
 
 <a name="fivethirtyeight" href="#fivethirtyeight">#</a>
 vega.themes.<b>fivethirtyeight</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-fiveThirtyEight.js "Source")
 
-Chart theme modeled after FiveThirtyEight.
+Chart theme modeled after FiveThirtyEight. [Try it here](https://vega.github.io/vega-themes/?theme=dark).
 
 <a name="dark" href="#dark">#</a>
 vega.themes.<b>dark</b>
@@ -70,7 +70,7 @@ A dark theme.
 vega.themes.<b>latimes</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-latimes.js "Source")
 
-Chart theme modeled after the Los Angeles Times.
+Chart theme modeled after the Los Angeles Times. [Try it here](https://vega.github.io/vega-themes/?theme=latimes).
 
 ## Instructions for Developers
 

@@ -1,0 +1,29 @@
+{
+  "config": {"view": {"width": 400, "height": 300}},
+  "data": {
+    "url": "https://vega.github.io/vega-datasets/data/iowa-electricity.csv",
+    "format": {"type": "csv"}
+  },
+  "title": "Iowa's renewable energy boom",
+  "mark": "area",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "source",
+      "legend": {"title": "Electricity source"}
+    },
+    "x": {
+      "type": "temporal",
+      "axis": {"title": "Year"},
+      "field": "year",
+      "timeUnit": "year"
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {"format": ".0%", "title": "Share of net generation"},
+      "field": "net_generation",
+      "stack": "normalize"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json"
+}

@@ -56,15 +56,15 @@ Chart theme modeled after Vox. [Try it here](https://vega.github.io/vega-themes/
 
 <a name="fivethirtyeight" href="#fivethirtyeight">#</a>
 vega.themes.<b>fivethirtyeight</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-fiveThirtyEight.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-fivethirtyeight.js "Source")
 
-Chart theme modeled after FiveThirtyEight. [Try it here](https://vega.github.io/vega-themes/?theme=dark).
+Chart theme modeled after FiveThirtyEight. [Try it here](https://vega.github.io/vega-themes/?theme=fivethirtyeight).
 
 <a name="dark" href="#dark">#</a>
 vega.themes.<b>dark</b>
 [<>](https://github.com/vega/vega-themes/blob/master/src/theme-dark.js "Source")
 
-A dark theme.
+A dark theme. [Try it here](https://vega.github.io/vega-themes/?theme=dark).
 
 <a name="latimes" href="#latimes">#</a>
 vega.themes.<b>latimes</b>

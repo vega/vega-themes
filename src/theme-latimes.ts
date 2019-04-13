@@ -2,14 +2,14 @@ import { Config } from './config';
 
 const headlineFontSize = 22;
 const headlineFontWeight = 'normal';
-const labelFont = 'Benton Gothic, sans';
+const labelFont = 'Benton Gothic, sans-serif';
 const labelFontSize = 11.5;
 const labelFontWeight = 'normal';
 const markColor = '#82c6df';
 const markHighlight = '#006d8f';
 const markDemocrat = '#5789b8';
 const markRepublican = '#d94f54';
-const titleFont = 'Benton Gothic Bold, sans';
+const titleFont = 'Benton Gothic Bold, sans-serif';
 const titleFontWeight = 'normal';
 const titleFontSize = 13;
 const colorSchemes = {

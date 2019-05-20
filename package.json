@@ -61,7 +61,7 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.4",
     "rollup": "^1.7.0",
-    "terser": "^3.17.0",
+    "terser": "^4.0.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.4000",

@@ -12,6 +12,7 @@ const markRepublican = '#d94f54';
 const titleFont = 'Benton Gothic Bold, sans-serif';
 const titleFontWeight = 'normal';
 const titleFontSize = 13;
+
 const colorSchemes = {
   'category-6': [
     '#ec8431',
@@ -54,8 +55,8 @@ const latimesTheme: Config = {
 
   title: {
     anchor: 'start',
+    color: '#000000',
     font: titleFont,
-    fontColor: '#000000',
     fontSize: headlineFontSize,
     fontWeight: headlineFontWeight,
   },

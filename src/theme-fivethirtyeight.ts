@@ -130,7 +130,7 @@ const fiveThirtyEightTheme: Config = {
     heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5'],
   },
 
-  symbol: {
+  point: {
     filled: true,
     shape: 'circle',
   },

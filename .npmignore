@@ -3,7 +3,12 @@
 .eslintrc.js
 .gitignore
 .prettierignore
+.travis.yml
+.vscode/
 examples
 node_modules
 prettier.config.js
+rollup.config.js
+src/
+tsconfig.json
 tslint.json

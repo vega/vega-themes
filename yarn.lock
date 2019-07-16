@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.1.0", "@babel/core@^7.4.5":
+"@babel/core@^7.1.0", "@babel/core@^7.5.4":
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.5.4.tgz#4c32df7ad5a58e9ea27ad025c11276324e0b4ddd"
   integrity sha512-+DaeBEpYq6b2+ZmHx3tHspC+ZRflrvLqwfv8E3hNr5LVQoyBnL8RPKSBCg+rK2W2My9PWlujBiqd0ZPsR9Q6zQ==
@@ -549,7 +549,7 @@
     "@babel/helper-regex" "^7.4.4"
     regexpu-core "^4.5.4"
 
-"@babel/preset-env@^7.4.5":
+"@babel/preset-env@^7.5.4":
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.5.4.tgz#64bc15041a3cbb0798930319917e70fcca57713d"
   integrity sha512-hFnFnouyRNiH1rL8YkX1ANCNAUVC8Djwdqfev8i1415tnAG+7hlA5zhZ0Q/3Q5gkop4HioIPbCEWAalqcbxRoQ==
@@ -645,7 +645,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@beemo/cli@^1.0.0":
+"@beemo/cli@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@beemo/cli/-/cli-1.0.2.tgz#7b5769c4dc22c5670f56ce687b5201364839f402"
   integrity sha512-4VgKSjxXPXd9rHjGf4/R+NF6n2wl21lHWYn1q95xSMOPHheH+dzLpu1HJ1M/bv6XFH//ZxxzM+ZL4BVejSKj8w==
@@ -654,7 +654,7 @@
     semver "^6.2.0"
     yargs "^13.2.4"
 
-"@beemo/core@^1.0.0":
+"@beemo/core@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@beemo/core/-/core-1.0.3.tgz#a79961997234e1b7953eb0d632e1d4f02b28a991"
   integrity sha512-Y7Eumj9leYFRGv4tEOHv8NOEnLifpandl7hMmLqQFVtMUdsWppnIm5kddWgtoEDu1Q/XtfZxhz1vOsX+lImxVw==
@@ -686,21 +686,21 @@
   resolved "https://registry.yarnpkg.com/@beemo/dependency-graph/-/dependency-graph-1.0.1.tgz#572b547a435a3b6e8d964c6caadef5e3d2a7284f"
   integrity sha512-ATco1JiZX+B+J5BdEmMGKPcnrjebOAV1TIe/r1VAydnGTSQLbmqt7H/QAG1+VfPlWB8k+bRBOAiw3HjTTleemg==
 
-"@beemo/driver-babel@^1.0.0":
+"@beemo/driver-babel@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@beemo/driver-babel/-/driver-babel-1.0.2.tgz#1cf8a01ec10f587b8fb524593be4f704d9353ceb"
   integrity sha512-xA4+YmmtCN3j6WUQhDdU2fbapMuaXDwss1LAHzYl9ZLr/y8BPZPLQ2fJHWWe2Cjazf6k7xOYuacJ9dDRgAu8/w==
   dependencies:
     rimraf "^2.6.3"
 
-"@beemo/driver-eslint@^1.0.0":
+"@beemo/driver-eslint@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@beemo/driver-eslint/-/driver-eslint-1.0.3.tgz#10a8288e4e0924bb0dada75964567d69aac4d586"
   integrity sha512-5bau9Hx41QS20B2gJyHwxDCUxrrp64iKOL5zhv1jqJg0gr76tgsvY6zM5q+PHVJZhNCJ/gIQBrHcaE7RzzxSaQ==
   dependencies:
     "@boost/event" "^1.0.2"
 
-"@beemo/driver-jest@^1.0.0":
+"@beemo/driver-jest@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@beemo/driver-jest/-/driver-jest-1.0.2.tgz#842bdd815874d9df9c6f4b08be3c4a7a32991ba1"
   integrity sha512-0I0srBhbPgFt+v6BFQQSqr8Wu3ImQU9vc6IDGVVJRdu/cCcKzd+Sy4bn9YzseIcycJ5bOE2krqmcPTyOv9eZow==
@@ -708,7 +708,7 @@
     "@jest/types" "^24.8.0"
     utility-types "^3.7.0"
 
-"@beemo/driver-prettier@^1.0.0":
+"@beemo/driver-prettier@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@beemo/driver-prettier/-/driver-prettier-1.0.2.tgz#7329015ed05dab4fdcbeb5fdb316703bfea189aa"
   integrity sha512-wECpIt0vMp0Bqw0QYyyIPW89kqFmIPHAaMUGlXWQ3zFfMT83NGhU4wv3aJXdsgcmFu8z3d4vYnnXmkuqZecqwg==
@@ -716,7 +716,7 @@
     "@boost/event" "^1.0.2"
     "@types/prettier" "*"
 
-"@beemo/driver-typescript@^1.0.0":
+"@beemo/driver-typescript@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@beemo/driver-typescript/-/driver-typescript-1.1.0.tgz#bfdf724b781567a17e538ab1d77cf92d311eea9f"
   integrity sha512-eWAs5HFJqmmf1HAGeXr+yu7BLCKUsWMnaHNb7MDhyL04HvVLFfF5AUZExET2valsMSqcqE9RdGPMRPiwzzQMTw==
@@ -1087,7 +1087,7 @@
   resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
   integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
 
-"@types/jest@^24.0.13":
+"@types/jest@^24.0.15":
   version "24.0.15"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.15.tgz#6c42d5af7fe3b44ffff7cc65de7bf741e8fa427f"
   integrity sha512-MU1HIvWUme74stAoc3mgAi+aMlgKOudgEvQDIm1v4RkrDudBh1T+NFp5sftpBAdXdx1J0PbdpJ+M2EsSOi1djA==
@@ -1168,7 +1168,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^1.9.0":
+"@typescript-eslint/eslint-plugin@^1.12.0":
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-1.12.0.tgz#96b4e08b5f998a198b8414508b1a289f9e8c549a"
   integrity sha512-J/ZTZF+pLNqjXBGNfq5fahsoJ4vJOkYbitWPavA05IrZ7BXUaf4XWlhUB/ic1lpOGTRpLWF+PLAePjiHp6dz8g==
@@ -1187,7 +1187,7 @@
     "@typescript-eslint/typescript-estree" "1.12.0"
     eslint-scope "^4.0.0"
 
-"@typescript-eslint/parser@^1.9.0":
+"@typescript-eslint/parser@^1.12.0":
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.12.0.tgz#9965895ec4745578185965d63f21510f93a3f35a"
   integrity sha512-0uzbaa9ZLCA5yMWJywnJJ7YVENKGWVUhJDV5UrMoldC5HoI54W5kkdPhTfmtFKpPFp93MIwmJj0/61ztvmz5Dw==
@@ -2579,10 +2579,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
-  integrity sha512-sZwhSTHVVz78+kYD3t5pCWSYEdVSBR0PXnwjDRsUs8ytIrK8PLXw+6FKp8r3Z7rx4ZszdetWlXYKOHoUrrwPlA==
+eslint-config-prettier@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#f429a53bde9fc7660e6353910fd996d6284d3c25"
+  integrity sha512-vDrcCFE3+2ixNT5H83g28bO/uYAwibJxerXPj+E7op4qzBCsAV36QfvdAyVOoNxKAH2Os/e01T/2x++V0LPukA==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -2593,7 +2593,7 @@ eslint-plugin-prettier@^3.1.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react@^7.13.0:
+eslint-plugin-react@^7.14.2:
   version "7.14.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.14.2.tgz#94c193cc77a899ac0ecbb2766fbef88685b7ecc1"
   integrity sha512-jZdnKe3ip7FQOdjxks9XPN0pjUKZYq48OggNMd16Sk+8VXx6JOvXmlElxROCgp7tiUsTsze3jd78s/9AFJP2mA==
@@ -5340,7 +5340,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^1.17.1:
+prettier@^1.18.2:
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
   integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
@@ -6872,30 +6872,30 @@ vega-hierarchy@^4.0.1:
     vega-dataflow "^5.1.0"
     vega-util "^1.8.0"
 
-vega-lite-dev-config@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/vega-lite-dev-config/-/vega-lite-dev-config-0.1.7.tgz#1643122303528f8ea3790bfe2e7871e5f0654103"
-  integrity sha512-sp07ECcrF6aZ2qX5LFxg0TKLfRwU3HmwQBSt3Lkmvd8/VUN0y82igEdNQdXmGK/tHdC0q84/oY/umMtEflhrkQ==
+vega-lite-dev-config@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/vega-lite-dev-config/-/vega-lite-dev-config-0.1.16.tgz#5de099c5a6e2eb08392dd7e5479bf8082af85c04"
+  integrity sha512-Doj7k52k31qFBR5q69ZvFPdl0Se7hEPAVc9dCgy5mFo3POEN4jHyY2vQJkkDgADnXMhmeZtBLbHxxStkVCQdwQ==
   dependencies:
-    "@babel/core" "^7.4.5"
-    "@babel/preset-env" "^7.4.5"
-    "@beemo/cli" "^1.0.0"
-    "@beemo/core" "^1.0.0"
-    "@beemo/driver-babel" "^1.0.0"
-    "@beemo/driver-eslint" "^1.0.0"
-    "@beemo/driver-jest" "^1.0.0"
-    "@beemo/driver-prettier" "^1.0.0"
-    "@beemo/driver-typescript" "^1.0.0"
-    "@types/jest" "^24.0.13"
-    "@typescript-eslint/eslint-plugin" "^1.9.0"
-    "@typescript-eslint/parser" "^1.9.0"
+    "@babel/core" "^7.5.4"
+    "@babel/preset-env" "^7.5.4"
+    "@beemo/cli" "^1.0.2"
+    "@beemo/core" "^1.0.3"
+    "@beemo/driver-babel" "^1.0.2"
+    "@beemo/driver-eslint" "^1.0.3"
+    "@beemo/driver-jest" "^1.0.2"
+    "@beemo/driver-prettier" "^1.0.2"
+    "@beemo/driver-typescript" "^1.1.0"
+    "@types/jest" "^24.0.15"
+    "@typescript-eslint/eslint-plugin" "^1.12.0"
+    "@typescript-eslint/parser" "^1.12.0"
     babel-jest "^24.8.0"
     eslint "^5.16.0"
-    eslint-config-prettier "^4.3.0"
+    eslint-config-prettier "^6.0.0"
     eslint-plugin-prettier "^3.1.0"
-    eslint-plugin-react "^7.13.0"
+    eslint-plugin-react "^7.14.2"
     jest "^24.8.0"
-    prettier "^1.17.1"
+    prettier "^1.18.2"
     ts-jest "^24.0.2"
 
 vega-lite@^3.0.0:

@@ -1,4 +1,4 @@
-import { Config } from './config';
+import {Config} from './config';
 
 const markColor = '#30a2da';
 const axisColor = '#cbcbcb';
@@ -8,80 +8,32 @@ const backgroundColor = '#f0f0f0';
 const blackTitle = '#333';
 
 const fiveThirtyEightTheme: Config = {
-  arc: { fill: markColor },
-  area: { fill: markColor },
+  arc: {fill: markColor},
+  area: {fill: markColor},
+
+  axis: {
+    domainColor: axisColor,
+    grid: true,
+    gridColor: axisColor,
+    gridWidth: 1,
+    labelColor: guideLabelColor,
+    labelFontSize: 10,
+    titleColor: guideTitleColor,
+    tickColor: axisColor,
+    tickSize: 10,
+    titleFontSize: 14,
+    titlePadding: 10,
+    labelPadding: 4
+  },
 
   axisBand: {
-    grid: false,
-  },
-
-  axisBottom: {
-    domain: false,
-    domainColor: blackTitle,
-    domainWidth: 3,
-    grid: true,
-    gridColor: axisColor,
-    gridWidth: 1,
-    labelColor: guideLabelColor,
-    labelFontSize: 10,
-    labelPadding: 4,
-    tickColor: axisColor,
-    tickSize: 10,
-    titleFontSize: 14,
-    titlePadding: 10,
-  },
-
-  axisLeft: {
-    domainColor: axisColor,
-    domainWidth: 1,
-    grid: true,
-    gridColor: axisColor,
-    gridWidth: 1,
-    labelColor: guideLabelColor,
-    labelFontSize: 10,
-    labelPadding: 4,
-    tickColor: axisColor,
-    tickSize: 10,
-    ticks: true,
-    titleFontSize: 14,
-    titlePadding: 10,
-  },
-
-  axisRight: {
-    domainColor: blackTitle,
-    domainWidth: 1,
-    grid: true,
-    gridColor: axisColor,
-    gridWidth: 1,
-    labelColor: guideLabelColor,
-    labelFontSize: 10,
-    labelPadding: 4,
-    tickColor: axisColor,
-    tickSize: 10,
-    ticks: true,
-    titleFontSize: 14,
-    titlePadding: 10,
-  },
-
-  axisTop: {
-    domain: false,
-    domainColor: blackTitle,
-    domainWidth: 3,
-    grid: true,
-    gridColor: axisColor,
-    gridWidth: 1,
-    labelColor: guideLabelColor,
-    labelFontSize: 10,
-    labelPadding: 4,
-    tickColor: axisColor,
-    tickSize: 10,
-    titleFontSize: 14,
-    titlePadding: 10,
+    grid: false
   },
 
   background: backgroundColor,
+
   group: {
-    fill: backgroundColor,
+    fill: backgroundColor
   },
 
   legend: {
@@ -92,16 +44,16 @@ const fiveThirtyEightTheme: Config = {
     symbolType: 'square',
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10,
+    titlePadding: 10
   },
 
   line: {
     stroke: markColor,
-    strokeWidth: 2,
+    strokeWidth: 2
   },
 
-  path: { stroke: markColor, strokeWidth: 0.5 },
-  rect: { fill: markColor },
+  path: {stroke: markColor, strokeWidth: 0.5},
+  rect: {fill: markColor},
 
   range: {
     category: [
@@ -116,41 +68,34 @@ const fiveThirtyEightTheme: Config = {
       '#52d2ca',
       '#52689e',
       '#545454',
-      '#9fe4f8',
+      '#9fe4f8'
     ],
 
-    diverging: [
-      '#cc0020',
-      '#e77866',
-      '#f6e7e1',
-      '#d6e8ed',
-      '#91bfd9',
-      '#1d78b5',
-    ],
-    heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5'],
+    diverging: ['#cc0020', '#e77866', '#f6e7e1', '#d6e8ed', '#91bfd9', '#1d78b5'],
+    heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5']
   },
 
   point: {
     filled: true,
-    shape: 'circle',
+    shape: 'circle'
   },
 
-  shape: { stroke: markColor },
+  shape: {stroke: markColor},
 
   style: {
     bar: {
       binSpacing: 2,
       fill: markColor,
-      stroke: null,
-    },
+      stroke: null
+    }
   },
 
   title: {
     anchor: 'start',
     fontSize: 24,
     fontWeight: 600,
-    offset: 20,
-  },
+    offset: 20
+  }
 };
 
 export default fiveThirtyEightTheme;

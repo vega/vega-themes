@@ -1,4 +1,4 @@
-import { Config } from './config';
+import {Config} from './config';
 
 const lightColor = '#fff';
 const medColor = '#888';
@@ -6,22 +6,22 @@ const medColor = '#888';
 const darkTheme: Config = {
   background: '#333',
 
-  title: { color: lightColor },
+  title: {color: lightColor},
 
   style: {
     'guide-label': {
-      fill: lightColor,
+      fill: lightColor
     },
     'guide-title': {
-      fill: lightColor,
-    },
+      fill: lightColor
+    }
   },
 
   axis: {
     domainColor: lightColor,
     gridColor: medColor,
-    tickColor: lightColor,
-  },
+    tickColor: lightColor
+  }
 };
 
 export default darkTheme;

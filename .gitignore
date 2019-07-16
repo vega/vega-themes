@@ -1,5 +1,7 @@
 .DS_Store
+.eslintignore
 .eslintrc.js
+.prettierignore
 beemo-error.log
 build/
 examples/build/

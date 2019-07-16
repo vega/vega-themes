@@ -1,19 +1,19 @@
-import { Config } from './config';
+import {Config} from './config';
 
 const markColor = '#000';
 
 const ggplot2Theme: Config = {
   group: {
-    fill: '#e5e5e5',
+    fill: '#e5e5e5'
   },
 
-  arc: { fill: markColor },
-  area: { fill: markColor },
-  line: { stroke: markColor },
-  path: { stroke: markColor },
-  rect: { fill: markColor },
-  shape: { stroke: markColor },
-  symbol: { fill: markColor, size: 40 },
+  arc: {fill: markColor},
+  area: {fill: markColor},
+  line: {stroke: markColor},
+  path: {stroke: markColor},
+  rect: {fill: markColor},
+  shape: {stroke: markColor},
+  symbol: {fill: markColor, size: 40},
 
   axis: {
     domain: false,
@@ -25,13 +25,13 @@ const ggplot2Theme: Config = {
     tickColor: '#7F7F7F',
     tickSize: 5.67,
     titleFontSize: 16,
-    titleFontWeight: 'normal',
+    titleFontWeight: 'normal'
   },
 
   legend: {
     labelBaseline: 'middle',
     labelFontSize: 11,
-    symbolSize: 40,
+    symbolSize: 40
   },
 
   range: {
@@ -45,9 +45,9 @@ const ggplot2Theme: Config = {
       '#4D4D4D',
       '#C9C9C9',
       '#666666',
-      '#DCDCDC',
-    ],
-  },
+      '#DCDCDC'
+    ]
+  }
 };
 
 export default ggplot2Theme;

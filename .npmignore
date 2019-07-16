@@ -1,6 +1,9 @@
 .DS_Store
-.editorconfig
+.eslintignore
+.eslintrc.js
 .gitignore
+.prettierignore
 examples
 node_modules
+prettier.config.js
 tslint.json

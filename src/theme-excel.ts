@@ -1,17 +1,17 @@
-import { Config } from './config';
+import {Config} from './config';
 
 const markColor = '#4572a7';
 
 const excelTheme: Config = {
   background: '#fff',
 
-  arc: { fill: markColor },
-  area: { fill: markColor },
-  line: { stroke: markColor, strokeWidth: 2 },
-  path: { stroke: markColor },
-  rect: { fill: markColor },
-  shape: { stroke: markColor },
-  symbol: { fill: markColor, strokeWidth: 1.5, size: 50 },
+  arc: {fill: markColor},
+  area: {fill: markColor},
+  line: {stroke: markColor, strokeWidth: 2},
+  path: {stroke: markColor},
+  rect: {fill: markColor},
+  shape: {stroke: markColor},
+  symbol: {fill: markColor, strokeWidth: 1.5, size: 50},
 
   axis: {
     bandPosition: 0.5,
@@ -21,19 +21,19 @@ const excelTheme: Config = {
     gridWidth: 0.5,
     labelPadding: 10,
     tickSize: 5,
-    tickWidth: 0.5,
+    tickWidth: 0.5
   },
 
   axisBand: {
     grid: false,
-    tickExtra: true,
+    tickExtra: true
   },
 
   legend: {
     labelBaseline: 'middle',
     labelFontSize: 11,
     symbolSize: 50,
-    symbolType: 'square',
+    symbolType: 'square'
   },
 
   range: {
@@ -47,9 +47,9 @@ const excelTheme: Config = {
       '#94aace',
       '#d09393',
       '#b9cc98',
-      '#a99cbc',
-    ],
-  },
+      '#a99cbc'
+    ]
+  }
 };
 
 export default excelTheme;

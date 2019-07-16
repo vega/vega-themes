@@ -146,15 +146,16 @@
       }
 
       function setBackground(theme) {
+        document.body.style.background = null;
+        document.body.style.color = null;
+        if (!theme) {
+          return;
+        }
         if ('background' in theme) {
           document.body.style.background = theme.background;
-        } else {
-          document.body.style.background = null;
         }
         if ('title' in theme && 'color' in theme.title) {
           document.body.style.color = theme.title.color;
-        } else {
-          document.body.style.color = null;
         }
       }
     </script>

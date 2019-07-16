@@ -1,5 +1,8 @@
 .DS_Store
+.eslintrc.js
+beemo-error.log
 build/
 examples/build/
 node_modules
 npm-debug.log
+prettier.config.js

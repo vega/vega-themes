@@ -11,7 +11,7 @@
   "license": "BSD-3-Clause",
   "author": {
     "name": "UW Interactive Data Lab",
-    "url": "http://idl.cs.washington.edu"
+    "url": "https://idl.cs.washington.edu"
   },
   "contributors": [
     {
@@ -41,10 +41,12 @@
     "url": "https://github.com/vega/vega-themes.git"
   },
   "scripts": {
+    "prepare": "beemo create-config --silent",
     "clean": "rm -rf build && mkdir -p build examples/build",
-    "prettierbase": "prettier '{src,examples}/**/*.{ts,html,css}'",
-    "format": "tslint -p . --fix && yarn prettierbase --write",
-    "lint": "tslint -p . && yarn prettierbase --check",
+    "prettierbase": "beemo prettier 'examples/*.{html,scss,css}'",
+    "eslintbase": "beemo eslint '{src,test,typings}/**/*.ts' '*.js'",
+    "format": "yarn eslintbase --fix && yarn prettierbase --write",
+    "lint": "yarn eslintbase && yarn prettierbase --check",
     "prebuild": "yarn clean && tsc",
     "build": "rollup -c",
     "postbuild": "terser build/vega-themes.js -cm > build/vega-themes.min.js",
@@ -59,17 +61,22 @@
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.1",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.18.2",
     "rollup": "^1.17.0",
     "terser": "^4.1.2",
-    "tslint": "^5.18.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3",
     "vega": "^5.3.1",
-    "vega-lite": "^3.0.0"
+    "vega-lite": "^3.0.0",
+    "vega-lite-dev-config": "^0.1.7"
   },
   "peerDependencies": {
     "vega": "*",
     "vega-lite": "*"
+  },
+  "beemo": {
+    "module": "vega-lite-dev-config",
+    "drivers": [
+      "prettier",
+      "eslint"
+    ]
   }
 }

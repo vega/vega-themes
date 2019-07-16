@@ -14,17 +14,10 @@
         position: relative;
       }
       #header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        width: 100%;
+        padding: 10px 0 20px;
         height: 20px;
-        background: white;
-        z-index: 1000;
       }
       #views {
-        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
@@ -139,6 +132,7 @@
 
       function refresh() {
         container.innerHTML = '';
+        setBackground(theme);
         specs.forEach(function(spec) {
           var el = document.createElement('div');
           el.setAttribute('class', 'view');
@@ -149,6 +143,19 @@
             defaultStyle: true
           });
         });
+      }
+
+      function setBackground(theme) {
+        if ('background' in theme) {
+          document.body.style.background = theme.background;
+        } else {
+          document.body.style.background = null;
+        }
+        if ('title' in theme && 'color' in theme.title) {
+          document.body.style.color = theme.title.color;
+        } else {
+          document.body.style.color = null;
+        }
       }
     </script>
   </body>

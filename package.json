@@ -57,15 +57,15 @@
     "start": "yarn build && concurrently --kill-others -n Server,Typescript,Rollup 'yarn serve' 'tsc -w' 'rollup -c -w'"
   },
   "devDependencies": {
-    "@types/node": "^12.6.3",
+    "@types/node": "^12.6.8",
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.1",
     "gh-pages": "^2.0.1",
     "rollup": "^1.17.0",
     "terser": "^4.1.2",
     "typescript": "^3.5.3",
-    "vega": "^5.3.1",
-    "vega-lite": "^3.0.0",
+    "vega": "^5.4.0",
+    "vega-lite": "^3.4.0",
     "vega-lite-dev-config": "^0.1.16"
   },
   "peerDependencies": {

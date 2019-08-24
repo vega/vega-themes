@@ -39,7 +39,7 @@
         display: inline-block;
         width: 100px;
       }
-      .vega-bind input[type='range'] {
+      .vega-bind input[type="range"] {
         width: 400px;
       }
       .vega-bind label {
@@ -70,19 +70,19 @@
     <div id="views"></div>
     <script>
       var files = [
-        'bars.vg.json',
-        'lines.vg.json',
-        'scatter.vg.json',
-        'stacked.vl.json',
-        'area.vl.json',
-        'heatmap.vl.json',
-        'ramp.vl.json'
+        "bars.vg.json",
+        "lines.vg.json",
+        "scatter.vg.json",
+        "stacked.vl.json",
+        "area.vl.json",
+        "heatmap.vl.json",
+        "ramp.vl.json"
       ];
       var specs = [];
 
-      var container = document.querySelector('#views'),
+      var container = document.querySelector("#views"),
         loader = vega.loader(),
-        renderType = 'svg',
+        renderType = "svg",
         theme = {};
 
       Promise.all(
@@ -95,8 +95,8 @@
         })
       )
         .then(function() {
-          var earlierChoosenTheme = url.searchParams.get('theme');
-          var selectedGraph = url.searchParams.get('renderer');
+          var earlierChoosenTheme = url.searchParams.get("theme");
+          var selectedGraph = url.searchParams.get("renderer");
           if (earlierChoosenTheme) {
             theme = vegaThemes[earlierChoosenTheme];
             themes.value = earlierChoosenTheme;
@@ -112,30 +112,30 @@
           console.error(err, err.stack);
         });
 
-      var themes = document.querySelector('#themes');
+      var themes = document.querySelector("#themes");
       var currentLocation = window.location;
       var url = new URL(currentLocation);
-      themes.addEventListener('change', function() {
+      themes.addEventListener("change", function() {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
-        url.searchParams.set('theme', `${themes.options[themes.selectedIndex].value}`);
+        url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
 
-      var render = document.querySelector('#render');
-      render.addEventListener('change', function() {
+      var render = document.querySelector("#render");
+      render.addEventListener("change", function() {
         renderType = render.options[render.selectedIndex].value;
-        url.searchParams.set('renderer', `${render.options[render.selectedIndex].value}`);
+        url.searchParams.set("renderer", `${render.options[render.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
 
       function refresh() {
-        container.innerHTML = '';
+        container.innerHTML = "";
         setBackground(theme);
         specs.forEach(function(spec) {
-          var el = document.createElement('div');
-          el.setAttribute('class', 'view');
+          var el = document.createElement("div");
+          el.setAttribute("class", "view");
           container.appendChild(el);
           vegaEmbed(el, spec, {
             renderer: renderType,
@@ -151,10 +151,10 @@
         if (!theme) {
           return;
         }
-        if ('background' in theme) {
+        if ("background" in theme) {
           document.body.style.background = theme.background;
         }
-        if ('title' in theme && 'color' in theme.title) {
+        if ("title" in theme && "color" in theme.title) {
           document.body.style.color = theme.title.color;
         }
       }

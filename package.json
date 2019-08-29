@@ -60,12 +60,12 @@
     "browser-sync": "^2.26.7",
     "concurrently": "^4.1.2",
     "gh-pages": "^2.1.1",
-    "rollup": "^1.20.1",
+    "rollup": "^1.20.3",
     "rollup-plugin-json": "^4.0.0",
     "terser": "^4.2.1",
-    "typescript": "^3.5.3",
-    "vega": "^5.4.0",
-    "vega-lite": "^3.4.0",
+    "typescript": "~3.5.3",
+    "vega": "^5.5.2",
+    "vega-lite": "^4.0.0-beta.1",
     "vega-lite-dev-config": "^0.2.5"
   },
   "peerDependencies": {

@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "declaration": true,
     "strict": true,
+    "strictNullChecks": false,
     "outDir": "./build",
     "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,

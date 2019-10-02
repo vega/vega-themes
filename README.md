@@ -72,6 +72,12 @@ vega.themes.<b>latimes</b>
 
 Chart theme modeled after the Los Angeles Times. [Try it here](https://vega.github.io/vega-themes/?theme=latimes).
 
+<a name="urbaninstitute" href="#urbaninstitute">#</a>
+vega.themes.<b>urbaninstitute</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-urbaninstitute.js "Source")
+
+Chart theme modeled after the Urban Institute. [Try it here](https://vega.github.io/vega-themes/?theme=urbaninstitute).
+
 ## Instructions for Developers
 
 To view and test different themes, follow these steps:

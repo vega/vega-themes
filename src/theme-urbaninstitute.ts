@@ -39,12 +39,13 @@ const colorSchemes = {
 
 const urbanInstituteTheme: Config = {
   background: backgroundColor,
+
   title: {
     anchor: "start",
     fontSize: titleFontSize,
     font: font,
-    fontColor: "#000000"
 },
+
 axisX: {
    domain: true,
    domainColor: axisColor,
@@ -58,8 +59,9 @@ axisX: {
    titleFontSize: 12,
    titlePadding: 10,
    titleFont: font,
-   title: "",
+   //title: " ",
 },
+
 axisY: {
    domain: false,
    domainWidth: 1,
@@ -77,6 +79,7 @@ axisY: {
    titleY: -10,
    titleX: 18,
 },
+
 legend: {
    labelFontSize: 12,
    labelFont: labelFont,
@@ -85,44 +88,53 @@ legend: {
    titleFontSize: 12,
    titlePadding: 10,
    titleFont: font,
-   title: "",
+   //title: " ",
    orient: "right",
    offset: 10,
 },
+
 view: {
    stroke: "transparent",
 },
+
 range: {
    category: colorSchemes['six-groups-cat-1'],
    diverging: colorSchemes['diverging'],
    heatmap: colorSchemes['diverging'],
    ordinal: colorSchemes['six-groups-seq'],
-   ramp: colorSchemes['shades-blue']
+   ramp: colorSchemes['shades-blue'],
 },
+
 area: {
    fill: markColor,
 },
+
 rect: {
    fill: markColor,
 },
+
 line: {
    color: markColor,
    stroke: markColor,
-   strokewidth: 5,
+   strokeWidth: 5,
 },
+
 trail: {
    color: markColor,
    stroke: markColor,
    strokeWidth: 0,
    size: 1,
 },
+
 path: {
    stroke: markColor,
    strokeWidth: 0.5,
 },
+
 point: {
    filled: true,
 },
+
 text: {
    font: sourceFont,
    color: markColor,
@@ -131,17 +143,17 @@ text: {
    fontWeight: 400,
    size: 11,
 }, 
+
+style: {
 bar: {
-    // "size": 40,
-    // "binSpacing": 15,
-    // "continuousBandSize": 30,
-    // "discreteBandSize": 30,
     fill: markColor,
     stroke: false,
+   }
 },
+
 arc: {fill: markColor},
 shape: {stroke: markColor},
-symbol: {fill: markColor, size: 30},
+symbol: {fill: markColor, size: 30}
 };
 
 export default urbanInstituteTheme;

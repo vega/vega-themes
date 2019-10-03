@@ -46,107 +46,107 @@ const urbanInstituteTheme: Config = {
     font: font
   },
 
-axisX: {
-   domain: true,
-   domainColor: axisColor,
-   domainWidth: 1,
-   grid: false,
-   labelFontSize: 12,
-   labelFont: labelFont,
-   labelAngle: 0,
-   tickColor: axisColor,
-   tickSize: 5,
-   titleFontSize: 12,
-   titlePadding: 10,
-   titleFont: font,
-},
+  axisX: {
+    domain: true,
+    domainColor: axisColor,
+    domainWidth: 1,
+    grid: false,
+    labelFontSize: 12,
+    labelFont: labelFont,
+    labelAngle: 0,
+    tickColor: axisColor,
+    tickSize: 5,
+    titleFontSize: 12,
+    titlePadding: 10,
+    titleFont: font,
+  },
 
-axisY: {
-   domain: false,
-   domainWidth: 1,
-   grid: true,
-   gridColor: gridColor,
-   gridWidth: 1,
-   labelFontSize: 12,
-   labelFont: labelFont,
-   labelPadding: 8,
-   ticks: false,
-   titleFontSize: 12,
-   titlePadding: 10,
-   titleFont: font,
-   titleAngle: 0,
-   titleY: -10,
-   titleX: 18,
-},
+ axisY: {
+    domain: false,
+    domainWidth: 1,
+    grid: true,
+    gridColor: gridColor,
+    gridWidth: 1,
+    labelFontSize: 12,
+    labelFont: labelFont,
+    labelPadding: 8,
+    ticks: false,
+    titleFontSize: 12,
+    titlePadding: 10,
+    titleFont: font,
+    titleAngle: 0,
+    titleY: -10,
+    titleX: 18,
+  },
 
-legend: {
-   labelFontSize: 12,
-   labelFont: labelFont,
-   symbolSize: 100,
-   titleFontSize: 12,
-   titlePadding: 10,
-   titleFont: font,
-   orient: 'right',
-   offset: 10,
-},
+ legend: {
+    labelFontSize: 12,
+    labelFont: labelFont,
+    symbolSize: 100,
+    titleFontSize: 12,
+    titlePadding: 10,
+    titleFont: font,
+    orient: 'right',
+    offset: 10,
+  },
 
-view: {
-   stroke: 'transparent',
-},
+ view: {
+    stroke: 'transparent',
+  },
 
-range: {
-   category: colorSchemes['six-groups-cat-1'],
-   diverging: colorSchemes['diverging'],
-   heatmap: colorSchemes['diverging'],
-   ordinal: colorSchemes['six-groups-seq'],
-   ramp: colorSchemes['shades-blue'],
-},
+ range: {
+    category: colorSchemes['six-groups-cat-1'],
+    diverging: colorSchemes['diverging'],
+    heatmap: colorSchemes['diverging'],
+    ordinal: colorSchemes['six-groups-seq'],
+    ramp: colorSchemes['shades-blue'],
+  },
 
-area: {
-   fill: markColor,
-},
+ area: {
+    fill: markColor,
+  },
 
-rect: {
-   fill: markColor,
-},
+ rect: {
+    fill: markColor,
+  },
 
-line: {
-   color: markColor,
-   stroke: markColor,
-   strokeWidth: 5,
-},
+ line: {
+    color: markColor,
+    stroke: markColor,
+    strokeWidth: 5,
+  },
 
-trail: {
-   color: markColor,
-   stroke: markColor,
-   strokeWidth: 0,
-   size: 1,
-},
+ trail: {
+    color: markColor,
+    stroke: markColor,
+    strokeWidth: 0,
+    size: 1,
+  },
 
-path: {
-   stroke: markColor,
-   strokeWidth: 0.5,
-},
+ path: {
+    stroke: markColor,
+    strokeWidth: 0.5,
+  },
 
-point: {
-   filled: true,
-},
+ point: {
+    filled: true,
+  },
 
-text: {
-   font: sourceFont,
-   color: markColor,
-   fontSize: 11,
-   align: 'center',
-   fontWeight: 400,
-   size: 11,
-}, 
+ text: {
+    font: sourceFont,
+    color: markColor,
+    fontSize: 11,
+    align: 'center',
+    fontWeight: 400,
+    size: 11,
+  }, 
 
-style: {
-bar: {
+ style: {
+ bar: {
     fill: markColor,
     stroke: false,
    }
-},
+  },
 
 arc: {fill: markColor},
 shape: {stroke: markColor},

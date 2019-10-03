@@ -142,9 +142,9 @@ const urbanInstituteTheme: Config = {
   },
 
   style: {
-   bar: {
-     fill: markColor,
-     stroke: false,
+    bar: {
+      fill: markColor,
+      stroke: false,
     }
   },
 

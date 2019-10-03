@@ -1,23 +1,23 @@
 import {Config} from './config';
 
-const markColor = "#1696d2";
-const axisColor = "#000000";
-const backgroundColor = "#FFFFFF";
-const font = "Lato";
-const labelFont = "Lato";
-const sourceFont = "Lato";
-const gridColor = "#DEDDDD";
+const markColor = '#1696d2';
+const axisColor = '#000000';
+const backgroundColor = '#FFFFFF';
+const font = 'Lato';
+const labelFont = 'Lato';
+const sourceFont = 'Lato';
+const gridColor = '#DEDDDD';
 const titleFontSize = 18;
 
 const colorSchemes = {
   'main-colors': ['#1696d2', '#d2d2d2', '#000000', '#fdbf11', '#ec008b', '#55b748', '#5c5859', '#db2b27'],
-  'shades-blue': ["#CFE8F3","#A2D4EC","#73BFE2","#46ABDB","#1696D2","#12719E","#0A4C6A","#062635"],
-  'shades-gray': ["#F5F5F5","#ECECEC","#E3E3E3","#DCDBDB","#D2D2D2","#9D9D9D","#696969","#353535"],
-  'shades-yellow': ["#FFF2CF","#FCE39E","#FDD870","#FCCB41","#FDBF11","#E88E2D","#CA5800","#843215"],
-  'shades-magenta': ["#F5CBDF","#EB99C2","#E46AA7","#E54096","#EC008B","#AF1F6B","#761548","#351123"],
-  'shades-green': ["#DCEDD9","#BCDEB4","#98CF90","#78C26D","#55B748","#408941","#2C5C2D","#1A2E19"],
-  'shades-black': ["#D5D5D4","#ADABAC","#848081","#5C5859","#332D2F","#262223","#1A1717","#0E0C0D"],
-  'shades-red': ["#F8D5D4","#F1AAA9","#E9807D","#E25552","#DB2B27","#A4201D","#6E1614","#370B0A"],
+  'shades-blue': ['#CFE8F3','#A2D4EC','#73BFE2','#46ABDB','#1696D2','#12719E','#0A4C6A','#062635'],
+  'shades-gray': ['#F5F5F5','#ECECEC','#E3E3E3','#DCDBDB','#D2D2D2','#9D9D9D','#696969','#353535'],
+  'shades-yellow': ['#FFF2CF','#FCE39E','#FDD870','#FCCB41','#FDBF11','#E88E2D','#CA5800','#843215'],
+  'shades-magenta': ['#F5CBDF','#EB99C2','#E46AA7','#E54096','#EC008B','#AF1F6B','#761548','#351123'],
+  'shades-green': ['#DCEDD9','#BCDEB4','#98CF90','#78C26D','#55B748','#408941','#2C5C2D','#1A2E19'],
+  'shades-black': ['#D5D5D4','#ADABAC','#848081','#5C5859','#332D2F','#262223','#1A1717','#0E0C0D'],
+  'shades-red': ['#F8D5D4','#F1AAA9','#E9807D','#E25552','#DB2B27','#A4201D','#6E1614','#370B0A'],
   'one-group': ['#1696d2', '#000000'],
   'two-groups-cat-1': ['#1696d2', '#000000'],
   'two-groups-cat-2': ['#1696d2', '#fdbf11'],
@@ -41,7 +41,7 @@ const urbanInstituteTheme: Config = {
   background: backgroundColor,
 
   title: {
-    anchor: "start",
+    anchor: 'start',
     fontSize: titleFontSize,
     font: font,
 },
@@ -86,12 +86,12 @@ legend: {
    titleFontSize: 12,
    titlePadding: 10,
    titleFont: font,
-   orient: "right",
+   orient: 'right',
    offset: 10,
 },
 
 view: {
-   stroke: "transparent",
+   stroke: 'transparent',
 },
 
 range: {
@@ -136,7 +136,7 @@ text: {
    font: sourceFont,
    color: markColor,
    fontSize: 11,
-   align: "center",
+   align: 'center',
    fontWeight: 400,
    size: 11,
 }, 

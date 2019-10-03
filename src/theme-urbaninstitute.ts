@@ -59,7 +59,6 @@ axisX: {
    titleFontSize: 12,
    titlePadding: 10,
    titleFont: font,
-   //title: " ",
 },
 
 axisY: {
@@ -84,11 +83,9 @@ legend: {
    labelFontSize: 12,
    labelFont: labelFont,
    symbolSize: 100,
-   // "symbolType": "square",
    titleFontSize: 12,
    titlePadding: 10,
    titleFont: font,
-   //title: " ",
    orient: "right",
    offset: 10,
 },

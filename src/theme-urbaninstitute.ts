@@ -144,7 +144,7 @@ const urbanInstituteTheme: Config = {
   style: {
     bar: {
       fill: markColor,
-      stroke: false,
+      stroke: false
     }
   },
 

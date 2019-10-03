@@ -34,7 +34,7 @@ const colorSchemes = {
   'six-groups-cat-1': ['#1696d2', '#ec008b', '#fdbf11', '#000000', '#d2d2d2', '#55b748'],
   'six-groups-cat-2': ['#1696d2', '#d2d2d2', '#ec008b', '#fdbf11', '#332d2f', '#0a4c6a'],
   'six-groups-seq': ['#cfe8f3', '#a2d4ec', '#73bfe2', '#46abdb', '#1696d2', '#12719e'],
-  'diverging': ['#ca5800', '#fdbf11', '#fdd870', '#fff2cf', '#cfe8f3', '#73bfe2', '#1696d2', '#0a4c6a']
+  'diverging-colors': ['#ca5800', '#fdbf11', '#fdd870', '#fff2cf', '#cfe8f3', '#73bfe2', '#1696d2', '#0a4c6a']
 };
 
 const urbanInstituteTheme: Config = {
@@ -58,10 +58,10 @@ const urbanInstituteTheme: Config = {
     tickSize: 5,
     titleFontSize: 12,
     titlePadding: 10,
-    titleFont: font,
+    titleFont: font
   },
 
- axisY: {
+  axisY: {
     domain: false,
     domainWidth: 1,
     grid: true,
@@ -76,10 +76,10 @@ const urbanInstituteTheme: Config = {
     titleFont: font,
     titleAngle: 0,
     titleY: -10,
-    titleX: 18,
+    titleX: 18
   },
 
- legend: {
+  legend: {
     labelFontSize: 12,
     labelFont: labelFont,
     symbolSize: 100,
@@ -87,70 +87,70 @@ const urbanInstituteTheme: Config = {
     titlePadding: 10,
     titleFont: font,
     orient: 'right',
-    offset: 10,
+    offset: 10
   },
 
- view: {
-    stroke: 'transparent',
+  view: {
+    stroke: 'transparent'
   },
 
- range: {
+  range: {
     category: colorSchemes['six-groups-cat-1'],
-    diverging: colorSchemes['diverging'],
-    heatmap: colorSchemes['diverging'],
+    diverging: colorSchemes['diverging-colors'],
+    heatmap: colorSchemes['diverging-colors'],
     ordinal: colorSchemes['six-groups-seq'],
-    ramp: colorSchemes['shades-blue'],
+    ramp: colorSchemes['shades-blue']
   },
 
- area: {
-    fill: markColor,
+  area: {
+    fill: markColor
   },
 
- rect: {
-    fill: markColor,
+  rect: {
+    fill: markColor
   },
 
- line: {
+  line: {
     color: markColor,
     stroke: markColor,
-    strokeWidth: 5,
+    strokeWidth: 5
   },
 
- trail: {
+  trail: {
     color: markColor,
     stroke: markColor,
     strokeWidth: 0,
-    size: 1,
+    size: 1
   },
 
- path: {
+  path: {
     stroke: markColor,
-    strokeWidth: 0.5,
+    strokeWidth: 0.5
   },
 
- point: {
-    filled: true,
+  point: {
+    filled: true
   },
 
- text: {
+  text: {
     font: sourceFont,
     color: markColor,
     fontSize: 11,
     align: 'center',
     fontWeight: 400,
-    size: 11,
-  }, 
-
- style: {
- bar: {
-    fill: markColor,
-    stroke: false,
-   }
+    size: 11
   },
 
-arc: {fill: markColor},
-shape: {stroke: markColor},
-symbol: {fill: markColor, size: 30}
+  style: {
+   bar: {
+     fill: markColor,
+     stroke: false,
+    }
+  },
+
+  arc: {fill: markColor},
+  shape: {stroke: markColor},
+  symbol: {fill: markColor, size: 30}
 };
 
 export default urbanInstituteTheme;

@@ -1,0 +1,82 @@
+{
+    "name": "vega-themes",
+    "version": "2.5.0",
+    "description": "Themes for stylized Vega and Vega-Lite visualizations.",
+    "keywords": [
+        "vega",
+        "vega-lite",
+        "themes",
+        "style"
+    ],
+    "license": "BSD-3-Clause",
+    "author": {
+        "name": "UW Interactive Data Lab",
+        "url": "https://idl.cs.washington.edu"
+    },
+    "contributors": [
+        {
+            "name": "Emily Gu",
+            "url": "https://github.com/emilygu"
+        },
+        {
+            "name": "Arvind Satyanarayan",
+            "url": "http://arvindsatya.com"
+        },
+        {
+            "name": "Jeffrey Heer",
+            "url": "http://idl.cs.washington.edu"
+        },
+        {
+            "name": "Dominik Moritz",
+            "url": "https://www.domoritz.de"
+        }
+    ],
+    "main": "build/vega-themes.js",
+    "module": "build/src/index.js",
+    "unpkg": "build/vega-themes.min.js",
+    "jsdelivr": "build/vega-themes.min.js",
+    "typings": "build/src/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vega/vega-themes.git"
+    },
+    "scripts": {
+        "prepare": "beemo create-config --silent",
+        "clean": "rm -rf build examples/build",
+        "prettierbase": "beemo prettier 'examples/*.{html,scss,css}'",
+        "eslintbase": "beemo eslint 'src/**/*.ts'",
+        "format": "yarn eslintbase --fix && yarn prettierbase --write",
+        "lint": "yarn eslintbase && yarn prettierbase --check",
+        "prebuild": "mkdir -p build",
+        "build": "tsc && rollup -c",
+        "postbuild": "terser build/vega-themes.js -cm > build/vega-themes.min.js",
+        "deploy:gh": "yarn build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
+        "prepublishOnly": "yarn clean && yarn build",
+        "preversion": "yarn lint",
+        "serve": "browser-sync start -s -f build examples --serveStatic examples",
+        "start": "yarn build && concurrently --kill-others -n Server,Typescript,Rollup 'yarn serve' 'tsc -w' 'rollup -c -w'"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "concurrently": "^4.1.2",
+        "gh-pages": "^2.1.1",
+        "rollup": "^1.22.0",
+        "rollup-plugin-json": "^4.0.0",
+        "terser": "^4.3.4",
+        "typescript": "~3.6.3",
+        "vega": "^5.5.2",
+        "vega-lite": "^4.0.0-beta.1",
+        "vega-lite-dev-config": "^0.3.0"
+    },
+    "peerDependencies": {
+        "vega": "*",
+        "vega-lite": "*"
+    },
+    "beemo": {
+        "module": "vega-lite-dev-config",
+        "drivers": [
+            "prettier",
+            "eslint"
+        ]
+    }
+}

@@ -14,17 +14,10 @@
         position: relative;
       }
       #header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        width: 100%;
+        padding: 10px 0 20px;
         height: 20px;
-        background: white;
-        z-index: 1000;
       }
       #views {
-        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
@@ -66,6 +59,7 @@
         <option value="dark">dark</option>
         <option value="fivethirtyeight">fivethirtyeight</option>
         <option value="latimes">latimes</option>
+        <option value="urbaninstitute">urbaninstitute</option>
       </select>
       &nbsp; Renderer:
       <select id="render">
@@ -124,10 +118,7 @@
       var url = new URL(currentLocation);
       themes.addEventListener("change", function() {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
-        url.searchParams.set(
-          "theme",
-          `${themes.options[themes.selectedIndex].value}`
-        );
+        url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
@@ -135,26 +126,38 @@
       var render = document.querySelector("#render");
       render.addEventListener("change", function() {
         renderType = render.options[render.selectedIndex].value;
-        url.searchParams.set(
-          "renderer",
-          `${render.options[render.selectedIndex].value}`
-        );
+        url.searchParams.set("renderer", `${render.options[render.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
 
       function refresh() {
         container.innerHTML = "";
+        setBackground(theme);
         specs.forEach(function(spec) {
           var el = document.createElement("div");
           el.setAttribute("class", "view");
           container.appendChild(el);
           vegaEmbed(el, spec, {
-            render: renderType,
+            renderer: renderType,
             config: theme,
             defaultStyle: true
           });
         });
+      }
+
+      function setBackground(theme) {
+        document.body.style.background = null;
+        document.body.style.color = null;
+        if (!theme) {
+          return;
+        }
+        if ("background" in theme) {
+          document.body.style.background = theme.background;
+        }
+        if ("title" in theme && "color" in theme.title) {
+          document.body.style.color = theme.title.color;
+        }
       }
     </script>
   </body>

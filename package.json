@@ -63,7 +63,7 @@
     "rollup": "^1.22.0",
     "rollup-plugin-json": "^4.0.0",
     "terser": "^4.3.4",
-    "typescript": "~3.6.3",
+    "typescript": "~3.7.2",
     "vega": "^5.5.2",
     "vega-lite": "^4.0.0-beta.1",
     "vega-lite-dev-config": "^0.3.0"

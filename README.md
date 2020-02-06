@@ -78,6 +78,13 @@ vega.themes.<b>urbaninstitute</b>
 
 Chart theme modeled after the Urban Institute. [Try it here](https://vega.github.io/vega-themes/?theme=urbaninstitute).
 
+<a name="googlecharts " href="#googlecharts">#</a>
+vega.themes.<b>googlecharts</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-googlecharts.ts "Source")
+
+Chart theme modeled after Google Charts. [Try it here](https://vega.github.io/vega-themes/?theme=googlecharts).
+
+
 ## Instructions for Developers
 
 To view and test different themes, follow these steps:

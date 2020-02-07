@@ -21,13 +21,16 @@ const googlechartsTheme: Config = {
   },
   style: {
     'guide-label': {
-      font: defaultFont
+      font: defaultFont,
+      fontSize: 12
     },
     'guide-title': {
-      font: defaultFont
+      font: defaultFont,
+      fontSize: 12
     },
     'group-title': {
-      font: defaultFont
+      font: defaultFont,
+      fontSize: 12
     }
   },
   title: {
@@ -38,16 +41,10 @@ const googlechartsTheme: Config = {
     anchor: 'start'
   },
   axis: {
-    titleFontSize: 12,
-    labelFontSize: 12,
     gridColor: gridColor,
     tickColor: gridColor,
     domain: false,
     grid: true
-  },
-  legend: {
-    titleFontSize: 12,
-    labelFontSize: 12
   },
   range: {
     category: [

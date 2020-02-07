@@ -1,3 +1,8 @@
+/**
+ * Copyright 2020 Google LLC.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 import {Config} from './config';
 
 const markColor = '#3366CC';

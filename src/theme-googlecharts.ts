@@ -19,21 +19,35 @@ const googlechartsTheme: Config = {
     bottom: 10,
     left: 10
   },
+  style: {
+    'guide-label': {
+      font: defaultFont
+    },
+    'guide-title': {
+      font: defaultFont
+    },
+    'group-title': {
+      font: defaultFont
+    }
+  },
   title: {
     font: defaultFont,
-    fontSize: 12,
+    fontSize: 14,
+    fontWeight: 'bold',
     dy: -3,
     anchor: 'start'
   },
   axis: {
-    labelFont: defaultFont,
+    titleFontSize: 12,
     labelFontSize: 12,
-    titleFont: defaultFont,
-    titleFontWeight: 200,
     gridColor: gridColor,
     tickColor: gridColor,
     domain: false,
     grid: true
+  },
+  legend: {
+    titleFontSize: 12,
+    labelFontSize: 12
   },
   range: {
     category: [

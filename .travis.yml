@@ -8,6 +8,7 @@ cache: yarn
 deploy:
   provider: npm
   email: domoritz@gmail.com
+  edge: true
   on:
     tags: true
     repo: vega/vega-themes

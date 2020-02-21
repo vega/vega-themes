@@ -82,12 +82,10 @@ const fiveThirtyEightTheme: Config = {
 
   shape: {stroke: markColor},
 
-  style: {
-    bar: {
-      binSpacing: 2,
-      fill: markColor,
-      stroke: null
-    }
+  bar: {
+    binSpacing: 2,
+    fill: markColor,
+    stroke: null
   },
 
   title: {

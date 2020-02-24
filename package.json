@@ -63,7 +63,7 @@
     "gh-pages": "^2.2.0",
     "rollup": "^1.31.0",
     "terser": "^4.6.3",
-    "typescript": "~3.7.5",
+    "typescript": "~3.8.2",
     "vega": "^5.9.0",
     "vega-lite": "^4.0.0",
     "vega-lite-dev-config": "^0.4.3"

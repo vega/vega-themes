@@ -3,11 +3,14 @@
     "target": "es6",
     "module": "es2015",
     "moduleResolution": "node",
+    
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
     "strict": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "outDir": "./build",
-    "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "incremental": true

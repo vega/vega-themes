@@ -21,19 +21,19 @@ const excelTheme: Config = {
     gridWidth: 0.5,
     labelPadding: 10,
     tickSize: 5,
-    tickWidth: 0.5
+    tickWidth: 0.5,
   },
 
   axisBand: {
     grid: false,
-    tickExtra: true
+    tickExtra: true,
   },
 
   legend: {
     labelBaseline: 'middle',
     labelFontSize: 11,
     symbolSize: 50,
-    symbolType: 'square'
+    symbolType: 'square',
   },
 
   range: {
@@ -47,9 +47,9 @@ const excelTheme: Config = {
       '#94aace',
       '#d09393',
       '#b9cc98',
-      '#a99cbc'
-    ]
-  }
+      '#a99cbc',
+    ],
+  },
 };
 
 export default excelTheme;

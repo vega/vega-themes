@@ -10,18 +10,18 @@ const darkTheme: Config = {
 
   style: {
     'guide-label': {
-      fill: lightColor
+      fill: lightColor,
     },
     'guide-title': {
-      fill: lightColor
-    }
+      fill: lightColor,
+    },
   },
 
   axis: {
     domainColor: lightColor,
     gridColor: medColor,
-    tickColor: lightColor
-  }
+    tickColor: lightColor,
+  },
 };
 
 export default darkTheme;

@@ -23,17 +23,17 @@ const fiveThirtyEightTheme: Config = {
     tickSize: 10,
     titleFontSize: 14,
     titlePadding: 10,
-    labelPadding: 4
+    labelPadding: 4,
   },
 
   axisBand: {
-    grid: false
+    grid: false,
   },
 
   background: backgroundColor,
 
   group: {
-    fill: backgroundColor
+    fill: backgroundColor,
   },
 
   legend: {
@@ -44,12 +44,12 @@ const fiveThirtyEightTheme: Config = {
     symbolType: 'square',
     titleColor: blackTitle,
     titleFontSize: 14,
-    titlePadding: 10
+    titlePadding: 10,
   },
 
   line: {
     stroke: markColor,
-    strokeWidth: 2
+    strokeWidth: 2,
   },
 
   path: {stroke: markColor, strokeWidth: 0.5},
@@ -68,16 +68,16 @@ const fiveThirtyEightTheme: Config = {
       '#52d2ca',
       '#52689e',
       '#545454',
-      '#9fe4f8'
+      '#9fe4f8',
     ],
 
     diverging: ['#cc0020', '#e77866', '#f6e7e1', '#d6e8ed', '#91bfd9', '#1d78b5'],
-    heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5']
+    heatmap: ['#d6e8ed', '#cee0e5', '#91bfd9', '#549cc6', '#1d78b5'],
   },
 
   point: {
     filled: true,
-    shape: 'circle'
+    shape: 'circle',
   },
 
   shape: {stroke: markColor},
@@ -85,15 +85,15 @@ const fiveThirtyEightTheme: Config = {
   bar: {
     binSpacing: 2,
     fill: markColor,
-    stroke: null
+    stroke: null,
   },
 
   title: {
     anchor: 'start',
     fontSize: 24,
     fontWeight: 600,
-    offset: 20
-  }
+    offset: 20,
+  },
 };
 
 export default fiveThirtyEightTheme;

@@ -19,31 +19,31 @@ const voxTheme: Config = {
     labelPadding: 2,
     tickSize: 5,
     tickWidth: 0.5,
-    titleFontWeight: 'normal'
+    titleFontWeight: 'normal',
   },
 
   axisBand: {
-    grid: false
+    grid: false,
   },
 
   axisX: {
-    gridWidth: 0.2
+    gridWidth: 0.2,
   },
 
   axisY: {
     gridDash: [3],
-    gridWidth: 0.4
+    gridWidth: 0.4,
   },
 
   legend: {
     labelFontSize: 11,
     padding: 1,
-    symbolType: 'square'
+    symbolType: 'square',
   },
 
   range: {
-    category: ['#3e5c69', '#6793a6', '#182429', '#0570b0', '#3690c0', '#74a9cf', '#a6bddb', '#e2ddf2']
-  }
+    category: ['#3e5c69', '#6793a6', '#182429', '#0570b0', '#3690c0', '#74a9cf', '#a6bddb', '#e2ddf2'],
+  },
 };
 
 export default voxTheme;

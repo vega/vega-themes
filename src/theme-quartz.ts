@@ -21,29 +21,29 @@ const quartzTheme: Config = {
     labelColor: axisColor,
     tickColor: axisColor,
     tickWidth: 0.2,
-    titleColor: axisColor
+    titleColor: axisColor,
   },
 
   axisBand: {
-    grid: false
+    grid: false,
   },
 
   axisX: {
     grid: true,
-    tickSize: 10
+    tickSize: 10,
   },
 
   axisY: {
     domain: false,
     grid: true,
-    tickSize: 0
+    tickSize: 0,
   },
 
   legend: {
     labelFontSize: 11,
     padding: 1,
     symbolSize: 30,
-    symbolType: 'square'
+    symbolType: 'square',
   },
 
   range: {
@@ -57,9 +57,9 @@ const quartzTheme: Config = {
       '#d365ba',
       '#154866',
       '#666666',
-      '#c4c4c4'
-    ]
-  }
+      '#c4c4c4',
+    ],
+  },
 };
 
 export default quartzTheme;

@@ -25,34 +25,34 @@ const googlechartsTheme: Config = {
     top: 10,
     right: 10,
     bottom: 10,
-    left: 10
+    left: 10,
   },
   style: {
     'guide-label': {
       font: defaultFont,
-      fontSize: 12
+      fontSize: 12,
     },
     'guide-title': {
       font: defaultFont,
-      fontSize: 12
+      fontSize: 12,
     },
     'group-title': {
       font: defaultFont,
-      fontSize: 12
-    }
+      fontSize: 12,
+    },
   },
   title: {
     font: defaultFont,
     fontSize: 14,
     fontWeight: 'bold',
     dy: -3,
-    anchor: 'start'
+    anchor: 'start',
   },
   axis: {
     gridColor: gridColor,
     tickColor: gridColor,
     domain: false,
-    grid: true
+    grid: true,
   },
   range: {
     category: [
@@ -67,10 +67,10 @@ const googlechartsTheme: Config = {
       '#5C6BC0',
       '#F06292',
       '#00796B',
-      '#C2185B'
+      '#C2185B',
     ],
-    heatmap: ['#c6dafc', '#5e97f6', '#2a56c6']
-  }
+    heatmap: ['#c6dafc', '#5e97f6', '#2a56c6'],
+  },
 };
 
 export default googlechartsTheme;

@@ -32,49 +32,49 @@ input specification must be re-parsed with a new theme.
 
 <a name="excel" href="#excel">#</a>
 vega.themes.<b>excel</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-excel.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-excel.ts "Source")
 
 Chart theme modeled after Microsoft Excel. [Try it here](https://vega.github.io/vega-themes/?theme=excel).
 
 <a name="ggplot2" href="#ggplot2">#</a>
 vega.themes.<b>ggplot2</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-ggplot2.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-ggplot2.ts "Source")
 
 Chart theme modeled after ggplot2. [Try it here](https://vega.github.io/vega-themes/?theme=ggplot2).
 
 <a name="quartz" href="#quartz">#</a>
 vega.themes.<b>quartz</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-quartz.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-quartz.ts "Source")
 
 Chart theme modeled after Quartz. [Try it here](https://vega.github.io/vega-themes/?theme=quartz).
 
 <a name="vox" href="#vox">#</a>
 vega.themes.<b>vox</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-vox.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-vox.ts "Source")
 
 Chart theme modeled after Vox. [Try it here](https://vega.github.io/vega-themes/?theme=vox).
 
 <a name="fivethirtyeight" href="#fivethirtyeight">#</a>
 vega.themes.<b>fivethirtyeight</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-fivethirtyeight.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-fivethirtyeight.ts "Source")
 
 Chart theme modeled after FiveThirtyEight. [Try it here](https://vega.github.io/vega-themes/?theme=fivethirtyeight).
 
 <a name="dark" href="#dark">#</a>
 vega.themes.<b>dark</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-dark.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-dark.ts "Source")
 
 A dark theme. [Try it here](https://vega.github.io/vega-themes/?theme=dark).
 
 <a name="latimes" href="#latimes">#</a>
 vega.themes.<b>latimes</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-latimes.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-latimes.ts "Source")
 
 Chart theme modeled after the Los Angeles Times. [Try it here](https://vega.github.io/vega-themes/?theme=latimes).
 
 <a name="urbaninstitute" href="#urbaninstitute">#</a>
 vega.themes.<b>urbaninstitute</b>
-[<>](https://github.com/vega/vega-themes/blob/master/src/theme-urbaninstitute.js "Source")
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-urbaninstitute.ts "Source")
 
 Chart theme modeled after the Urban Institute. [Try it here](https://vega.github.io/vega-themes/?theme=urbaninstitute).
 

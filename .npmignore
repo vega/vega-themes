@@ -1,13 +1,13 @@
 .DS_Store
 .eslintignore
 .eslintrc.js
+.github
 .gitignore
 .prettierignore
-.travis.yml
 .vscode/
+*.tsbuildinfo
 examples
 node_modules
 prettier.config.js
 rollup.config.js
 tsconfig.json
-*.tsbuildinfo

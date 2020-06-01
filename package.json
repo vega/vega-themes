@@ -60,7 +60,7 @@
     "@rollup/plugin-json": "^4.0.3",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.2.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.0.0",
     "rollup": "^2.9.1",
     "terser": "^4.6.13",
     "typescript": "^3.8.3",

@@ -1,4 +1,5 @@
-import {version} from '../package.json';
+import pkg from '../package.json';
+const version = pkg.version;
 
 export {default as dark} from './theme-dark';
 export {default as excel} from './theme-excel';

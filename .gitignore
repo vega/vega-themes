@@ -2,9 +2,14 @@
 .eslintignore
 .eslintrc.js
 .prettierignore
+babel.config.js
 beemo-error.log
-build/
-examples/build/
+build
+coverage/
+jest.config.js
 node_modules
-npm-debug.log
+npm-debug.log*
 prettier.config.js
+tsconfig.json
+yarn-debug.log*
+yarn-error.log*

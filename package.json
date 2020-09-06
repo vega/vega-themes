@@ -32,41 +32,50 @@
     }
   ],
   "main": "build/vega-themes.js",
-  "module": "build/src/index.js",
+  "module": "build/vega-themes.module.js",
   "unpkg": "build/vega-themes.min.js",
   "jsdelivr": "build/vega-themes.min.js",
-  "typings": "build/src/index.d.ts",
+  "types": "build/vega-themes.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vega/vega-themes.git"
   },
+  "files": [
+    "src",
+    "build"
+  ],
   "scripts": {
-    "prepare": "beemo create-config --silent",
-    "clean": "rm -rf build examples/build",
-    "prettierbase": "beemo prettier 'examples/*.{html,scss,css}'",
-    "eslintbase": "beemo eslint .",
-    "format": "yarn eslintbase --fix && yarn prettierbase --write",
-    "lint": "yarn eslintbase && yarn prettierbase --check",
-    "prebuild": "mkdir -p build",
-    "build": "tsc && rollup -c",
-    "postbuild": "terser build/vega-themes.js -cm > build/vega-themes.min.js",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "clean": "rimraf build && rimraf examples/build",
+    "copy:data": "rsync -r node_modules/vega-datasets/data/* examples/data",
+    "copy:build": "rsync -r build/* examples/build",
     "deploy:gh": "yarn build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
     "prepublishOnly": "yarn clean && yarn build",
-    "preversion": "yarn lint",
+    "preversion": "yarn lint && yarn test",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
-    "start": "yarn build && concurrently --kill-others -n Server,Typescript,Rollup 'yarn serve' 'tsc -w' 'rollup -c -w'"
+    "start": "yarn build && concurrently --kill-others -n Server,Rollup 'yarn serve' 'rollup -c -w'",
+    "prepare": "beemo create-config",
+    "eslintbase": "beemo eslint .",
+    "format": "yarn eslintbase --fix",
+    "lint": "yarn eslintbase"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@wessberg/rollup-plugin-ts": "^1.3.4",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.2.0",
     "gh-pages": "^3.1.0",
-    "rollup": "^2.21.0",
-    "terser": "^5.0.0",
+    "rollup": "^2.26.10",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.0.2",
     "vega": "^5.10.0",
     "vega-lite": "^4.8.1",
-    "vega-lite-dev-config": "^0.12.0"
+    "vega-lite-dev-config": "^0.14.2"
   },
   "peerDependencies": {
     "vega": "*",
@@ -75,6 +84,7 @@
   "beemo": {
     "module": "vega-lite-dev-config",
     "drivers": [
+      "typescript",
       "prettier",
       "eslint"
     ]

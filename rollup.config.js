@@ -6,18 +6,17 @@ import bundleSize from 'rollup-plugin-bundle-size';
 import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
-const tsconfig = require('./tsconfig.json').compilerOptions;
 
 const plugins = (declaration) => [
   resolve({ extensions: ['.js', '.ts'] }),
   commonjs(),
   json(),
   ts({
-    tsconfig: {
-      ...tsconfig,
+    tsconfig: (resolvedConfig) => ({
+      ...resolvedConfig,
       declaration,
       declarationMap: declaration
-    },
+    }),
     browserslist: 'defaults and not IE 11'
   }),
   bundleSize()

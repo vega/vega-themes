@@ -52,7 +52,7 @@
     "copy:build": "rsync -r build/* examples/build",
     "deploy:gh": "yarn build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
     "prepublishOnly": "yarn clean && yarn build",
-    "preversion": "yarn lint && yarn test",
+    "preversion": "yarn lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
     "start": "yarn build && concurrently --kill-others -n Server,Rollup 'yarn serve' 'rollup -c -w'",
     "prepare": "beemo create-config",

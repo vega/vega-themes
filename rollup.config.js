@@ -1,4 +1,3 @@
-import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import ts from '@wessberg/rollup-plugin-ts';
@@ -8,8 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 const pkg = require('./package.json');
 
 const plugins = (browserslist, declaration) => [
-  resolve({ extensions: ['.js', '.ts'] }),
-  commonjs(),
+  resolve(),
   json(),
   ts({
     tsconfig: (resolvedConfig) => ({
@@ -29,8 +27,7 @@ const outputs = [
       file: pkg.module,
       format: 'esm'
     },
-    plugins: plugins(undefined, true),
-    external: [...Object.keys(pkg.peerDependencies)]
+    plugins: plugins(undefined, true)
   }, {
     input: 'src/index.ts',
     output: [
@@ -49,7 +46,6 @@ const outputs = [
       }
     ],
     plugins: plugins('defaults and not IE 11', false),
-    external: ['vega', 'vega-lite']
   }
 ];
 

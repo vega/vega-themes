@@ -6,12 +6,18 @@ import bundleSize from 'rollup-plugin-bundle-size';
 import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
+const tsconfig = require('./tsconfig.json').compilerOptions;
 
-const plugins = [
+const plugins = (declaration) => [
   resolve({ extensions: ['.js', '.ts'] }),
   commonjs(),
   json(),
   ts({
+    tsconfig: {
+      ...tsconfig,
+      declaration,
+      declarationMap: declaration
+    },
     browserslist: 'defaults and not IE 11'
   }),
   bundleSize()
@@ -24,7 +30,7 @@ const outputs = [
       file: 'build/vega-themes.module.js',
       format: 'esm'
     },
-    plugins,
+    plugins: plugins(true),
     external: [...Object.keys(pkg.peerDependencies)]
   }, {
     input: 'src/index.ts',
@@ -43,7 +49,7 @@ const outputs = [
         plugins: [terser()]
       }
     ],
-    plugins,
+    plugins: plugins(false),
     external: ['vega']
   }
 ];

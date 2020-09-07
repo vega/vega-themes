@@ -35,7 +35,7 @@
   "module": "build/vega-themes.module.js",
   "unpkg": "build/vega-themes.min.js",
   "jsdelivr": "build/vega-themes.min.js",
-  "types": "build/vega-themes.d.ts",
+  "types": "build/vega-themes.module.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vega/vega-themes.git"
@@ -61,7 +61,6 @@
     "lint": "yarn eslintbase"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",

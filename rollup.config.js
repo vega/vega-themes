@@ -26,7 +26,7 @@ const outputs = [
   {
     input: 'src/index.ts',
     output: {
-      file: 'build/vega-themes.module.js',
+      file: pkg.module,
       format: 'esm'
     },
     plugins: plugins(undefined, true),
@@ -35,13 +35,13 @@ const outputs = [
     input: 'src/index.ts',
     output: [
       {
-        file: `build/vega-themes.js`,
+        file: pkg.main,
         format: 'umd',
         name: 'vegaThemes',
         exports: 'named'
       },
       {
-        file: `build/vega-themes.min.js`,
+        file: pkg.unpkg,
         format: 'iife',
         name: 'vegaThemes',
         exports: 'named',

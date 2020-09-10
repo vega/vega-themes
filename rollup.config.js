@@ -39,7 +39,7 @@ const outputs = [
       },
       {
         file: pkg.unpkg,
-        format: 'iife',
+        format: 'umd',
         name: 'vegaThemes',
         exports: 'named',
         plugins: [terser()]

@@ -58,7 +58,8 @@
     "prepare": "beemo create-config",
     "eslintbase": "beemo eslint .",
     "format": "yarn eslintbase --fix",
-    "lint": "yarn eslintbase"
+    "lint": "yarn eslintbase",
+    "release": "yarn prepublishOnly && yarn auto shipit"
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "^10.31.0",

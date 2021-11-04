@@ -7,8 +7,8 @@ const darkTheme: Config = {
   background: '#333',
 
   title: {
-      color: lightColor,
-      subtitleColor: lightColor
+    color: lightColor,
+    subtitleColor: lightColor,
   },
 
   style: {

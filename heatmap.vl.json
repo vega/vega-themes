@@ -1,45 +1,45 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {
-      "url": "https://vega.github.io/vega-datasets/data/seattle-temps.csv"
+    "url": "https://vega.github.io/vega-datasets/data/seattle-weather.csv"
   },
   "title": "2010 Daily Max Temperature in Seattle",
   "config": {
-      "view": {
-          "strokeWidth": 0
-      },
-      "scale": {
-          "rangeStep": 13
-      },
-      "axis": {
-          "domain": false
-      }
+    "view": {
+      "strokeWidth": 0
+    },
+    "axis": {
+      "domain": false
+    }
   },
-  "mark": "rect",
+  "mark": {
+    "type": "rect",
+    "tooltip": true
+  },
   "encoding": {
-      "x": {
-          "field": "date",
-          "timeUnit": "date",
-          "type": "ordinal",
-          "title": "Day",
-          "axis": {
-              "labelAngle": 0,
-              "format": "%e"
-          }
-      },
-      "y": {
-          "field": "date",
-          "timeUnit": "month",
-          "type": "ordinal",
-          "title": "Month"
-      },
-      "color": {
-          "field": "temp",
-          "aggregate": "max",
-          "type": "quantitative",
-          "legend": {
-              "title": null
-          }
+    "x": {
+      "field": "date",
+      "timeUnit": "date",
+      "type": "ordinal",
+      "title": "Day",
+      "axis": {
+        "labelAngle": 0,
+        "format": "%e"
       }
+    },
+    "y": {
+      "field": "date",
+      "timeUnit": "month",
+      "type": "ordinal",
+      "title": "Month"
+    },
+    "color": {
+      "field": "temp_max",
+      "aggregate": "max",
+      "type": "quantitative",
+      "legend": {
+        "title": null
+      }
+    }
   }
 }

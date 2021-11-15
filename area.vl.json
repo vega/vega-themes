@@ -1,11 +1,16 @@
 {
-  "config": {"view": {"width": 400, "height": 300}},
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 400,
+  "height": 300,
   "data": {
     "url": "https://vega.github.io/vega-datasets/data/iowa-electricity.csv",
     "format": {"type": "csv"}
   },
   "title": "Iowa's renewable energy boom",
-  "mark": "area",
+  "mark": {
+    "type": "area",
+    "tooltip": true
+  },
   "encoding": {
     "color": {
       "type": "nominal",
@@ -24,6 +29,5 @@
       "field": "net_generation",
       "stack": "normalize"
     }
-  },
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json"
+  }
 }

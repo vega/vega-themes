@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 480,
   "height": 150,
   "padding": 5,
@@ -63,7 +63,8 @@
           "x": {"scale": "scaleIndex", "field": "index", "offset": 1},
           "width": {"scale": "scaleIndex", "band": 1, "offset": -1},
           "y": {"scale": "scaleValue", "field": "value"},
-          "y2": {"scale": "scaleValue", "value": 0}
+          "y2": {"scale": "scaleValue", "value": 0},
+          "tooltip": {"scale": "scaleValue", "field": "value"}
         }
       }
     }

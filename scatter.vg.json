@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 200,
   "height": 150,
   "padding": 5,
@@ -78,7 +78,8 @@
           "x": {"scale": "scalePosition", "field": "position"},
           "y": {"scale": "scaleValue", "field": "value"},
           "shape": {"scale": "symbolCategory", "field": "category"},
-          "stroke": {"scale": "colorCategory", "field": "category"}
+          "stroke": {"scale": "colorCategory", "field": "category"},
+          "tooltip": {"signal": "datum"}
         }
       }
     }

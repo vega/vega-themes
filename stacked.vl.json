@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {
     "values": [
       {"yield":27,"variety":"Manchuria","year":1931,"site":"University Farm"},
@@ -124,7 +124,10 @@
       {"yield":29.33333,"variety":"Wisconsin No. 38","year":1932,"site":"Duluth"}
     ]
   },
-  "mark": "bar",
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
   "encoding": {
     "column": {"field": "year", "type": "ordinal"},
     "x": {"field": "yield", "type": "quantitative", "aggregate": "sum"},

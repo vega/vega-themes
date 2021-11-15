@@ -3,8 +3,8 @@
   <head>
     <title>Vega Theme Test</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script src="build/vega-themes.js"></script>
     <style>
       body {
@@ -60,6 +60,8 @@
         <option value="fivethirtyeight">fivethirtyeight</option>
         <option value="latimes">latimes</option>
         <option value="urbaninstitute">urbaninstitute</option>
+        <option value="googlecharts">googlecharts</option>
+        <option value="powerbi">powerbi</option>
       </select>
       &nbsp; Renderer:
       <select id="render">
@@ -77,7 +79,7 @@
         "stacked.vl.json",
         "area.vl.json",
         "heatmap.vl.json",
-        "ramp.vl.json"
+        "ramp.vl.json",
       ];
       var specs = [];
 
@@ -87,15 +89,15 @@
         theme = {};
 
       Promise.all(
-        files.map(function(file) {
+        files.map(function (file) {
           var index = specs.length;
           specs.push(file);
-          return loader.load(file).then(function(json) {
+          return loader.load(file).then(function (json) {
             specs[index] = JSON.parse(json);
           });
         })
       )
-        .then(function() {
+        .then(function () {
           var earlierChoosenTheme = url.searchParams.get("theme");
           var selectedGraph = url.searchParams.get("renderer");
           if (earlierChoosenTheme) {
@@ -109,14 +111,14 @@
 
           refresh();
         })
-        .catch(function(err) {
+        .catch(function (err) {
           console.error(err, err.stack);
         });
 
       var themes = document.querySelector("#themes");
       var currentLocation = window.location;
       var url = new URL(currentLocation);
-      themes.addEventListener("change", function() {
+      themes.addEventListener("change", function () {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
         url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
@@ -124,7 +126,7 @@
       });
 
       var render = document.querySelector("#render");
-      render.addEventListener("change", function() {
+      render.addEventListener("change", function () {
         renderType = render.options[render.selectedIndex].value;
         url.searchParams.set("renderer", `${render.options[render.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
@@ -134,14 +136,14 @@
       function refresh() {
         container.innerHTML = "";
         setBackground(theme);
-        specs.forEach(function(spec) {
+        specs.forEach(function (spec) {
           var el = document.createElement("div");
           el.setAttribute("class", "view");
           container.appendChild(el);
           vegaEmbed(el, spec, {
             renderer: renderType,
             config: theme,
-            defaultStyle: true
+            defaultStyle: true,
           });
         });
       }

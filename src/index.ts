@@ -10,4 +10,5 @@ export {default as quartz} from './theme-quartz';
 export {default as vox} from './theme-vox';
 export {default as urbaninstitute} from './theme-urbaninstitute';
 export {default as googlecharts} from './theme-googlecharts';
+export {default as powerbi} from './theme-powerbi';
 export {version};

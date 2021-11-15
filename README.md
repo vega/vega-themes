@@ -85,6 +85,12 @@ vega.themes.<b>googlecharts</b>
 
 Chart theme modeled after Google Charts. [Try it here](https://vega.github.io/vega-themes/?theme=googlecharts).
 
+<a name="powerbi " href="#powerbi">#</a>
+vega.themes.<b>powerbi</b>
+[<>](https://github.com/vega/vega-themes/blob/master/src/theme-powerbi.ts "Source")
+
+Chart theme modeled after Power BI Desktop default theme. [Try it here](https://vega.github.io/vega-themes/?theme=powerbi).
+
 ## Instructions for Developers
 
 To view and test different themes, follow these steps:

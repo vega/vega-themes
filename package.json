@@ -51,7 +51,6 @@
     "copy:data": "rsync -r node_modules/vega-datasets/data/* examples/data",
     "copy:build": "rsync -r build/* examples/build",
     "deploy:gh": "yarn build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
-    "prepublishOnly": "yarn clean && yarn build",
     "preversion": "yarn lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
     "start": "yarn build && concurrently --kill-others -n Server,Rollup 'yarn serve' 'rollup -c -w'",
@@ -59,7 +58,7 @@
     "eslintbase": "beemo eslint .",
     "format": "yarn eslintbase --fix",
     "lint": "yarn eslintbase",
-    "release": "yarn prepublishOnly && yarn auto shipit"
+    "release": "auto shipit"
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "^10.32.2",

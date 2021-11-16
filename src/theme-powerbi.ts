@@ -2,38 +2,38 @@ import {Config} from './config';
 
 const ptToPx = (value: number) => value * (1 / 3 + 1);
 
-const fontSmallPx = ptToPx(9),
-  legendFontPx = ptToPx(10),
-  fontLargePx = ptToPx(12),
-  fontStandard = 'Segoe UI',
-  fontTitle = 'wf_standard-font, helvetica, arial, sans-serif',
-  firstLevelElementColor = '#252423',
-  secondLevelElementColor = '#605E5C',
-  backgroundColor = 'transparent',
-  backgroundSecondaryColor = '#C8C6C4',
-  paletteColor1 = '#118DFF',
-  paletteColor2 = '#12239E',
-  paletteColor3 = '#E66C37',
-  paletteColor4 = '#6B007B',
-  paletteColor5 = '#E044A7',
-  paletteColor6 = '#744EC2',
-  paletteColor7 = '#D9B300',
-  paletteColor8 = '#D64550',
-  divergentColorMax = paletteColor1,
-  divergentColorMin = '#DEEFFF',
-  divergentPalette = [divergentColorMin, divergentColorMax],
-  ordinalPalette = [
-    divergentColorMin,
-    '#c7e4ff',
-    '#b0d9ff',
-    '#9aceff',
-    '#83c3ff',
-    '#6cb9ff',
-    '#55aeff',
-    '#3fa3ff',
-    '#2898ff',
-    divergentColorMax,
-  ];
+const fontSmallPx = ptToPx(9);
+const legendFontPx = ptToPx(10);
+const fontLargePx = ptToPx(12);
+const fontStandard = 'Segoe UI';
+const fontTitle = 'wf_standard-font, helvetica, arial, sans-serif';
+const firstLevelElementColor = '#252423';
+const secondLevelElementColor = '#605E5C';
+const backgroundColor = 'transparent';
+const backgroundSecondaryColor = '#C8C6C4';
+const paletteColor1 = '#118DFF';
+const paletteColor2 = '#12239E';
+const paletteColor3 = '#E66C37';
+const paletteColor4 = '#6B007B';
+const paletteColor5 = '#E044A7';
+const paletteColor6 = '#744EC2';
+const paletteColor7 = '#D9B300';
+const paletteColor8 = '#D64550';
+const divergentColorMax = paletteColor1;
+const divergentColorMin = '#DEEFFF';
+const divergentPalette = [divergentColorMin, divergentColorMax];
+const ordinalPalette = [
+  divergentColorMin,
+  '#c7e4ff',
+  '#b0d9ff',
+  '#9aceff',
+  '#83c3ff',
+  '#6cb9ff',
+  '#55aeff',
+  '#3fa3ff',
+  '#2898ff',
+  divergentColorMax,
+];
 
 const powerbiTheme: Config = {
   view: {stroke: backgroundColor},

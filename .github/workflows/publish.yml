@@ -26,9 +26,6 @@ jobs:
       - name: Install Node dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build
-        run: yarn build
-
       # don't use yarn run to avoid using yarnpkg registry
       - name: Create release
         run: npm run release

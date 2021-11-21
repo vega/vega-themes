@@ -58,7 +58,7 @@
     "eslintbase": "beemo eslint .",
     "format": "yarn eslintbase --fix",
     "lint": "yarn eslintbase",
-    "release": "auto shipit"
+    "release": "yarn build && auto shipit"
   },
   "devDependencies": {
     "@auto-it/conventional-commits": "^10.32.2",

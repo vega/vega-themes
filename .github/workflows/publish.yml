@@ -14,20 +14,17 @@ jobs:
     name: Make a release and publish to NPM
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - uses: actions/setup-node@v2.4.1
+      - uses: actions/setup-node@v3
         with:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Node dependencies
         run: yarn --frozen-lockfile
-
-      - name: Build
-        run: yarn build
 
       # don't use yarn run to avoid using yarnpkg registry
       - name: Create release

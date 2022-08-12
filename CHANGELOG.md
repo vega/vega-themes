@@ -1,0 +1,113 @@
+# v2.11.0 (Thu Aug 11 2022)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Daniel Marsh-Patrick ([@dm-p](https://github.com/dm-p))
+
+:heart: Cameron Yick ([@hydrosquall](https://github.com/hydrosquall))
+
+#### 🚀 Enhancement
+
+- feat: add powerbi theme [#320](https://github.com/vega/vega-themes/pull/320) ([@dm-p](https://github.com/dm-p))
+
+#### 🐛 Bug Fix
+
+- refactor: one const per declaration [#327](https://github.com/vega/vega-themes/pull/327) ([@domoritz](https://github.com/domoritz))
+- ci: use same release process as vega embed [#325](https://github.com/vega/vega-themes/pull/325) ([@domoritz](https://github.com/domoritz))
+- chore: upgrade deps [#323](https://github.com/vega/vega-themes/pull/323) ([@domoritz](https://github.com/domoritz))
+- ci: don't set node version [#322](https://github.com/vega/vega-themes/pull/322) ([@domoritz](https://github.com/domoritz))
+- chore: upgrade deps and format [#321](https://github.com/vega/vega-themes/pull/321) ([@domoritz](https://github.com/domoritz))
+- chore: set up auto for versioning/release management [#293](https://github.com/vega/vega-themes/pull/293) ([@hydrosquall](https://github.com/hydrosquall))
+- ci: fix akheron/dependabot-cron-action to use v0.2 [#295](https://github.com/vega/vega-themes/pull/295) ([@domoritz](https://github.com/domoritz))
+- ci: update to akheron/dependabot-cron-action@v2 [#295](https://github.com/vega/vega-themes/pull/295) ([@domoritz](https://github.com/domoritz))
+- ci: auto merge dependabot PRs [#295](https://github.com/vega/vega-themes/pull/295) ([@domoritz](https://github.com/domoritz))
+- ci: monthly updates [#295](https://github.com/vega/vega-themes/pull/295) ([@domoritz](https://github.com/domoritz))
+
+#### ⚠️ Pushed to `stable`
+
+- v2.11.0 ([@domoritz](https://github.com/domoritz))
+
+#### 🔩 Dependency Updates
+
+- chore(deps-dev): bump vega-lite-dev-config from 0.18.0 to 0.19.0 [#312](https://github.com/vega/vega-themes/pull/312) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @rollup/plugin-node-resolve from 13.0.5 to 13.0.6 [#313](https://github.com/vega/vega-themes/pull/313) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump auto from 10.32.1 to 10.32.2 [#314](https://github.com/vega/vega-themes/pull/314) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.58.0 to 2.59.0 [#315](https://github.com/vega/vega-themes/pull/315) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @auto-it/first-time-contributor from 10.32.1 to 10.32.2 [#316](https://github.com/vega/vega-themes/pull/316) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @auto-it/conventional-commits from 10.32.1 to 10.32.2 [#317](https://github.com/vega/vega-themes/pull/317) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump typescript from 4.4.3 to 4.4.4 [#318](https://github.com/vega/vega-themes/pull/318) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump browser-sync from 2.27.5 to 2.27.7 [#319](https://github.com/vega/vega-themes/pull/319) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump actions/setup-node from 2.4.0 to 2.4.1 [#302](https://github.com/vega/vega-themes/pull/302) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump vega-lite from 5.1.0 to 5.1.1 [#304](https://github.com/vega/vega-themes/pull/304) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @rollup/plugin-node-resolve from 13.0.4 to 13.0.5 [#303](https://github.com/vega/vega-themes/pull/303) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump concurrently from 6.2.1 to 6.3.0 [#305](https://github.com/vega/vega-themes/pull/305) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.56.3 to 2.58.0 [#306](https://github.com/vega/vega-themes/pull/306) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @auto-it/conventional-commits from 10.31.0 to 10.32.1 [#307](https://github.com/vega/vega-themes/pull/307) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump typescript from 4.4.2 to 4.4.3 [#308](https://github.com/vega/vega-themes/pull/308) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump vega from 5.20.2 to 5.21.0 [#309](https://github.com/vega/vega-themes/pull/309) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump auto from 10.31.0 to 10.32.1 [#310](https://github.com/vega/vega-themes/pull/310) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @auto-it/first-time-contributor from 10.31.0 to 10.32.1 [#311](https://github.com/vega/vega-themes/pull/311) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump tmpl from 1.0.4 to 1.0.5 [#301](https://github.com/vega/vega-themes/pull/301) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump object-path from 0.11.7 to 0.11.8 [#300](https://github.com/vega/vega-themes/pull/300) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump typescript from 4.3.5 to 4.4.2 [#299](https://github.com/vega/vega-themes/pull/299) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump object-path from 0.11.5 to 0.11.7 [#298](https://github.com/vega/vega-themes/pull/298) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump actions/setup-node from 2.3.0 to 2.4.0 [#294](https://github.com/vega/vega-themes/pull/294) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump concurrently from 6.2.0 to 6.2.1 [#296](https://github.com/vega/vega-themes/pull/296) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.55.1 to 2.56.3 [#297](https://github.com/vega/vega-themes/pull/297) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump path-parse from 1.0.6 to 1.0.7 [#292](https://github.com/vega/vega-themes/pull/292) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump actions/setup-node from 2.2.0 to 2.3.0 [#287](https://github.com/vega/vega-themes/pull/287) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump browser-sync from 2.27.4 to 2.27.5 [#288](https://github.com/vega/vega-themes/pull/288) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump vega-lite-dev-config from 0.17.3 to 0.18.0 [#289](https://github.com/vega/vega-themes/pull/289) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @rollup/plugin-node-resolve from 13.0.0 to 13.0.4 [#290](https://github.com/vega/vega-themes/pull/290) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.52.7 to 2.55.1 [#291](https://github.com/vega/vega-themes/pull/291) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump akheron/dependabot-cron-action from 0.2 to 1 [#281](https://github.com/vega/vega-themes/pull/281) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump actions/setup-node from 2.1.5 to 2.2.0 [#282](https://github.com/vega/vega-themes/pull/282) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.50.5 to 2.52.7 [#283](https://github.com/vega/vega-themes/pull/283) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump gh-pages from 3.2.0 to 3.2.3 [#284](https://github.com/vega/vega-themes/pull/284) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump browser-sync from 2.26.14 to 2.27.4 [#285](https://github.com/vega/vega-themes/pull/285) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump typescript from 4.3.2 to 4.3.5 [#286](https://github.com/vega/vega-themes/pull/286) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump glob-parent from 5.1.1 to 5.1.2 [#280](https://github.com/vega/vega-themes/pull/280) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.47.0 to 2.50.5 [#277](https://github.com/vega/vega-themes/pull/277) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump typescript from 4.2.4 to 4.3.2 [#276](https://github.com/vega/vega-themes/pull/276) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump gh-pages from 3.1.0 to 3.2.0 [#278](https://github.com/vega/vega-themes/pull/278) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump concurrently from 6.1.0 to 6.2.0 [#279](https://github.com/vega/vega-themes/pull/279) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump ws from 7.4.3 to 7.4.6 [#275](https://github.com/vega/vega-themes/pull/275) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.46.0 to 2.47.0 [#274](https://github.com/vega/vega-themes/pull/274) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump concurrently from 6.0.2 to 6.1.0 [#273](https://github.com/vega/vega-themes/pull/273) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump @rollup/plugin-node-resolve from 11.2.1 to 13.0.0 [#272](https://github.com/vega/vega-themes/pull/272) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump hosted-git-info from 2.8.8 to 2.8.9 [#271](https://github.com/vega/vega-themes/pull/271) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps): bump actions/setup-node from v1 to v2.1.5 [#269](https://github.com/vega/vega-themes/pull/269) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- chore(deps-dev): bump rollup from 2.45.2 to 2.46.0 [#270](https://github.com/vega/vega-themes/pull/270) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- ci: upgrade to GitHub-native Dependabot [#268](https://github.com/vega/vega-themes/pull/268) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega-lite-dev-config from 0.17.2 to 0.17.3 [#266](https://github.com/vega/vega-themes/pull/266) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump @wessberg/rollup-plugin-ts from 1.3.11 to 1.3.14 [#267](https://github.com/vega/vega-themes/pull/267) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump concurrently from 6.0.1 to 6.0.2 [#265](https://github.com/vega/vega-themes/pull/265) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega-lite from 5.0.0 to 5.1.0 [#264](https://github.com/vega/vega-themes/pull/264) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.45.1 to 2.45.2 [#263](https://github.com/vega/vega-themes/pull/263) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega-lite-dev-config from 0.17.0 to 0.17.2 [#261](https://github.com/vega/vega-themes/pull/261) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump concurrently from 6.0.0 to 6.0.1 [#258](https://github.com/vega/vega-themes/pull/258) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.44.0 to 2.45.1 [#260](https://github.com/vega/vega-themes/pull/260) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump typescript from 4.2.3 to 4.2.4 [#259](https://github.com/vega/vega-themes/pull/259) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.43.1 to 2.44.0 [#257](https://github.com/vega/vega-themes/pull/257) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega from 5.20.0 to 5.20.2 [#256](https://github.com/vega/vega-themes/pull/256) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.42.2 to 2.43.1 [#254](https://github.com/vega/vega-themes/pull/254) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump @wessberg/rollup-plugin-ts from 1.3.10 to 1.3.11 [#255](https://github.com/vega/vega-themes/pull/255) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump @rollup/plugin-node-resolve from 11.2.0 to 11.2.1 [#253](https://github.com/vega/vega-themes/pull/253) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega from 5.19.1 to 5.20.0 [#251](https://github.com/vega/vega-themes/pull/251) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump @wessberg/rollup-plugin-ts from 1.3.8 to 1.3.10 [#250](https://github.com/vega/vega-themes/pull/250) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.41.2 to 2.42.2 [#252](https://github.com/vega/vega-themes/pull/252) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.40.0 to 2.41.2 [#249](https://github.com/vega/vega-themes/pull/249) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega-lite-dev-config from 0.16.6 to 0.17.0 [#248](https://github.com/vega/vega-themes/pull/248) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump typescript from 4.2.2 to 4.2.3 [#247](https://github.com/vega/vega-themes/pull/247) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump rollup from 2.39.1 to 2.40.0 [#246](https://github.com/vega/vega-themes/pull/246) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- chore(deps-dev): bump vega-lite-dev-config from 0.16.1 to 0.16.6 [#245](https://github.com/vega/vega-themes/pull/245) ([@dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+
+#### Authors: 5
+
+- [@dependabot-preview[bot]](https://github.com/dependabot-preview[bot])
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Cameron Yick ([@hydrosquall](https://github.com/hydrosquall))
+- Daniel Marsh-Patrick ([@dm-p](https://github.com/dm-p))
+- Dominik Moritz ([@domoritz](https://github.com/domoritz))

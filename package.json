@@ -64,7 +64,7 @@
     "@auto-it/conventional-commits": "^10.37.4",
     "@auto-it/first-time-contributor": "^10.37.4",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "auto": "^10.37.4",
     "browser-sync": "^2.27.10",
     "concurrently": "^7.3.0",

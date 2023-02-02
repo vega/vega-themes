@@ -68,7 +68,7 @@
     "auto": "^10.37.4",
     "browser-sync": "^2.27.10",
     "concurrently": "^7.3.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "rollup": "^2.77.3",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-terser": "^7.0.2",

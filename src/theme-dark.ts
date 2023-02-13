@@ -5,11 +5,11 @@ const medColor = '#888';
 
 const darkTheme: Config = {
   background: '#333',
-   
+
   view: {
     stroke: medColor,
   },
-  
+
   title: {
     color: lightColor,
     subtitleColor: lightColor,

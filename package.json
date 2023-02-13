@@ -63,12 +63,12 @@
   "devDependencies": {
     "@auto-it/conventional-commits": "^10.37.4",
     "@auto-it/first-time-contributor": "^10.37.4",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "auto": "^10.37.4",
     "browser-sync": "^2.27.10",
     "concurrently": "^7.3.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "rollup": "^2.77.3",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-terser": "^7.0.2",
@@ -76,7 +76,7 @@
     "typescript": "^4.7.4",
     "vega": "^5.19.1",
     "vega-lite": "^5.0.0",
-    "vega-lite-dev-config": "^0.20.0"
+    "vega-lite-dev-config": "^0.21.0"
   },
   "peerDependencies": {
     "vega": "*",

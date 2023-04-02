@@ -27,7 +27,7 @@ const outputs = [
       file: pkg.module,
       format: 'esm'
     },
-    plugins: plugins(undefined, true)
+    plugins: plugins(false, true)
   }, {
     input: 'src/index.ts',
     output: [
@@ -45,7 +45,7 @@ const outputs = [
         plugins: [terser()]
       }
     ],
-    plugins: plugins('defaults and not IE 11', false),
+    plugins: plugins('> 1%, not dead', false),
   }
 ];
 

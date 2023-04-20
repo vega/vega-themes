@@ -15,6 +15,7 @@ const plugins = (browserslist, declaration) => [
       declaration,
       declarationMap: declaration
     }),
+    transpiler: "babel",
     browserslist
   }),
   bundleSize()

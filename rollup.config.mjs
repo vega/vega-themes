@@ -45,7 +45,7 @@ const outputs = [
         plugins: [terser()]
       }
     ],
-    plugins: plugins('> 1%, not dead', false),
+    plugins: plugins('defaults', false),
   }
 ];
 

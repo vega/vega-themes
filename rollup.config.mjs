@@ -15,6 +15,7 @@ const plugins = (browserslist, declaration) => [
       declaration,
       declarationMap: declaration
     }),
+    transpiler: "babel",
     browserslist
   }),
   bundleSize()
@@ -45,7 +46,7 @@ const outputs = [
         plugins: [terser()]
       }
     ],
-    plugins: plugins('> 1%, not dead', false),
+    plugins: plugins('defaults', false),
   }
 ];
 

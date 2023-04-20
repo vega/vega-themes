@@ -1,5 +1,12 @@
 
 
+# [2.13.0](https://github.com/vega/vega-themes/compare/v2.12.1...v2.13.0) (2023-04-20)
+
+
+### Features
+
+* remove beemo ([#444](https://github.com/vega/vega-themes/issues/444)) ([732aa95](https://github.com/vega/vega-themes/commit/732aa95ea8b70f81643be9b07ce218d25ff46bd4))
+
 ## <small>2.12.1 (2023-02-13)</small>
 
 * chorer: switch to release-it, update rollup ([46a2fed](https://github.com/vega/vega-themes/commit/46a2fed))

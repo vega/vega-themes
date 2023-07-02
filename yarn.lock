@@ -6612,9 +6612,9 @@ vega-label@~1.2.1:
     vega-util "^1.15.2"
 
 vega-lite@^5.9.3:
-  version "5.9.3"
-  resolved "https://registry.yarnpkg.com/vega-lite/-/vega-lite-5.9.3.tgz#0c6d93345cef7c1ee995d8cc5615b05846f1aed8"
-  integrity sha512-S1B81aOkMC/iDU2skeS7ROaIaJuxvGx1PW1LO9ECe2dsrfsaDHk20SGsEhPSKZAgSxOghJ0+AuYdU0glRNjN1Q==
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/vega-lite/-/vega-lite-5.12.0.tgz#8bfa9019a80d83f24d7eb86ac4cd609cca5599c9"
+  integrity sha512-mc0vavCp77B7wJwfVbNrJTmFuAUAornyi1nTw7UjBOFlCY6S4FKpUH9OToYC1o8rzv8HZ+QAFjz6MzmxIWfH7A==
   dependencies:
     "@types/clone" "~2.1.1"
     clone "~2.1.2"

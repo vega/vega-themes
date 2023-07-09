@@ -11,4 +11,8 @@ export {default as vox} from './theme-vox';
 export {default as urbaninstitute} from './theme-urbaninstitute';
 export {default as googlecharts} from './theme-googlecharts';
 export {default as powerbi} from './theme-powerbi';
+export {default as carbonwhite} from './theme-carbonwhite';
+export {default as carbong10} from './theme-carbong10';
+export {default as carbong90} from './theme-carbong90';
+export {default as carbong100} from './theme-carbong100';
 export {version};

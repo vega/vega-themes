@@ -126,4 +126,4 @@ To view and test different themes, follow these steps:
 
 ## Publishing
 
-To make a release, run `npm run release`.
+To make a release, run `npm run release`. To deploy the examples, run `yarn deploy:gh`.

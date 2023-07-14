@@ -12,5 +12,9 @@ declare const voxTheme: Config;
 declare const urbanInstituteTheme: Config;
 declare const googlechartsTheme: Config;
 declare const powerbiTheme: Config;
-export { darkTheme as dark, excelTheme as excel, fiveThirtyEightTheme as fivethirtyeight, ggplot2Theme as ggplot2, latimesTheme as latimes, quartzTheme as quartz, voxTheme as vox, urbanInstituteTheme as urbaninstitute, googlechartsTheme as googlecharts, powerbiTheme as powerbi, version };
+declare const carbonwhite: Config;
+declare const carbong10: Config;
+declare const carbong90: Config;
+declare const carbong100: Config;
+export { darkTheme as dark, excelTheme as excel, fiveThirtyEightTheme as fivethirtyeight, ggplot2Theme as ggplot2, latimesTheme as latimes, quartzTheme as quartz, voxTheme as vox, urbanInstituteTheme as urbaninstitute, googlechartsTheme as googlecharts, powerbiTheme as powerbi, carbonwhite, carbong10, carbong90, carbong100, version };
 //# sourceMappingURL=vega-themes.module.d.ts.map

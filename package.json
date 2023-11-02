@@ -81,7 +81,7 @@
     "gh-pages": "^6.0.0",
     "prettier": "^3.0.0",
     "release-it": "^16.1.0",
-    "rollup": "^3.26.2",
+    "rollup": "^4.2.0",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-ts": "^3.2.0",
     "typescript": "^5.1.6",

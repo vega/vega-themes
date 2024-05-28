@@ -1,7 +1,28 @@
 import {Config} from './config';
 
 const defaultFont = 'IBM Plex Sans,system-ui,-apple-system,BlinkMacSystemFont,".sfnstext-regular",sans-serif';
+const condensedFont =
+  'IBM Plex Sans Condensed, system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", sans-serif';
 const fontWeight = 400;
+
+const TOKENS = {
+  textPrimary: {g90: '#f4f4f4', g100: '#f4f4f4', white: '#161616', g10: '#161616'},
+  textSecondary: {g90: '#c6c6c6', g100: '#c6c6c6', white: '#525252', g10: '#525252'},
+  // layer
+  layerAccent01: {
+    white: '#e0e0e0',
+    g10: '#e0e0e0',
+    g90: '#525252',
+    g100: '#393939',
+  },
+  // grid
+  gridBg: {
+    white: '#ffffff',
+    g10: '#ffffff',
+    g90: '#161616',
+    g100: '#161616',
+  },
+};
 
 const darkCategories = [
   '#8a3ffc',
@@ -37,9 +58,14 @@ const lightCategories = [
   '#a56eff',
 ];
 
-function genCarbonConfig({type, background}: {type: 'light' | 'dark'; background: string}): Config {
-  const viewbg = type === 'dark' ? '#161616' : '#ffffff';
-  const textColor = type === 'dark' ? '#f4f4f4' : '#161616';
+function genCarbonConfig({theme, background}: {theme: 'white' | 'g10' | 'g90' | 'g100'; background: string}): Config {
+  const type = ['white', 'g10'].includes(theme) ? 'light' : 'dark';
+
+  const viewbg = TOKENS.gridBg[theme];
+
+  const titleColor = TOKENS.textPrimary[theme];
+  const textColor = TOKENS.textSecondary[theme];
+
   const category = type === 'dark' ? darkCategories : lightCategories;
   const markColor = type === 'dark' ? '#d4bbff' : '#6929c4';
 
@@ -64,7 +90,7 @@ function genCarbonConfig({type, background}: {type: 'light' | 'dark'; background
     },
 
     title: {
-      color: textColor,
+      color: titleColor,
       anchor: 'start',
       dy: -15,
       fontSize: 16,
@@ -73,14 +99,27 @@ function genCarbonConfig({type, background}: {type: 'light' | 'dark'; background
     },
 
     axis: {
+      // Axis labels
       labelColor: textColor,
       labelFontSize: 12,
+      labelFont: condensedFont,
+      labelFontWeight: fontWeight,
+      // Axis titles
+      titleColor: titleColor,
+      titleFontWeight: 600,
+      titleFontSize: 12,
+
+      // MISC
       grid: true,
-      gridColor: '#525252',
-      titleColor: textColor,
+      gridColor: TOKENS.layerAccent01[theme],
       labelAngle: 0,
     },
-
+    axisX: {
+      titlePadding: 10,
+    },
+    axisY: {
+      titlePadding: 2.5,
+    },
     style: {
       'guide-label': {
         font: defaultFont,

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Vega Theme Test</title>
@@ -19,6 +19,7 @@
       }
       #views {
         display: flex;
+        gap: 60px;
         flex-wrap: wrap;
         justify-content: left;
       }
@@ -45,6 +46,46 @@
       .vega-bind label {
         margin: 0 0.5em 0 2px;
       }
+
+      #carbon-alert {
+        display: none;
+        background: #f4f4f4;
+        border-inline-start: 3px solid #f1c21b;
+        color: #161616;
+        font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+        padding: 16px;
+        margin-top: 24px;
+        margin-bottom: 48px;
+      }
+
+      #carbon-alert.visible {
+        display: block;
+      }
+
+      #carbon-alert.dark {
+        background: #393939;
+        border-inline-start: 3px solid #f1c21b;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      #carbon-alert a {
+        color: #0f62fe;
+      }
+
+      #carbon-alert.dark a {
+        color: #78a9ff;
+      }
+
+      .carbon-alert__title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .carbon-alert__subtitle {
+        margin: 0;
+      }
     </style>
   </head>
   <body>
@@ -62,10 +103,12 @@
         <option value="urbaninstitute">urbaninstitute</option>
         <option value="googlecharts">googlecharts</option>
         <option value="powerbi">powerbi</option>
-        <option value="carbonwhite">carbonwhite</option>
-        <option value="carbong10">carbong10</option>
-        <option value="carbong90">carbong90</option>
-        <option value="carbong100">carbong100</option>
+        <optgroup label="Carbon">
+          <option value="carbonwhite">carbonwhite</option>
+          <option value="carbong10">carbong10</option>
+          <option value="carbong90">carbong90</option>
+          <option value="carbong100">carbong100</option>
+        </optgroup>
       </select>
       &nbsp; Renderer:
       <select id="render">
@@ -74,6 +117,22 @@
       </select>
       <br />
     </div>
+
+    <div id="carbon-alert">
+      <p class="carbon-alert__title">Additional imports</p>
+
+      <p class="carbon-alert__subtitle">
+        Carbon themes require the Plex font to be imported, as well as an additional CSS file (to style overflow menu &
+        tooltips). More instructions
+        <a
+          href="https://github.com/carbon-design-system/carbon-vega-theme/blob/main/README.md"
+          target="_blank"
+          rel="noreferrer"
+          >here</a
+        >
+      </p>
+    </div>
+
     <div id="views"></div>
     <script>
       var files = [
@@ -100,7 +159,7 @@
           return loader.load(file).then(function (json) {
             specs[index] = JSON.parse(json);
           });
-        })
+        }),
       )
         .then(function () {
           var earlierChoosenTheme = url.searchParams.get("theme");
@@ -139,6 +198,8 @@
       });
 
       function refresh() {
+        const themeName = themes.options[themes.selectedIndex].value;
+
         container.innerHTML = "";
         setBackground(theme);
         specs.forEach(function (spec) {
@@ -151,6 +212,78 @@
             defaultStyle: true,
           });
         });
+
+        // Add Carbon theme CSS & font if selected
+        if (["carbonwhite", "carbong10", "carbong90", "carbong100"].includes(themeName)) {
+          AddCarbonThemeImports();
+        } else {
+          RemoveCarbonThemeImports();
+        }
+      }
+
+      /*
+       * Carbon themes are accompanied by a CSS bundle
+       * and require Plex font to be imported
+       */
+      function AddCarbonThemeImports() {
+        const themeName = themes.options[themes.selectedIndex].value;
+
+        var _previousLink = document.getElementById("carbon-theme-css");
+        if (_previousLink) {
+          _previousLink.remove();
+        }
+
+        var carbonAlert = document.getElementById("carbon-alert");
+        if (carbonAlert) {
+          carbonAlert.classList.add("visible");
+
+          if (["carbong90", "carbong100"].includes(themeName)) {
+            carbonAlert.classList.add("dark");
+          } else {
+            carbonAlert.classList.remove("dark");
+          }
+        }
+
+        var _link = document.createElement("link");
+        _link.id = "carbon-theme-css";
+        _link.rel = "stylesheet";
+        _fileNameToImport = {
+          carbonwhite: "white",
+          carbong10: "g10",
+          carbong90: "g90",
+          carbong100: "g100",
+        }[themeName];
+        _link.href = `https://1.www.s81c.com/common/carbon/dataviz/carbon-vega-theme/0.0.1/css/${_fileNameToImport}.css`;
+        document.head.appendChild(_link);
+
+        if (!document.getElementById("plex-sans-font")) {
+          var _plexSansFont = document.createElement("link");
+          _plexSansFont.rel = "stylesheet";
+          _plexSansFont.href = "https://1.www.s81c.com/common/carbon/plex/sans.css";
+          _plexSansFont.id = "plex-sans-font";
+          document.head.appendChild(_plexSansFont);
+        }
+
+        if (!document.getElementById("plex-sans-condensed-font")) {
+          var _plexSansCondensedFont = document.createElement("link");
+          _plexSansCondensedFont.rel = "stylesheet";
+          _plexSansCondensedFont.href = "https://1.www.s81c.com/common/carbon/plex/sans-condensed.css";
+          _plexSansCondensedFont.id = "plex-sans-condensed-font";
+          document.head.appendChild(_plexSansCondensedFont);
+        }
+      }
+
+      // Remove Carbon theme CSS & font
+      function RemoveCarbonThemeImports() {
+        var _link = document.getElementById("carbon-theme-css");
+        if (_link) {
+          _link.remove();
+        }
+
+        var carbonAlert = document.getElementById("carbon-alert");
+        if (carbonAlert) {
+          carbonAlert.classList.remove("visible");
+        }
       }
 
       function setBackground(theme) {

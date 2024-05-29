@@ -1,5 +1,12 @@
 
 
+# [2.15.0](https://github.com/vega/vega-themes/compare/v2.14.0...v2.15.0) (2024-05-29)
+
+
+### Features
+
+* add all 4 carbon themes ([#587](https://github.com/vega/vega-themes/issues/587)) ([c82b2b0](https://github.com/vega/vega-themes/commit/c82b2b0347bf04769a7709f7114aaebb634b00bc))
+
 # [2.14.0](https://github.com/vega/vega-themes/compare/v2.13.0...v2.14.0) (2023-07-14)
 
 

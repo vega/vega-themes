@@ -1,5 +1,5 @@
 var name = "vega-themes";
-var version$1 = "2.14.0";
+var version$1 = "2.15.0";
 var description = "Themes for stylized Vega and Vega-Lite visualizations.";
 var keywords = ["vega", "vega-lite", "themes", "style"];
 var license = "BSD-3-Clause";
@@ -45,32 +45,28 @@ var scripts = {
   release: "release-it"
 };
 var devDependencies = {
-  "@babel/core": "^7.22.9",
-  "@babel/plugin-proposal-async-generator-functions": "^7.20.7",
-  "@babel/plugin-proposal-json-strings": "^7.18.6",
-  "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-  "@babel/plugin-proposal-optional-catch-binding": "^7.18.6",
-  "@babel/plugin-transform-runtime": "^7.22.9",
-  "@babel/preset-env": "^7.22.9",
-  "@babel/preset-typescript": "^7.22.5",
-  "@release-it/conventional-changelog": "^7.0.0",
-  "@rollup/plugin-json": "^6.0.0",
-  "@rollup/plugin-node-resolve": "^15.1.0",
-  "@rollup/plugin-terser": "^0.4.3",
-  "@typescript-eslint/eslint-plugin": "^6.0.0",
-  "@typescript-eslint/parser": "^6.0.0",
-  "browser-sync": "^2.29.3",
-  concurrently: "^8.2.0",
+  "@babel/core": "^7.24.6",
+  "@babel/plugin-transform-runtime": "^7.24.6",
+  "@babel/preset-env": "^7.24.6",
+  "@babel/preset-typescript": "^7.24.6",
+  "@release-it/conventional-changelog": "^8.0.1",
+  "@rollup/plugin-json": "^6.1.0",
+  "@rollup/plugin-node-resolve": "^15.2.3",
+  "@rollup/plugin-terser": "^0.4.4",
+  "@typescript-eslint/eslint-plugin": "^7.11.0",
+  "@typescript-eslint/parser": "^7.11.0",
+  "browser-sync": "^3.0.2",
+  concurrently: "^8.2.2",
   eslint: "^8.45.0",
-  "eslint-config-prettier": "^8.8.0",
-  "eslint-plugin-prettier": "^5.0.0",
-  "gh-pages": "^5.0.0",
-  prettier: "^3.0.0",
-  "release-it": "^16.1.0",
-  rollup: "^3.26.2",
+  "eslint-config-prettier": "^9.1.0",
+  "eslint-plugin-prettier": "^5.1.3",
+  "gh-pages": "^6.1.1",
+  prettier: "^3.2.5",
+  "release-it": "^17.3.0",
+  rollup: "^4.18.0",
   "rollup-plugin-bundle-size": "^1.0.3",
-  "rollup-plugin-ts": "^3.2.0",
-  typescript: "^5.1.6",
+  "rollup-plugin-ts": "^3.4.5",
+  typescript: "^5.4.5",
   vega: "^5.25.0",
   "vega-lite": "^5.9.3"
 };
@@ -846,15 +842,46 @@ const powerbiTheme = {
 };
 
 const defaultFont = 'IBM Plex Sans,system-ui,-apple-system,BlinkMacSystemFont,".sfnstext-regular",sans-serif';
+const condensedFont = 'IBM Plex Sans Condensed, system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", sans-serif';
 const fontWeight = 400;
+const TOKENS = {
+  textPrimary: {
+    g90: '#f4f4f4',
+    g100: '#f4f4f4',
+    white: '#161616',
+    g10: '#161616'
+  },
+  textSecondary: {
+    g90: '#c6c6c6',
+    g100: '#c6c6c6',
+    white: '#525252',
+    g10: '#525252'
+  },
+  // layer
+  layerAccent01: {
+    white: '#e0e0e0',
+    g10: '#e0e0e0',
+    g90: '#525252',
+    g100: '#393939'
+  },
+  // grid
+  gridBg: {
+    white: '#ffffff',
+    g10: '#ffffff',
+    g90: '#161616',
+    g100: '#161616'
+  }
+};
 const darkCategories = ['#8a3ffc', '#33b1ff', '#007d79', '#ff7eb6', '#fa4d56', '#fff1f1', '#6fdc8c', '#4589ff', '#d12771', '#d2a106', '#08bdba', '#bae6ff', '#ba4e00', '#d4bbff'];
 const lightCategories = ['#6929c4', '#1192e8', '#005d5d', '#9f1853', '#fa4d56', '#570408', '#198038', '#002d9c', '#ee538b', '#b28600', '#009d9a', '#012749', '#8a3800', '#a56eff'];
 function genCarbonConfig({
-  type,
+  theme,
   background
 }) {
-  const viewbg = type === 'dark' ? '#161616' : '#ffffff';
-  const textColor = type === 'dark' ? '#f4f4f4' : '#161616';
+  const type = ['white', 'g10'].includes(theme) ? 'light' : 'dark';
+  const viewbg = TOKENS.gridBg[theme];
+  const titleColor = TOKENS.textPrimary[theme];
+  const textColor = TOKENS.textSecondary[theme];
   const category = type === 'dark' ? darkCategories : lightCategories;
   const markColor = type === 'dark' ? '#d4bbff' : '#6929c4';
   return {
@@ -888,7 +915,7 @@ function genCarbonConfig({
       fill: viewbg
     },
     title: {
-      color: textColor,
+      color: titleColor,
       anchor: 'start',
       dy: -15,
       fontSize: 16,
@@ -896,12 +923,25 @@ function genCarbonConfig({
       fontWeight: 600
     },
     axis: {
+      // Axis labels
       labelColor: textColor,
       labelFontSize: 12,
+      labelFont: condensedFont,
+      labelFontWeight: fontWeight,
+      // Axis titles
+      titleColor: titleColor,
+      titleFontWeight: 600,
+      titleFontSize: 12,
+      // MISC
       grid: true,
-      gridColor: '#525252',
-      titleColor: textColor,
+      gridColor: TOKENS.layerAccent01[theme],
       labelAngle: 0
+    },
+    axisX: {
+      titlePadding: 10
+    },
+    axisY: {
+      titlePadding: 2.5
     },
     style: {
       'guide-label': {
@@ -924,22 +964,22 @@ function genCarbonConfig({
 }
 
 const carbonwhite = genCarbonConfig({
-  type: 'light',
+  theme: 'white',
   background: '#ffffff'
 });
 
 const carbong10 = genCarbonConfig({
-  type: 'light',
+  theme: 'g10',
   background: '#f4f4f4'
 });
 
 const carbong90 = genCarbonConfig({
-  type: 'dark',
+  theme: 'g90',
   background: '#262626'
 });
 
 const carbong100 = genCarbonConfig({
-  type: 'dark',
+  theme: 'g100',
   background: '#161616'
 });
 

@@ -1,7 +1,7 @@
 import genCarbonConfig from './carbongen';
 
 const carbong90 = genCarbonConfig({
-  type: 'dark',
+  theme: 'g90',
   background: '#262626',
 });
 

@@ -4,7 +4,7 @@ import terser from '@rollup/plugin-terser';
 import bundleSize from 'rollup-plugin-bundle-size';
 import ts from 'rollup-plugin-ts';
 
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const plugins = (browserslist, declaration) => [
   resolve(),
@@ -15,7 +15,7 @@ const plugins = (browserslist, declaration) => [
       declaration,
       declarationMap: declaration
     }),
-    transpiler: "babel",
+    transpiler: 'babel',
     browserslist
   }),
   bundleSize()

@@ -120,10 +120,10 @@ Chart theme modeled after IBM Carbon Charts - grey 100 theme. This is the grey 9
 
 To view and test different themes, follow these steps:
 
-1. Install dependencies via `yarn`.
-2. Launch a local web server in the top-level directory with `yarn start`.
+1. Install dependencies via `npm install`.
+2. Launch a local web server in the top-level directory with `npm start`.
 3. Make changes. The website will automatically reload.
 
 ## Publishing
 
-To make a release, run `npm run release`. To deploy the examples, run `yarn deploy:gh`.
+To make a release, run `npm run release`. To deploy the examples, run `npm run deploy:gh`.

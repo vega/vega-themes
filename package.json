@@ -45,15 +45,15 @@
     "build"
   ],
   "scripts": {
-    "prebuild": "yarn clean",
+    "prebuild": "npm run clean",
     "build": "rollup -c",
     "clean": "rimraf build && rimraf examples/build",
     "copy:data": "rsync -r node_modules/vega-datasets/data/* examples/data",
     "copy:build": "rsync -r build/* examples/build",
-    "deploy:gh": "yarn build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
-    "preversion": "yarn lint",
+    "deploy:gh": "npm run build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
+    "preversion": "npm run lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
-    "start": "yarn build && concurrently --kill-others -n Server,Rollup 'yarn serve' 'rollup -c -w'",
+    "start": "npm run build && concurrently --kill-others -n Server,Rollup 'npm run serve' 'rollup -c -w'",
     "format": "eslint . --fix",
     "lint": "eslint .",
     "release": "release-it"

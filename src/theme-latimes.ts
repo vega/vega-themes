@@ -1,4 +1,4 @@
-import {Config} from './config';
+import {Config} from './config.js';
 
 const headlineFontSize = 22;
 const headlineFontWeight = 'normal';

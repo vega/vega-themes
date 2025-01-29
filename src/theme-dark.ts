@@ -1,4 +1,4 @@
-import {Config} from './config';
+import {Config} from './config.js';
 
 const lightColor = '#fff';
 const medColor = '#888';

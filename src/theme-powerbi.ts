@@ -1,4 +1,4 @@
-import {Config} from './config';
+import {Config} from './config.js';
 
 const ptToPx = (value: number) => value * (1 / 3 + 1);
 

@@ -1,4 +1,4 @@
-import genCarbonConfig from './carbongen';
+import genCarbonConfig from './carbongen.js';
 
 const carbonwhite = genCarbonConfig({
   theme: 'white',

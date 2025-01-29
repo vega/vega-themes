@@ -6,7 +6,7 @@
  * https://developers.google.com/open-source/licenses/bsd
  */
 
-import {Config} from './config';
+import {Config} from './config.js';
 
 const markColor = '#3366CC';
 const gridColor = '#ccc';

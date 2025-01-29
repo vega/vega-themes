@@ -7,6 +7,7 @@ export default [
   {
     ignores: ['build/**', 'examples/build/**']
   },
+  prettierConfig,
   {
     files: ['**/*.ts'],
     languageOptions: {
@@ -26,8 +27,7 @@ export default [
       'prettier': prettier
     },
     rules: {
-      ...tseslint.configs['recommended'].rules,
-      ...prettierConfig.rules,
+      ...tseslint.configs.recommended.rules,
       'prettier/prettier': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -46,7 +46,10 @@ export default [
       }],
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': 'error',
-      '@typescript-eslint/no-object-literal-type-assertion': 'off',
+      '@typescript-eslint/consistent-type-assertions': ['error', {
+        'assertionStyle': 'as',
+        'objectLiteralTypeAssertions': 'allow-as-parameter'
+      }],
       '@typescript-eslint/no-namespace': 'error',
       'linebreak-style': ['error', 'unix'],
       'no-irregular-whitespace': ['error', {

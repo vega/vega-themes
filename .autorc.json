@@ -1,12 +1,5 @@
 {
-  "plugins": [
-    "npm",
-    "conventional-commits",
-    "first-time-contributor",
-    "released"
-  ],
+  "plugins": ["npm", "conventional-commits", "first-time-contributor", "released"],
   "baseBranch": "stable",
-  "prereleaseBranches": [
-    "next"
-  ]
+  "prereleaseBranches": ["next"]
 }

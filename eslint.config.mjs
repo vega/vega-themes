@@ -1,46 +1,44 @@
-import tseslint from "@typescript-eslint/eslint-plugin";
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
 import tsParser from "@typescript-eslint/parser";
-import prettier from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
+import prettierConfig from "eslint-plugin-prettier/recommended";
+import globals from "globals";
+
+delete globals.browser["AudioWorkletGlobalScope "];
 
 /**
  * @type {import('eslint').Linter.Config[]}
  */
 export default [
   {
-    ignores: ["build/**"],
+    ignores: ["prettier.config.js", "build/**", "coverage/**"],
   },
-  prettierConfig,
+  eslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   {
     files: ["**/*.{js,ts}"],
     languageOptions: {
       parser: tsParser,
-      parserOptions: {
-        project: "./tsconfig.json",
-        sourceType: "module",
-      },
       globals: {
-        window: false,
-        document: false,
+        ...globals.browser,
       },
-    },
-    plugins: {
-      "@typescript-eslint": tseslint,
-      prettier: prettier,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
       "prettier/prettier": "warn",
       "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/prefer-for-of": "error",
       "@typescript-eslint/no-for-in-array": "error",
       "@typescript-eslint/no-require-imports": "error",
       "@typescript-eslint/no-parameter-properties": "off",
-      "@typescript-eslint/explicit-member-accessibility": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -49,31 +47,36 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
-      "no-shadow": "off",
       "@typescript-eslint/no-shadow": "error",
-      "@typescript-eslint/consistent-type-assertions": [
-        "error",
-        {
-          assertionStyle: "as",
-          objectLiteralTypeAssertions: "allow-as-parameter",
-        },
-      ],
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/no-unsafe-return": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/no-object-literal-type-assertion": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-namespace": "error",
+      "@typescript-eslint/unbound-method": "off",
+      "@typescript-eslint/no-base-to-string": "off",
+      "@typescript-eslint/no-unnecessary-type-assertion": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-misused-promises": "off",
       "linebreak-style": ["error", "unix"],
-      "no-irregular-whitespace": [
-        "error",
-        {
-          skipComments: true,
-        },
-      ],
+      "no-irregular-whitespace": ["error", { skipComments: true }],
       "no-alert": "error",
       "prefer-const": "error",
       "no-return-assign": "error",
       "no-useless-call": "error",
       "no-useless-concat": "error",
-      "no-console": "off",
-      "no-undef": "off",
-      "no-unreachable": "off",
+      "prefer-template": "error",
+      "no-unused-vars": "off",
+      // "no-undef": "off", // typescript takes care of this for us
+      "no-unreachable": "off", // typescript takes care of this for us
     },
+  },
+  prettierConfig,
+  {
+    files: ["**/*.mjs"],
+    ...tseslint.configs.disableTypeChecked,
   },
 ];

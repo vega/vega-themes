@@ -1,7 +1,7 @@
 # Vega Themes
 
 [![npm version](https://img.shields.io/npm/v/vega-themes.svg)](https://www.npmjs.com/package/vega-themes)
-[![Build Status](https://github.com/vega/vega-themes/workflows/Test/badge.svg)](https://github.com/vega/vega-themes/actions)
+[![Test](https://github.com/vega/vega-themes/actions/workflows/test.yml/badge.svg)](https://github.com/vega/vega-themes/actions/workflows/test.yml)
 [![](https://data.jsdelivr.com/v1/package/npm/vega-themes/badge?style=rounded)](https://www.jsdelivr.com/package/npm/vega-themes)
 
 Themes for stylized [Vega](https://vega.github.io/vega/) and [Vega-Lite](https://vega.github.io/vega-lite/) visualizations. For Vega version 3+ and Vega-Lite 2+.

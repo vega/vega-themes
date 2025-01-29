@@ -9,7 +9,6 @@
     "declarationDir": "build",
     "declarationMap": true,
     "strict": true,
-    "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "resolveJsonModule": true
   },

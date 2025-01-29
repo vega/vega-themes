@@ -33,7 +33,7 @@
   ],
   "type": "module",
   "exports": "./build/vega-themes.js",
-  "types": "build/vega-themes.d.ts",
+  "types": "build/index.d.ts",
   "unpkg": "build/vega-themes.min.js",
   "jsdelivr": "build/vega-themes.min.js",
   "repository": {
@@ -71,6 +71,7 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "gh-pages": "^6.3.0",
+    "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",

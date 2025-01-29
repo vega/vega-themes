@@ -11,7 +11,7 @@ const outputs = [
     output: {
       file: pkg.exports,
       format: 'esm',
-      sourcemap: true
+      sourcemap: true,
     },
     plugins: [json(), typescript()],
   },

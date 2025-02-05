@@ -1,4 +1,4 @@
-import {Config} from './config';
+import {Config} from './config.js';
 
 const markColor = '#ab5787';
 const axisColor = '#979797';

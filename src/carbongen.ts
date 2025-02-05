@@ -1,4 +1,4 @@
-import {Config} from './config';
+import {Config} from './config.js';
 
 const defaultFont = 'IBM Plex Sans,system-ui,-apple-system,BlinkMacSystemFont,".sfnstext-regular",sans-serif';
 const condensedFont =

@@ -1,6 +1,6 @@
 {
   "name": "vega-themes",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "description": "Themes for stylized Vega and Vega-Lite visualizations.",
   "keywords": [
     "vega",
@@ -32,8 +32,10 @@
     }
   ],
   "type": "module",
-  "exports": "./build/vega-themes.js",
-  "types": "build/index.d.ts",
+  "exports": {
+    "default": "./build/vega-themes.js",
+    "types": "./build/index.d.ts"
+  },
   "unpkg": "build/vega-themes.min.js",
   "jsdelivr": "build/vega-themes.min.js",
   "repository": {

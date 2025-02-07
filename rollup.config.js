@@ -9,7 +9,7 @@ const outputs = [
   {
     input: 'src/index.ts',
     output: {
-      file: pkg.exports,
+      file: pkg.exports.default,
       format: 'esm',
       sourcemap: true,
     },

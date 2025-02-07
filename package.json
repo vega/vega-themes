@@ -1,6 +1,6 @@
 {
   "name": "vega-themes",
-  "version": "3.0.0-alpha.3",
+  "version": "2.15.0",
   "description": "Themes for stylized Vega and Vega-Lite visualizations.",
   "keywords": [
     "vega",

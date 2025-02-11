@@ -56,8 +56,8 @@
     "preversion": "npm run lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
     "dev": "vite examples",
-    "format": "eslint . --fix && prettier . --write",
-    "lint": "eslint . && prettier . --check",
+    "format": "eslint --fix && prettier . --write",
+    "lint": "eslint && prettier . --check",
     "release": "release-it"
   },
   "devDependencies": {

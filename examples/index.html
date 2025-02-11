@@ -2,10 +2,6 @@
 <html>
   <head>
     <title>Vega Theme Test</title>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <script src="build/vega-themes.min.js"></script>
     <style>
       body {
         margin: 10px;
@@ -134,8 +130,12 @@
     </div>
 
     <div id="views"></div>
-    <script>
-      var files = [
+
+    <script type="module">
+      import vegaEmbed, { vega } from "https://cdn.jsdelivr.net/npm/vega-embed@6/+esm";
+      import * as vegaThemes from "../src/index.ts";
+
+      const files = [
         "bars.vg.json",
         "lines.vg.json",
         "scatter.vg.json",
@@ -145,16 +145,16 @@
         "ramp.vl.json",
         "diverging.vl.json",
       ];
-      var specs = [];
+      const specs = [];
 
-      var container = document.querySelector("#views"),
-        loader = vega.loader(),
-        renderType = "svg",
-        theme = {};
+      const container = document.querySelector("#views");
+      const loader = vega.loader();
+      const renderType = "svg";
+      let theme = {};
 
       Promise.all(
         files.map(function (file) {
-          var index = specs.length;
+          const index = specs.length;
           specs.push(file);
           return loader.load(file).then(function (json) {
             specs[index] = JSON.parse(json);
@@ -162,11 +162,11 @@
         }),
       )
         .then(function () {
-          var earlierChoosenTheme = url.searchParams.get("theme");
-          var selectedGraph = url.searchParams.get("renderer");
-          if (earlierChoosenTheme) {
-            theme = vegaThemes[earlierChoosenTheme];
-            themes.value = earlierChoosenTheme;
+          const earlierChosenTheme = url.searchParams.get("theme");
+          const selectedGraph = url.searchParams.get("renderer");
+          if (earlierChosenTheme) {
+            theme = vegaThemes[earlierChosenTheme];
+            themes.value = earlierChosenTheme;
           }
           if (selectedGraph) {
             render.value = selectedGraph;
@@ -179,9 +179,9 @@
           console.error(err, err.stack);
         });
 
-      var themes = document.querySelector("#themes");
-      var currentLocation = window.location;
-      var url = new URL(currentLocation);
+      const themes = document.querySelector("#themes");
+      const currentLocation = window.location;
+      const url = new URL(currentLocation);
       themes.addEventListener("change", function () {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
         url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
@@ -189,7 +189,7 @@
         refresh();
       });
 
-      var render = document.querySelector("#render");
+      const render = document.querySelector("#render");
       render.addEventListener("change", function () {
         renderType = render.options[render.selectedIndex].value;
         url.searchParams.set("renderer", `${render.options[render.selectedIndex].value}`);
@@ -203,7 +203,7 @@
         container.innerHTML = "";
         setBackground(theme);
         specs.forEach(function (spec) {
-          var el = document.createElement("div");
+          const el = document.createElement("div");
           el.setAttribute("class", "view");
           container.appendChild(el);
           vegaEmbed(el, spec, {
@@ -228,12 +228,12 @@
       function AddCarbonThemeImports() {
         const themeName = themes.options[themes.selectedIndex].value;
 
-        var _previousLink = document.getElementById("carbon-theme-css");
+        const _previousLink = document.getElementById("carbon-theme-css");
         if (_previousLink) {
           _previousLink.remove();
         }
 
-        var carbonAlert = document.getElementById("carbon-alert");
+        const carbonAlert = document.getElementById("carbon-alert");
         if (carbonAlert) {
           carbonAlert.classList.add("visible");
 
@@ -244,7 +244,7 @@
           }
         }
 
-        var _link = document.createElement("link");
+        const _link = document.createElement("link");
         _link.id = "carbon-theme-css";
         _link.rel = "stylesheet";
         _fileNameToImport = {
@@ -257,7 +257,7 @@
         document.head.appendChild(_link);
 
         if (!document.getElementById("plex-sans-font")) {
-          var _plexSansFont = document.createElement("link");
+          const _plexSansFont = document.createElement("link");
           _plexSansFont.rel = "stylesheet";
           _plexSansFont.href = "https://1.www.s81c.com/common/carbon/plex/sans.css";
           _plexSansFont.id = "plex-sans-font";
@@ -265,7 +265,7 @@
         }
 
         if (!document.getElementById("plex-sans-condensed-font")) {
-          var _plexSansCondensedFont = document.createElement("link");
+          const _plexSansCondensedFont = document.createElement("link");
           _plexSansCondensedFont.rel = "stylesheet";
           _plexSansCondensedFont.href = "https://1.www.s81c.com/common/carbon/plex/sans-condensed.css";
           _plexSansCondensedFont.id = "plex-sans-condensed-font";
@@ -275,12 +275,12 @@
 
       // Remove Carbon theme CSS & font
       function RemoveCarbonThemeImports() {
-        var _link = document.getElementById("carbon-theme-css");
+        const _link = document.getElementById("carbon-theme-css");
         if (_link) {
           _link.remove();
         }
 
-        var carbonAlert = document.getElementById("carbon-alert");
+        const carbonAlert = document.getElementById("carbon-alert");
         if (carbonAlert) {
           carbonAlert.classList.remove("visible");
         }

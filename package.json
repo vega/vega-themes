@@ -9,6 +9,14 @@
     "style"
   ],
   "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vega/vega-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vega/vega-themes/issues"
+  },
+  "homepage": "https://github.com/vega/vega-themes#readme",
   "author": {
     "name": "UW Interactive Data Lab",
     "url": "https://idl.cs.washington.edu"
@@ -33,14 +41,8 @@
   ],
   "type": "module",
   "exports": {
-    "default": "./build/vega-themes.js",
-    "types": "./build/index.d.ts"
-  },
-  "unpkg": "build/vega-themes.min.js",
-  "jsdelivr": "build/vega-themes.min.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vega/vega-themes.git"
+    "types": "./build/index.d.ts",
+    "default": "./build/index.js"
   },
   "files": [
     "src",
@@ -49,13 +51,11 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "rollup -c",
-    "clean": "del-cli build && del-cli examples/build",
-    "copy:data": "rsync -r node_modules/vega-datasets/data/* examples/data",
-    "copy:build": "rsync -r build/* examples/build",
-    "deploy:gh": "npm run build && mkdir -p examples/build && rsync -r build/* examples/build && gh-pages -d examples",
+    "clean": "del-cli build src/style.ts examples/dist",
+    "deploy:gh": "vite build examples && gh-pages -d examples/dist && npm run clean",
     "preversion": "npm run lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
-    "start": "npm run build && concurrently --kill-others -n Server,Rollup 'npm run serve' 'rollup -c -w'",
+    "dev": "vite examples",
     "prettierbase": "prettier '*.{json,css,html}'",
     "format": "eslint . --fix && npm run prettierbase -- --write",
     "lint": "eslint . && npm run prettierbase -- --check",
@@ -65,10 +65,8 @@
     "@eslint/js": "^9.19.0",
     "@release-it/conventional-changelog": "^10.0.0",
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
-    "browser-sync": "^3.0.3",
-    "concurrently": "^9.1.2",
+    "del-cli": "^6.0.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -76,13 +74,13 @@
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "release-it": "^18.1.2",
-    "del-cli": "^6.0.0",
     "rollup": "^4.32.1",
     "rollup-plugin-bundle-size": "^1.0.3",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.22.0",
     "vega": "^5.31.0",
-    "vega-lite": "^5.23.0"
+    "vega-lite": "^5.23.0",
+    "vite": "^6.1.0"
   },
   "peerDependencies": {
     "vega": "*",

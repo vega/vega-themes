@@ -10,16 +10,18 @@
       "feature": "counties"
     }
   },
-  "transform": [{
-    "lookup": "id",
-    "from": {
-      "data": {
-        "url": "https://vega.github.io/vega-datasets/data/unemployment.tsv"
-      },
-      "key": "id",
-      "fields": ["rate"]
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "https://vega.github.io/vega-datasets/data/unemployment.tsv"
+        },
+        "key": "id",
+        "fields": ["rate"]
+      }
     }
-  }],
+  ],
   "projection": {
     "type": "albersUsa"
   },

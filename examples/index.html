@@ -36,7 +36,7 @@
         display: inline-block;
         width: 100px;
       }
-      .vega-bind input[type="range"] {
+      .vega-bind input[type='range'] {
         width: 400px;
       }
       .vega-bind label {
@@ -48,7 +48,7 @@
         background: #f4f4f4;
         border-inline-start: 3px solid #f1c21b;
         color: #161616;
-        font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+        font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
         padding: 16px;
         margin-top: 24px;
         margin-bottom: 48px;
@@ -132,24 +132,24 @@
     <div id="views"></div>
 
     <script type="module">
-      import vegaEmbed, { vega } from "https://cdn.jsdelivr.net/npm/vega-embed@6/+esm";
-      import * as vegaThemes from "../src/index.ts";
+      import vegaEmbed, {vega} from 'https://cdn.jsdelivr.net/npm/vega-embed@6/+esm';
+      import * as vegaThemes from '../src/index.ts';
 
       const files = [
-        "bars.vg.json",
-        "lines.vg.json",
-        "scatter.vg.json",
-        "stacked.vl.json",
-        "area.vl.json",
-        "heatmap.vl.json",
-        "ramp.vl.json",
-        "diverging.vl.json",
+        'bars.vg.json',
+        'lines.vg.json',
+        'scatter.vg.json',
+        'stacked.vl.json',
+        'area.vl.json',
+        'heatmap.vl.json',
+        'ramp.vl.json',
+        'diverging.vl.json',
       ];
       const specs = [];
 
-      const container = document.querySelector("#views");
+      const container = document.querySelector('#views');
       const loader = vega.loader();
-      const renderType = "svg";
+      const renderType = 'svg';
       let theme = {};
 
       Promise.all(
@@ -162,8 +162,8 @@
         }),
       )
         .then(function () {
-          const earlierChosenTheme = url.searchParams.get("theme");
-          const selectedGraph = url.searchParams.get("renderer");
+          const earlierChosenTheme = url.searchParams.get('theme');
+          const selectedGraph = url.searchParams.get('renderer');
           if (earlierChosenTheme) {
             theme = vegaThemes[earlierChosenTheme];
             themes.value = earlierChosenTheme;
@@ -179,20 +179,20 @@
           console.error(err, err.stack);
         });
 
-      const themes = document.querySelector("#themes");
+      const themes = document.querySelector('#themes');
       const currentLocation = window.location;
       const url = new URL(currentLocation);
-      themes.addEventListener("change", function () {
+      themes.addEventListener('change', function () {
         theme = vegaThemes[themes.options[themes.selectedIndex].value];
-        url.searchParams.set("theme", `${themes.options[themes.selectedIndex].value}`);
+        url.searchParams.set('theme', `${themes.options[themes.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
 
-      const render = document.querySelector("#render");
-      render.addEventListener("change", function () {
+      const render = document.querySelector('#render');
+      render.addEventListener('change', function () {
         renderType = render.options[render.selectedIndex].value;
-        url.searchParams.set("renderer", `${render.options[render.selectedIndex].value}`);
+        url.searchParams.set('renderer', `${render.options[render.selectedIndex].value}`);
         window.history.replaceState(null, null, url);
         refresh();
       });
@@ -200,11 +200,11 @@
       function refresh() {
         const themeName = themes.options[themes.selectedIndex].value;
 
-        container.innerHTML = "";
+        container.innerHTML = '';
         setBackground(theme);
         specs.forEach(function (spec) {
-          const el = document.createElement("div");
-          el.setAttribute("class", "view");
+          const el = document.createElement('div');
+          el.setAttribute('class', 'view');
           container.appendChild(el);
           vegaEmbed(el, spec, {
             renderer: renderType,
@@ -214,7 +214,7 @@
         });
 
         // Add Carbon theme CSS & font if selected
-        if (["carbonwhite", "carbong10", "carbong90", "carbong100"].includes(themeName)) {
+        if (['carbonwhite', 'carbong10', 'carbong90', 'carbong100'].includes(themeName)) {
           AddCarbonThemeImports();
         } else {
           RemoveCarbonThemeImports();
@@ -228,61 +228,61 @@
       function AddCarbonThemeImports() {
         const themeName = themes.options[themes.selectedIndex].value;
 
-        const _previousLink = document.getElementById("carbon-theme-css");
+        const _previousLink = document.getElementById('carbon-theme-css');
         if (_previousLink) {
           _previousLink.remove();
         }
 
-        const carbonAlert = document.getElementById("carbon-alert");
+        const carbonAlert = document.getElementById('carbon-alert');
         if (carbonAlert) {
-          carbonAlert.classList.add("visible");
+          carbonAlert.classList.add('visible');
 
-          if (["carbong90", "carbong100"].includes(themeName)) {
-            carbonAlert.classList.add("dark");
+          if (['carbong90', 'carbong100'].includes(themeName)) {
+            carbonAlert.classList.add('dark');
           } else {
-            carbonAlert.classList.remove("dark");
+            carbonAlert.classList.remove('dark');
           }
         }
 
-        const _link = document.createElement("link");
-        _link.id = "carbon-theme-css";
-        _link.rel = "stylesheet";
+        const _link = document.createElement('link');
+        _link.id = 'carbon-theme-css';
+        _link.rel = 'stylesheet';
         _fileNameToImport = {
-          carbonwhite: "white",
-          carbong10: "g10",
-          carbong90: "g90",
-          carbong100: "g100",
+          carbonwhite: 'white',
+          carbong10: 'g10',
+          carbong90: 'g90',
+          carbong100: 'g100',
         }[themeName];
         _link.href = `https://1.www.s81c.com/common/carbon/dataviz/carbon-vega-theme/0.0.1/css/${_fileNameToImport}.css`;
         document.head.appendChild(_link);
 
-        if (!document.getElementById("plex-sans-font")) {
-          const _plexSansFont = document.createElement("link");
-          _plexSansFont.rel = "stylesheet";
-          _plexSansFont.href = "https://1.www.s81c.com/common/carbon/plex/sans.css";
-          _plexSansFont.id = "plex-sans-font";
+        if (!document.getElementById('plex-sans-font')) {
+          const _plexSansFont = document.createElement('link');
+          _plexSansFont.rel = 'stylesheet';
+          _plexSansFont.href = 'https://1.www.s81c.com/common/carbon/plex/sans.css';
+          _plexSansFont.id = 'plex-sans-font';
           document.head.appendChild(_plexSansFont);
         }
 
-        if (!document.getElementById("plex-sans-condensed-font")) {
-          const _plexSansCondensedFont = document.createElement("link");
-          _plexSansCondensedFont.rel = "stylesheet";
-          _plexSansCondensedFont.href = "https://1.www.s81c.com/common/carbon/plex/sans-condensed.css";
-          _plexSansCondensedFont.id = "plex-sans-condensed-font";
+        if (!document.getElementById('plex-sans-condensed-font')) {
+          const _plexSansCondensedFont = document.createElement('link');
+          _plexSansCondensedFont.rel = 'stylesheet';
+          _plexSansCondensedFont.href = 'https://1.www.s81c.com/common/carbon/plex/sans-condensed.css';
+          _plexSansCondensedFont.id = 'plex-sans-condensed-font';
           document.head.appendChild(_plexSansCondensedFont);
         }
       }
 
       // Remove Carbon theme CSS & font
       function RemoveCarbonThemeImports() {
-        const _link = document.getElementById("carbon-theme-css");
+        const _link = document.getElementById('carbon-theme-css');
         if (_link) {
           _link.remove();
         }
 
-        const carbonAlert = document.getElementById("carbon-alert");
+        const carbonAlert = document.getElementById('carbon-alert');
         if (carbonAlert) {
-          carbonAlert.classList.remove("visible");
+          carbonAlert.classList.remove('visible');
         }
       }
 
@@ -292,10 +292,10 @@
         if (!theme) {
           return;
         }
-        if ("background" in theme) {
+        if ('background' in theme) {
           document.body.style.background = theme.background;
         }
-        if ("title" in theme && "color" in theme.title) {
+        if ('title' in theme && 'color' in theme.title) {
           document.body.style.color = theme.title.color;
         }
       }

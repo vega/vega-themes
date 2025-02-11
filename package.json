@@ -56,9 +56,8 @@
     "preversion": "npm run lint",
     "serve": "browser-sync start -s -f build examples --serveStatic examples",
     "dev": "vite examples",
-    "prettierbase": "prettier '*.{json,css,html}'",
-    "format": "eslint . --fix && npm run prettierbase -- --write",
-    "lint": "eslint . && npm run prettierbase -- --check",
+    "format": "eslint . --fix && prettier . --write",
+    "lint": "eslint . && prettier . --check",
     "release": "release-it"
   },
   "devDependencies": {

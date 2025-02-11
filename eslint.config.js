@@ -11,7 +11,7 @@ delete globals.browser['AudioWorkletGlobalScope '];
  */
 export default [
   {
-    ignores: ['build/**', 'coverage/**'],
+    ignores: ['build/**', 'coverage/**', 'examples/dist/**'],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,

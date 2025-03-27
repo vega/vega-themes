@@ -132,7 +132,7 @@
     <div id="views"></div>
 
     <script type="module">
-      import vegaEmbed, {vega} from 'https://cdn.jsdelivr.net/npm/vega-embed@6/+esm';
+      import vegaEmbed, {vega} from 'vega-embed';
       import * as vegaThemes from '../src/index.ts';
 
       const files = [
@@ -149,7 +149,7 @@
 
       const container = document.querySelector('#views');
       const loader = vega.loader();
-      const renderType = 'svg';
+      let renderType = 'svg';
       let theme = {};
 
       Promise.all(

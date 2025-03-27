@@ -1,4 +1,11 @@
+# Changelog
 
+# [3.0.0](https://github.com/vega/vega-themes/compare/v2.15.0...v3.0.0) (2025-03-27)
+
+
+### Bug Fixes
+
+* fix demo site ([b55f081](https://github.com/vega/vega-themes/commit/b55f08174f1587c6398c056a3d6e7f3272fc5927))
 
 # [2.15.0](https://github.com/vega/vega-themes/compare/v2.14.0...v2.15.0) (2024-05-29)
 

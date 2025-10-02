@@ -60,7 +60,7 @@
     "release-it": "^19.0.2",
     "rollup": "^4.40.2",
     "rollup-plugin-bundle-size": "^1.0.3",
-    "typescript": "~5.8.3",
+    "typescript": "~5.9.3",
     "typescript-eslint": "^8.32.0",
     "vega": "^6.1.2",
     "vega-embed": "^7.0.2",
